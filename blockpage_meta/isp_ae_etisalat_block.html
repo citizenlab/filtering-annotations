@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="author" content="MMPWW"/>
+    <link rel="icon" href="assets/favicon.ico">
+
+    <title>Blocked URL</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+          integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css"/>
+
+    <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot('/27367402/Etisalat_Proxy', [300, 250], 'div-gpt-ad-1547808539769-0').addService(googletag.pubads());
+            googletag.defineSlot('/27367402/Etisalat_Proxy', [970, 90], 'div-gpt-ad-1547808539769-1').addService(googletag.pubads());
+            googletag.defineSlot('/27367402/Etisalat_Proxy', [970, 250], 'div-gpt-ad-1547808539769-2').addService(googletag.pubads());
+            googletag.defineSlot('/27367402/Etisalat_Proxy', [728, 90], 'div-gpt-ad-1547808539769-4').addService(googletag.pubads());
+            googletag.defineSlot('/27367402/Etisalat_Proxy', [320, 50], 'div-gpt-ad-1547808539769-7').addService(googletag.pubads());
+            googletag.defineSlot('/27367402/Etisalat_Proxy', [300, 600], 'div-gpt-ad-1547808539769-8').addService(googletag.pubads());
+            googletag.defineSlot('/27367402/Etisalat_Proxy', [300, 100], 'div-gpt-ad-1547808539769-10').addService(googletag.pubads());
+            googletag.defineSlot('/27367402/Etisalat_Proxy', [300, 50], 'div-gpt-ad-1547808539769-11').addService(googletag.pubads());
+            googletag.defineSlot('/27367402/Etisalat_Proxy/Etisalat_Proxy1x1', [1, 1], 'div-gpt-ad-1547809106552-0').addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        $( document ).ready(function() {
+            $('.company_name').html('UAE Barq');
+            //$('.company_logo_added').attr("src", "logo.jpeg");
+            function timeAgo(dateParam) {
+                if (!dateParam) {
+                    return null;
+                }
+                const date = typeof dateParam === 'object' ? dateParam : new Date(dateParam);
+                const DAY_IN_MS = 86400000; // 24 * 60 * 60 * 1000
+                const today = new Date();
+                const yesterday = new Date(today - DAY_IN_MS);
+                const seconds = Math.round((today - date) / 1000);
+                const minutes = Math.round(seconds / 60);
+                const hours = Math.round(minutes / 60);
+                const days = Math.round(hours / 24);
+                const weeks = Math.round(days / 7);
+                const months = Math.round(weeks / 4);
+
+                if (seconds < 5) {
+                    return 'now';
+                } else if (seconds < 60) {
+                    return `${ seconds } seconds ago`;
+                } else if (seconds < 90) {
+                    return 'about a minute ago';
+                } else if (minutes < 60) {
+                    return (minutes == 1) ? `${ minutes } minute ago` : `${ minutes } minutes ago`;
+                } else if (hours < 24) {
+                    return (hours == 1) ? `${ hours } hour ago` : `${ hours } hours ago`;
+                } else if (hours>=24 && days < 7) {
+                    return (days==1) ? `${ days } day ago` : `${ days } days ago`;
+                }else if (weeks < 4) {
+                    return (weeks == 1) ? `${ weeks } week ago` : `${ weeks } weeks ago`;
+                }else{
+                    var formated_date = date.toString().split(" ");
+                    return formated_date[1] +' '+ formated_date[2] + ', ' + formated_date[3];
+                }
+
+            }
+            $.ajax({url: "https://www.uaebarq.ae/json/v2/", success: function(result){
+                    //Sports
+                    $.each(result.sports, function(idx, obj) {
+                        $('#sport_img_'+idx).attr("src",obj.images);
+                        $('#sports_timestamp_'+idx).html(timeAgo(new Date(obj.post_date.replace(/-/g, "/"))));
+                        $('#sports_title_'+idx).html((obj.headline));
+                        $('#sports_post_'+idx).attr("href",obj.uri);
+
+                    });
+                    //Entertainment & Arts
+                    $.each(result.entertainment, function(idx, obj) {
+                        $('#ent_img_'+idx).attr("src",obj.images);
+                        $('#ent_timestamp_'+idx).html(timeAgo(new Date(obj.post_date.replace(/-/g, "/"))));
+                        $('#ent_title_'+idx).html((obj.headline));
+                        $('#ent_post_'+idx).attr("href",obj.uri);
+                    });
+                    //Tech
+                    $.each(result.tech, function(idx, obj) {
+                        $('#tech_img_'+idx).attr("src",obj.images);
+                        $('#tech_timestamp_'+idx).html(timeAgo(new Date(obj.post_date.replace(/-/g, "/"))));
+                        $('#tech_title_'+idx).html((obj.headline));
+                        $('#tech_post_'+idx).attr("href",obj.uri);
+                    });
+                    //Tech
+                    $.each(result.news, function(idx, obj) {
+                        $('#news_img_'+idx).attr("src",obj.images);
+                        $('#news_timestamp_'+idx).html(timeAgo(new Date(obj.post_date.replace(/-/g, "/"))));
+                        $('#news_title_'+idx).html((obj.headline));
+                        $('#news_post_'+idx).attr("href",obj.uri);
+                    });
+                }});
+
+            $('.post').click(function() {
+                window.open($(this).attr("href"), '_blank');
+            });
+        });
+    </script>
+</head>
+<body>
+
+<!-- New Tag Start TN15092019-->
+<script data-cfasync="false">
+(function(R,e,c,s,W,i,d){R['RecsWidgetObject']=W;R[W]=R[W]||function(){ (R[W].q=R[W].q||[]).push(arguments)},R[W].l=1*new Date();i=e.createElement(c), d=e.getElementsByTagName(c)[0];i.async=1;i.src=s;d.parentNode.insertBefore(i,d) })(window,document,'script','//widget.yallarec.com/_yalla_loader.js','__recsWidget');
+__recsWidget('createWidget',{wwei:'RECS_WIDGET_130535',pubid:193421,webid:204849,wid:130535,on:'yallarec'});</script>
+<!-- New Tag End TN15092019-->
+
+<!-- /27367402/Etisalat_Proxy/Etisalat_Proxy1x1 -->
+<div id='div-gpt-ad-1547809106552-0' style='height:1px; width:1px;'>
+    <script>
+        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1547809106552-0'); });
+    </script>
+</div>
+<div id="wrapper" class="clearfix">
+    <header style="background-image: url(assets/img/banner-bg.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-md-12 col-centered order-last order-lg-first">
+                    <div class="left-content">
+                        <h1>The website is not accessible in UAE</h1>
+                        <p>The internet is a powerful medium for communication, sharing and serving our daily learning
+                            needs. However, the site you are trying to access contains content that is prohibited under
+                            the Internet Access Management Regulatory Policy <a href="https://www.tra.gov.ae/en/about-tra/information-and-egovernment-sector/internet-guidelines/details.aspx" target="_blank">Internet Access
+                                Management Regulatory Policy</a> of the Telecommunications Regulatory Authority of the
+                            United Arab Emirates.
+                            <br><br>
+                            If you believe the website you are trying to access does not contain any such content,
+                            please <a href="https://etisalat.ae/en/generic/contactus-forms/web-block-unblock.jsp" target="_blank">click here.</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 text-right">
+                    <div class="language-switcher text-right">
+                        <a href="/index-ar.html" class="btn-text">العربية</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="search-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-centered">
+                    <form method="get" action="https://www.google.com/search" target="_blank">
+                        <div class="input-group stylish-input-group">
+                            <input type="text" name="q" class="form-control" placeholder="Search powered by Google">
+                            <span class="input-group-addon">
+                                <button type="submit"><img src="assets/img/search.png"></button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="news-container">
+        <div class="container-fluid">
+<!-- New Tag Show Start TN15092019-->
+<div id="RECS_WIDGET_130535"></div>
+<!-- New Tag Show End TN15092019-->
+			<div class="row pb-40">
+                <div class="col-md-12 text-center">
+                    <div class="ad-element w-728-90">
+                        <!-- /27367402/Etisalat_Proxy 728x90-->
+                        <div id='div-gpt-ad-1547808539769-4'>
+                            <script>
+                                googletag.cmd.push(function () {
+                                    googletag.display('div-gpt-ad-1547808539769-4');
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <div class="ad-element w-300-100">
+                        <!-- /27367402/Etisalat_Proxy 300x100-->
+                        <div id='div-gpt-ad-1547808539769-10'>
+                            <script>
+                                googletag.cmd.push(function () {
+                                    googletag.display('div-gpt-ad-1547808539769-10');
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 col-12 col-centered">
+<!--                            <a href="#" target="_blank">-->
+                                <div class="news-block post" id="news_post_0">
+                                    <div class="upper-image">
+                                        <img id="news_img_0" src="https://www.uaebarq.ae/en/wp-content/uploads/2019/07/IMG-2019-07-31-14-08-57-2.jpg"
+                                             alt="">
+                                    </div>
+                                    <div class="content">
+                                        <h3>News</h3>
+                                        <div class="content-header">
+                                            <div class="avatar"><img src="assets/img/logo.jpeg" alt=""></div>
+                                            <div class="title">
+                                                <h4 class="company_name">UAE Barq</h4>
+                                                <div class="time" id="news_timestamp_0">19 hours ago</div>
+                                            </div>
+                                        </div>
+                                        <p id="news_title_0">Asian on trial for swindling money via smart media</p>
+                                    </div>
+                                </div>
+<!--                            </a>-->
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-12 col-centered pt-4 pt-lg-0 pt-md-0 pt-sm-0">
+<!--                            <a href="#" target="_blank">-->
+                                <div class="news-block post" id="news_post_1">
+                                    <div class="upper-image">
+                                        <img id="news_img_1" src="assets/img/tiles/solar-pic_pkc1ix_c_scale,w_360.jpg" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <h3>News</h3>
+                                        <div class="content-header">
+                                            <div class="avatar"><img src="assets/img/logo.jpeg" alt=""></div>
+                                            <div class="title">
+                                                <h4 class="company_name">Khaleej Times</h4>
+                                                <div class="time" id="news_timestamp_1">2 hours ago</div>
+                                            </div>
+                                        </div>
+                                        <p id="news_title_1">The Abu Dhabi government has pledged Dh535 million into Hub71, a new
+                                            initiative
+                                            to attract startup companies to set up shop in the UAE capital.</p>
+                                    </div>
+                                </div>
+<!--                            </a>-->
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-12 col-centered pt-4 pt-lg-0 pt-md-0">
+<!--                            <a href="#" target="_blank">-->
+                                <div class="news-block post" id="news_post_2">
+                                    <div class="upper-image">
+                                        <img id="news_img_2" src="assets/img/tiles/solar-pic_pkc1ix_c_scale,w_360.jpg" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <h3>News</h3>
+                                        <div class="content-header">
+                                            <div class="avatar"><img src="assets/img/logo.jpeg" alt=""></div>
+                                            <div class="title">
+                                                <h4 class="company_name">Khaleej Times</h4>
+                                                <div class="time" id="news_timestamp_2">2 hours ago</div>
+                                            </div>
+                                        </div>
+                                        <p id="news_title_2">The Abu Dhabi government has pledged Dh535 million into Hub71, a new
+                                            initiative
+                                            to attract startup companies to set up shop in the UAE capital.</p>
+                                    </div>
+                                </div>
+<!--                            </a>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 pt-60">
+                    <div class="ad-element w-970-250">
+                        <!-- /27367402/Etisalat_Proxy 970x250-->
+                        <div id='div-gpt-ad-1547808539769-2'>
+                            <script>
+                                googletag.cmd.push(function () {
+                                    googletag.display('div-gpt-ad-1547808539769-2');
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="ad-element w-300-50">
+                            <!-- /27367402/Etisalat_Proxy 300x50-->
+                            <div id='div-gpt-ad-1547808539769-11'>
+                                <script>
+                                    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1547808539769-11'); });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="tech-container">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 pb-4 pb-lg-0 pb-md-0">
+<!--                            <a href="#" target="_blank">-->
+                                <div class="tech-block post" id="tech_post_0">
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6 col-6 pr-0">
+                                            <div class="content-light">
+                                                <h3>Tech</h3>
+                                                <div class="content-header">
+                                                    <div class="avatar"><img src="assets/img/logo.jpeg" alt=""></div>
+                                                    <div class="title">
+                                                        <h4 class="company_name">UAE Barq</h4>
+                                                        <div class="time" id="tech_timestamp_0">1 week ago</div>
+                                                    </div>
+                                                </div>
+                                                <p id="tech_title_0">UAE is fastest growing eCommerce market in MENA, Dubai Economy-Visa
+                                                    report shows</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-6 pl-0">
+                                            <div class="cover-img">
+                                                <img id="tech_img_0" src="https://www.uaebarq.ae/en/wp-content/uploads/2019/07/133-012646-weather-uae-sea-temperatures_700x400.jpeg"
+                                                     alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+<!--                            </a>-->
+                        </div>
+                        <div class="col-md-4">
+<!--                            <a href="#" target="_blank">-->
+                                <div class="content white-content post" id="tech_post_1">
+                                    <h3>Tech</h3>
+                                    <div class="content-header">
+                                        <div class="avatar"><img src="assets/img/logo.jpeg" alt=""></div>
+                                        <div class="title">
+                                            <h4 class="company_name">UAE Barq</h4>
+                                            <div class="time" id="tech_timestamp_1">1 week ago</div>
+                                        </div>
+                                    </div>
+                                    <p id="tech_title_1">UAE is fastest growing eCommerce market in MENA, Dubai Economy-Visa
+                                        report shows</p>
+                                </div>
+<!--                            </a>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 pt-60">
+                    <div class="ad-element w-970-90">
+                        <!-- /27367402/Etisalat_Proxy 970x90-->
+                        <div id='div-gpt-ad-1547808539769-1'>
+                            <script>
+                                googletag.cmd.push(function () {
+                                    googletag.display('div-gpt-ad-1547808539769-1');
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="entertainments-container">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12 col-12 text-center text-lg-left text-md-left">
+                            <h2>Entertainment & Arts</h2>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-12 text-center text-lg-right text-md-right">
+                            <a href="https://www.uaebarq.ae/ar/" target="_blank" class="read-more">Read More ></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12 col-12">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+<!--                                    <a href="#" target="_blank">-->
+                                        <div class="entertainment-block post" id="ent_post_0">
+                                            <div class="content-light">
+                                                <div class="content-header">
+                                                    <div class="avatar"><img src="assets/img/logo.jpeg" alt=""></div>
+                                                    <div class="title">
+                                                        <h4 class="company_name">UAE Barq</h4>
+                                                        <div class="time" id="ent_timestamp_0">1 week ago</div>
+                                                    </div>
+                                                </div>
+                                                <p id="ent_title_0">UAE is fastest growing eCommerce market in MENA, Dubai Economy-Visa
+                                                    report shows</p>
+                                            </div>
+                                            <div class="bottom-cover">
+                                                <img id="ent_img_0" src="https://www.uaebarq.ae/en/wp-content/uploads/2019/07/Arabian-Race.jpg"
+                                                     alt="">
+                                            </div>
+                                        </div>
+<!--                                    </a>-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 pt-4 pt-lg-0 pt-md-0">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="ad-element w-300-250">
+                                        <!-- /27367402/Etisalat_Proxy 300x250-->
+                                        <div id='div-gpt-ad-1547808539769-0'>
+                                            <script>
+                                                googletag.cmd.push(function () {
+                                                    googletag.display('div-gpt-ad-1547808539769-0');
+                                                });
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pt-30">
+                        <div class="col-md-6 col-sm-6">
+<!--                            <a href="#" target="_blank">-->
+                                <div class="entertainment-block post" id="ent_post_1">
+                                    <div class="content-light">
+                                        <div class="content-header">
+                                            <div class="avatar"><img src="assets/img/logo.jpeg" alt=""></div>
+                                            <div class="title">
+                                                <h4 class="company_name">UAE Barq</h4>
+                                                <div class="time" id="ent_timestamp_1">1 week ago</div>
+                                            </div>
+                                        </div>
+                                        <p id="ent_title_1">UAE is fastest growing eCommerce market in MENA, Dubai Economy-Visa
+                                            report shows</p>
+                                    </div>
+                                    <div class="bottom-cover">
+                                        <img id="ent_img_1" src="https://www.uaebarq.ae/en/wp-content/uploads/2019/07/Arabian-Race.jpg"
+                                             alt="">
+                                    </div>
+                                </div>
+<!--                            </a>-->
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="row">
+                                <div class="col-md-12">
+<!--                                    <a href="#" target="_blank">-->
+                                        <div class="entertainment-block mb-20 mb-md-1 mt-4 post" id="ent_post_2">
+                                            <div class="content no-height">
+                                                <div class="content-header">
+                                                    <div class="avatar"><img src="assets/img/logo.jpeg" alt=""></div>
+                                                    <div class="title">
+                                                        <h4 class="company_name">UAE Barq</h4>
+                                                        <div class="time" id="ent_timestamp_2">1 week ago</div>
+                                                    </div>
+                                                </div>
+                                                <p id="ent_title_2">UAE is fastest growing eCommerce market in MENA, Dubai Economy-Visa
+                                                    report shows</p>
+                                            </div>
+                                        </div>
+<!--                                    </a>-->
+                                </div>
+                                <div class="col-md-12">
+<!--                                    <a href="#" target="_blank">-->
+                                        <div class="entertainment-block mt-20 mt-md-1 post" id="ent_post_3">
+                                            <div class="content no-height">
+                                                <div class="content-header">
+                                                    <div class="avatar"><img src="assets/img/logo.jpeg" alt=""></div>
+                                                    <div class="title">
+                                                        <h4 class="company_name">UAE Barq</h4>
+                                                        <div class="time" id="ent_timestamp_3">1 week ago</div>
+                                                    </div>
+                                                </div>
+                                                <p id="ent_title_3">UAE is fastest growing eCommerce market in MENA, Dubai Economy-Visa
+                                                    report shows</p>
+                                            </div>
+                                        </div>
+<!--                                    </a>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sports-container entertainments-container">
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="ad-element w-320-50">
+                    <!-- /27367402/Etisalat_Proxy 320x50-->
+                    <div id='div-gpt-ad-1547808539769-7'>
+                        <script>
+                            googletag.cmd.push(function() { googletag.display('div-gpt-ad-1547808539769-7'); });
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12 text-center text-lg-left text-md-left">
+                            <h2>Sports</h2>
+                        </div>
+                        <div class="col-md-6 col-sm-12 text-center text-lg-right text-md-right">
+                            <a href="https://www.uaebarq.ae/ar/" target="_blank" class="read-more">Read More ></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 pb-sm-5">
+                            <div class="ad-element w-300-600">
+                                <!-- /27367402/Etisalat_Proxy 300x600-->
+                                <div id='div-gpt-ad-1547808539769-8'>
+                                    <script>
+                                        googletag.cmd.push(function () {
+                                            googletag.display('div-gpt-ad-1547808539769-8');
+                                        });
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12 col-sm-6 col-12">
+<!--                                    <a href="#" target="_blank">-->
+                                        <div class="entertainment-block post" id="sports_post_0">
+                                            <div class="content-light">
+                                                <div class="content-header">
+                                                    <div class="avatar"><img class="company_logo_added" src="assets/img/logo.jpeg" alt=""></div>
+                                                    <div class="title">
+                                                        <h4 class="company_name">Khaleej Times</h4>
+                                                        <div class="time" id="sports_timestamp_0">2 hrs ago</div>
+                                                    </div>
+                                                </div>
+                                                <p id="sports_title_0">The Abu Dhabi government has pledged Dh535 million into Hub71, a new initiative to attract startup companies to set up shop in the UAE capital.</p>
+                                            </div>
+                                            <div class="bottom-cover">
+                                                <img id="sport_img_0" src="assets/img/new-in-store/mod-16-pic-3_ecfndu_c_scale,w_309.jpg"
+                                                     alt="">
+                                            </div>
+                                        </div>
+<!--                                    </a>-->
+                                </div>
+                                <div class="col-lg-6 col-md-12 col-sm-6 col-12 pt-4 pt-lg-0 pt-md-4 pt-sm-0">
+<!--                                    <a href="#" target="_blank">-->
+                                        <div class="entertainment-block post" id="sports_post_1">
+                                            <div class="content-light">
+                                                <div class="content-header">
+                                                    <div class="avatar"><img src="assets/img/logo.jpeg" alt=""></div>
+                                                    <div class="title">
+                                                        <h4 class="company_name">Khaleej Times</h4>
+                                                        <div class="time" id="sports_timestamp_1">2 hrs ago</div>
+                                                    </div>
+                                                </div>
+                                                <p id="sports_title_1">The Abu Dhabi government has pledged Dh535 million into Hub71, a new initiative to attract startup companies to set up shop in the UAE capital.</p>
+                                            </div>
+                                            <div class="bottom-cover">
+                                                <img id="sport_img_1" src="assets/img/new-in-store/mod-16-pic-3_ecfndu_c_scale,w_309.jpg"
+                                                     alt="">
+                                            </div>
+                                        </div>
+<!--                                    </a>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pt-20">
+                        <div class="col-md-12 col-sm-12 pt-4 pt-lg-0 pt-md-0">
+                            <div class="row">
+                                <div class="col-md-12">
+<!--                                    <a href="#" target="_blank">-->
+                                        <div class="entertainment-block mb-20 mb-md-1 post" id="sports_post_2">
+                                            <div class="content no-height">
+                                                <div class="content-header">
+                                                    <div class="avatar"><img src="assets/img/logo.jpeg" alt=""></div>
+                                                    <div class="title">
+                                                        <h4 class="company_name">Khaleej Times</h4>
+                                                        <div class="time" id="sports_timestamp_2">2 hrs ago</div>
+                                                    </div>
+                                                </div>
+                                                <p id="sports_title_2">The Abu Dhabi government has pledged Dh535 million into Hub71, a new initiative to attract startup companies to set up shop in the UAE capital.</p>
+                                            </div>
+                                        </div>
+<!--                                    </a>-->
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+<!--                                    <a href="#" target="_blank">-->
+                                        <div class="entertainment-block mt-20 mt-md-1 post" id="sports_post_3">
+                                            <div class="content no-height">
+                                                <div class="content-header">
+                                                    <div class="avatar"><img src="assets/img/logo.jpeg" alt=""></div>
+                                                    <div class="title">
+                                                        <h4 class="company_name">Khaleej Times</h4>
+                                                        <div class="time" id="sports_timestamp_3">2 hrs ago</div>
+                                                    </div>
+                                                </div>
+                                                <p id="sports_title_3">The Abu Dhabi government has pledged Dh535 million into Hub71, a new initiative to attract startup companies to set up shop in the UAE capital.</p>
+                                            </div>
+                                        </div>
+<!--                                    </a>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-12 col-xs-12 text-center text-lg-left text-md-center">
+                    <!-- ADD or REMOVE below view if you need social icons in footer -->
+                    <!-- start: footer - quick links -->
+                    <div class="social-links-section">
+                        <div class="social-links-head">
+                            <span class="links-title hidden-xs hidden-sm">Quick Access</span>
+                            <ul class="social-links-body">
+                                <li class="links-item">
+                                    <a href="https://facebook.com/etisalat" target="_blank" class="">
+                                        <img src="assets/img/wst-icons/icon-social-facebook.png" alt=""/>
+                                    </a>
+                                </li>
+                                <li class="links-item">
+                                    <a href="https://www.instagram.com/etisalat" target="_blank" class="">
+                                        <img src="assets/img/wst-icons/icon-social-instagram.png"/>
+                                    </a>
+                                </li>
+                                <li class="links-item">
+                                    <a href="https://www.linkedin.com/company/etisalat" target="_blank" class="">
+                                        <img src="assets/img/wst-icons/icon-social-instagram-copy.png"/>
+                                    </a>
+                                </li>
+                                <li class="links-item">
+                                    <a href="https://twitter.com/etisalat" target="_blank" class="">
+                                        <img src="assets/img/wst-icons/icon-social-twitter.png"/>
+                                    </a>
+                                </li>
+                                <li class="links-item">
+                                    <a href="https://youtube.com/etisalat" target="_blank" class="">
+                                        <img src="assets/img/wst-icons/icon-social-youtube.png"/>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end: footer - quick links -->
+                    <ul class="footer-links-nav">
+                        <li><a href="https://www.etisalat.ae/en/footer/about-us.jsp" target="_blank">About us</a></li>
+                        <li><a href="https://www.etisalat.ae/en/footer/privacy-policy.jsp" target="_blank">Privacy policy</a></li>
+                        <li><a href="https://www.etisalat.ae/en/system/wst/assets/docs/consumer/general/code-of-practice-for-customer-affairs.pdf" target="_blank">Code of practice</a></li>
+                        <li><a href="https://www.etisalat.ae/en/footer/terms-and-conditions.jsp" target="_blank">Terms & conditions</a></li>
+                        <li><a href="https://www.etisalat.ae/en/footer/doing-business-with-us.jsp" target="_blank">Doing business with us</a></li>
+                        <li><a href="https://www.etisalat.ae/en/footer/careers.jsp" class="last-child" target="_blank">Careers</a></li>
+                    </ul>
+                    <div class="copyright desktop text-center text-lg-left"> &copy; <span>2019</span> Etisalat. All
+                        Rights Reserved.
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-12 col-xs-12 text-center text-lg-right">
+                    <a class="etisalat-logo" href="https://etisalat.ae" target="_blank">
+                        <img src="assets/img/svg-icons/icon-logo-mockup.png" alt="etisalat-logo"/>
+                    </a>
+                    <div class="copyright d-none">
+                        &copy;
+                        <span>2019</span> Etisalat. All Rights Reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="./main.js"></script>
+
+</body>
+</html>

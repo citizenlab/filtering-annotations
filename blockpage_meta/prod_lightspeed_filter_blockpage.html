@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta content="" name="csrf-token" />
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<title>Lightspeed System - Web Access</title>
+	<link rel="stylesheet" href="/css/access/access.css" type="text/css" />
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+</head>
+
+<script type='text/javascript'>
+	window.onload = function(){
+		var form = document.getElementById("override_form");
+		document.getElementById("submit_link").addEventListener("click", function(){
+			form.submit();
+		});
+	};
+
+	function enter_submit(e) {
+		if (e && e.keyCode == 13) {
+			var form = document.getElementById("override_form");
+			form.submit();
+		}
+	}
+</script>
+
+<body>
+	<div class="page-icon">
+		<div class="page-icon--img page-icon--imgAccess">
+		</div>
+	</div>
+
+
+
+	<div class="strip">
+
+			Sorry,<span class="target">gaytoday.com</span>is not available because it is categorized as <span class="category_name">mature</span>.
+
+	</div>
+
+	<div class="auth_info text--blue">
+		<form action="/access/web/login" method="post">
+
+				You have been identified as anonymous from 10.156.160.135.
+
+						<a id="login" href="http://rwam.fcusd.org/access/web/login?id=HE5OTGF2OQA2DVQ7B3ETEAT9HVO6PFXD">Login</a>
+
+
+		</form>
+	</div>
+
+
+
+	<div class="override">
+
+
+
+	</div>
+
+
+
+
+</body>
+</html>

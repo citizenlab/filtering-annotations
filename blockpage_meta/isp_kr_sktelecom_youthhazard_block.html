@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Cache-control" content="no-cache"/>
+    <meta http-equiv="Cache-control" content="no-store"/>
+    <meta http-equiv="Cache-control" content="must-revalidate"/>
+    <meta http-equiv="Expires" content="0"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <title>청소년 유해차단서비스</title>
+    <style type="text/css">
+        * { margin: 0; }
+        html, body {
+            //height: 100%;
+            background: #f3f3f3;
+            background: -webkit-linear-gradient(to top, #f3f3f3, #b7b7b7);
+            background: linear-gradient(to top, #f3f3f3, #b7b7b7);
+        }
+        div, img { text-align:center; }
+    </style>
+    <script type="text/javascript" src="./script/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript">
+        var $body;
+        var initHeight = $(document).height();
+        var $imgBody = $('<img>').attr('src', './images/block2.png');
+
+        $(document).ready(function () {
+            $body = $('#body');
+        });
+        $(window).load(function () {
+            initPage();
+        });
+        function initPage() {
+            var UserAgent = navigator.userAgent;
+            if (navigator.appVersion.indexOf("Mobile") > -1 || UserAgent.match(/iPhone|iPod|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null || UserAgent.match(/LG|SAMSUNG|Samsung/) != null) {
+                resizeMobileImage();
+            }
+            else {
+                $('<img>').attr('src', './images/block2.png').appendTo($body);
+            }
+        }
+        function resizeMobileImage() {
+            var imgWidth = 1080; var imgBodyHeight = 1920;
+            var rate = $(document).width() / imgWidth; //이미지 확대 및 축소 비율
+            $imgBody.width(imgWidth * rate); $imgBody.height(imgBodyHeight * rate);
+            $imgBody.appendTo($body);
+
+            $body.height($imgBody.height());
+        }
+    </script>
+</head>
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+    <div id="wrapper">
+        <div id="body"></div>
+    </div>
+</body>
+</html>

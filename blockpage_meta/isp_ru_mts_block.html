@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MCPX45W');</script>
+    <!-- End Google Tag Manager -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MTC</title>
+    <link href="/images/favicon.ico" rel="shortcut icon">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/style_old.css">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+</head>
+<body onresize="resizeIframes()">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCPX45W"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="container off page">
+    <div class="page-error page-error--denied">
+        <div class="page-error__content content">
+            <div class="page-error__image"></div>
+            <div class="page-error__text">
+                Доступ к информационному ресурсу ограничен на основании Федерального закона от 27 июля 2006 г.&nbsp;N&nbsp;149-ФЗ "Об информации, информационных технологиях и о защите информации"
+            </div>
+        </div>
+    </div>
+    <div class="page__content content">
+        <iframe src="/info?host=" frameborder="0" scrolling="no" style="height: 76px;"  id="info" class="text"></iframe>
+        <iframe src="http://subblock.mts.ru/api?host=" frameborder="0" scrolling="no" id="more"></iframe>
+    </div>
+</div>
+
+<script>
+  var info = document.getElementById('info');
+  function toggleMode() {
+    document.getElementById('toggle').addEventListener('click', function (event) {
+      event.preventDefault();
+      if (this.parentElement.className == 'container off') {
+        this.parentElement.className = 'container on';
+      } else {
+        this.parentElement.className = 'container off'
+      }
+      resizeIframeInfo();
+    })
+  };
+  document.addEventListener("DOMContentLoaded", toggleMode());
+  function resizeIframeInfo() {
+    info.style.height = info.contentDocument.body.scrollHeight + 'px';
+  }
+  function resizeIframes() {
+    resizeIframeInfo();
+  }
+</script>
+</body>
+</html>
