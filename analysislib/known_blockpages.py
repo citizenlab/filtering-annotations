@@ -2184,7 +2184,7 @@ known_blocks = [
         confidence_no_fp=10,
         scope="isp",
         expected_countries=["ID"],
-        notes="Indonesian ISP Citranet forward to the block page.",
+        notes="Indonesian ISP Starnet forward to the block page.",
     ),
 
     SimpleBlockPagePattern(
@@ -2215,6 +2215,21 @@ known_blocks = [
         scope="isp",
         expected_countries=["ID"],
         notes="Indonesian ISP Citranet block page.",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_id_citranet_sehat_block_2017",
+        common_name="ID ISP Citranet Sehat Block",
+        pattern="""UA-18076037-2""",
+        location_found="body",
+        source=[
+            "https://www.citra.net.id/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20171010T001639Z_AS17974_DRF1cmT5lEsJdMlrkJ6xtFk4FW4zwAJHmf0eYBmCzoNFFHSgua?input=http://www.bglad.com",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["ID"],
+        notes="Indonesian ISP Citranet block page circa 2017 before it began using the filter.citra.net.id naming.",
     ),
 
     SimpleBlockPagePattern(
