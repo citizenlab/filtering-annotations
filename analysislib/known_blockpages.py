@@ -2113,6 +2113,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_id_mncplay_sehat_blockpage",
+        common_name="ID ISP MNC Play Media Blockpage",
+        pattern="""internetpositif.mncplaymedia.com""",
+        location_found="body",
+        source=[
+            "https://www.mncplay.id/en/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180727T095622Z_AS17670_ryQ3v3ZDI2X8YI7FKTxeG9L5PEmgc0Z5N3bDIU7uusFaaIcuql?input=http://www.bglad.com",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["ID"],
+        notes="Indonesian ISP MNC Play Media block page.",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_id_fastnet_sehat_blockpage",
         common_name="ID ISP First Media Fastnet Blockpage",
         pattern="""internetsehatdanamanfastnet.html""",

@@ -1073,6 +1073,19 @@ known_dns_sigs = [
         notes="""Indonesian ISP First Media blockpage"""
     ),
 
+    SimpleDNSReplyPattern(
+        name="dns_isp_id_sehat_mncplay",
+        response="110.50.83.31",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20180727T095622Z_AS17670_ryQ3v3ZDI2X8YI7FKTxeG9L5PEmgc0Z5N3bDIU7uusFaaIcuql?input=http://www.bglad.com",
+        source=[
+            "https://www.mncplay.id/en/"
+        ],
+        scope="isp",
+        expected_countries=["ID"],
+        notes="""Indonesian ISP MNC Play Media blockpage"""
+    ),
+
     #########
     # NATIONAL-SCOPED RESPONSES
     #########
