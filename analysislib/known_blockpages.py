@@ -2113,6 +2113,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_id_fastnet_sehat_blockpage",
+        common_name="ID ISP First Media Fastnet Blockpage",
+        pattern="""internetsehatdanamanfastnet.html""",
+        location_found="body",
+        source=[
+            "https://www.firstmedia.com/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20161031T235715Z_AS23700_3cxMXOKGRHBMQly8HBD4vFHM3qRsMKtzc5Yl8Dcm8LVeQasRLj?input=http://www.bglad.com",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["ID"],
+        notes="Indonesian ISP First Media Fastnet block page.",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_id_crypto_negatifkonten_blockpage",
         common_name="ID ISP Crypto Blockpage",
         pattern="""http://crypto.net.id/images/crypto_emblem.png""",
@@ -2124,7 +2139,7 @@ known_blocks = [
         confidence_no_fp=10,
         scope="isp",
         expected_countries=["ID"],
-        notes="Indonesian ISP Crypto blockpage block page.  This appears to be a business focused ISP.",
+        notes="Indonesian ISP Crypto block page.  This appears to be a business focused ISP.",
     ),
 
     SimpleBlockPagePattern(
