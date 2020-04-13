@@ -164,7 +164,6 @@ known_blocks = [
         """,
     ),
 
-
     SimpleBlockPagePattern(
         name="nat_id_trustpositif_block_1",
         common_name="ID TrustPositif Block",
@@ -2353,7 +2352,7 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
-        name="isp_id_telkomsel_block",
+        name="isp_id_telkomsel_block_1",
         common_name="ID ISP Telkomsel Block",
         pattern="""internetbaik.telkomsel.com/""",
         location_found="body",
@@ -2365,6 +2364,21 @@ known_blocks = [
         scope="isp",
         expected_countries=["ID"],
         notes="Indonesian ISP Telkomsel block page.",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_id_telkomsel_block_2",
+        common_name="ID ISP Telkomsel Block",
+        pattern="""internetbaik.telkomsel.com/""",
+        location_found="body",
+        source=[
+            "https://www.telkomsel.com/en"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20170316T024318Z_AS23693_CQPxlyILeqGXlHzFqGSCPR6MgtCBfZtbs3h2l37MOyiU77N1xP?input=http://www.bglad.com",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["ID"],
+        notes="Indonesian ISP Telkomsel block page. This is for the variant that does not use internetbaik.telkomsel.com subdomain.",
     ),
 
     SimpleBlockPagePattern(

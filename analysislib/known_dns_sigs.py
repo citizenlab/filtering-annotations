@@ -544,6 +544,20 @@ known_dns_sigs = [
     # INDONESIAN SEHAT RELATED RESPONSES
 
     SimpleDNSReplyPattern(
+        name="dns_isp_id_sehat_telkomsel_baik",
+        response="202.3.219.209",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20170316T024318Z_AS23693_CQPxlyILeqGXlHzFqGSCPR6MgtCBfZtbs3h2l37MOyiU77N1xP?input=http://www.bglad.com",
+        source=[
+            "http://telkomsel.com/"
+        ],
+        scope="isp",
+        expected_countries=["ID"],
+        notes="""Indonesian ISP Telkomsel Internet Baik sehat blockpage
+        """
+    ),
+
+    SimpleDNSReplyPattern(
         name="dns_isp_id_sehat_telkom_uzone",
         response="36.86.63.185",
         confidence_no_fp=10,
