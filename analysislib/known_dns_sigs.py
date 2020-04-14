@@ -572,6 +572,20 @@ known_dns_sigs = [
     ),
 
     SimpleDNSReplyPattern(
+        name="dns_isp_id_sehat_telkom_uzone_mercusuar",
+        response="118.97.116.27",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20191114T004142Z_AS17974_zSo1qO4rG5Isd8Rr2WGTHYV4hwK9jeGkR201ACNu7np3CxXqOQ?input=http://ilga.org/",
+        source=[
+            "https://uzone.id/"
+        ],
+        scope="isp",
+        expected_countries=["ID"],
+        notes="""Indonesian ISP Telkom Uzone sehat blockpage. Mercusuar (lighthouse) is a branding of Telkomsel's Uzone
+    """
+    ),
+
+    SimpleDNSReplyPattern(
         name="dns_isp_id_sehat_crypto_negatif",
         response="202.52.141.98",
         confidence_no_fp=10,

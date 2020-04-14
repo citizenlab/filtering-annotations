@@ -2353,7 +2353,7 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
-        name="isp_id_telkomsel_block_1",
+        name="isp_id_telkomsel_block_baik_1",
         common_name="ID ISP Telkomsel Block",
         pattern="""internetbaik.telkomsel.com/""",
         location_found="body",
@@ -2368,9 +2368,9 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
-        name="isp_id_telkomsel_block_2",
+        name="isp_id_telkomsel_block_baik_2",
         common_name="ID ISP Telkomsel Block",
-        pattern="""internetbaik.telkomsel.com/""",
+        pattern="""telkomsel|internet sehat|baik|internet baik""",
         location_found="body",
         source=[
             "https://www.telkomsel.com/en"
@@ -2379,7 +2379,8 @@ known_blocks = [
         confidence_no_fp=10,
         scope="isp",
         expected_countries=["ID"],
-        notes="Indonesian ISP Telkomsel block page. This is for the variant that does not use internetbaik.telkomsel.com subdomain.",
+        notes="Indonesian ISP Telkomsel block page. This is for the variant that does not use internetbaik.telkomsel.com subdomain. "
+              "Matches based on metacontent",
     ),
 
     SimpleBlockPagePattern(
