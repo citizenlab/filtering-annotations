@@ -2979,6 +2979,36 @@ known_blocks = [
     # INSTITUTIONAL BLOCKS
 
     SimpleBlockPagePattern(
+        name="inst_edu_id_telkomuniversity_forward",
+        common_name="ID Institutional Block - Telkom University",
+        pattern="""internet-sehat.telkomuniversity.ac.id""",
+        location_found="header",
+        source=[
+            "https://telkomuniversity.ac.id/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180315T084438Z_AS133357_LeDGv9wMP20hFNfN2nqsvJxL1vUKOFZ0grMlnMJXACYHkmPLNB?input=http://www.ifge.org",
+        confidence_no_fp=10,
+        scope="inst",
+        expected_countries=["ID"],
+        notes="Indonesian University owned by the largest telco. Has a seperate filtering system. This matches the 30x forward to the blockpage",
+    ),
+
+    SimpleBlockPagePattern(
+        name="inst_edu_id_telkomuniversity_block",
+        common_name="ID Institutional Block - Telkom University",
+        pattern="""<title>Internet Sehat Telkom University</title>""",
+        location_found="body",
+        source=[
+            "https://telkomuniversity.ac.id/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180315T084438Z_AS133357_LeDGv9wMP20hFNfN2nqsvJxL1vUKOFZ0grMlnMJXACYHkmPLNB?input=http://www.ifge.org",
+        confidence_no_fp=10,
+        scope="inst",
+        expected_countries=["ID"],
+        notes="Indonesian University owned by the largest telco. Has a seperate filtering system. This matches the actual blockpage",
+    ),
+
+    SimpleBlockPagePattern(
         name="inst_edu_taunton",
         common_name="Institutional Block - Taunton School",
         pattern="""Taunton School allow access to the following search engines""",
