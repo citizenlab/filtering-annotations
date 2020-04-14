@@ -582,7 +582,7 @@ known_dns_sigs = [
         scope="isp",
         expected_countries=["ID"],
         notes="""Indonesian ISP Telkom Uzone sehat blockpage. Mercusuar (lighthouse) is a branding of Telkomsel's Uzone
-    """
+        """
     ),
 
     SimpleDNSReplyPattern(
@@ -597,7 +597,7 @@ known_dns_sigs = [
         expected_countries=["ID"],
         notes="""Indonesian ISP Telkom blockpage. This is to match against the variant where Telkomsel DNS reply
         is to CNAME mypage.blocked.bltsel and this IP.
-"""
+        """
     ),
 
     SimpleDNSReplyPattern(

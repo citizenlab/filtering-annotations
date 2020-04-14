@@ -183,12 +183,27 @@ known_blocks = [
     SimpleBlockPagePattern(
         name="nat_id_trustpositif_block_2",
         common_name="ID TrustPositif Block",
-        pattern="""cdn.uzone.id/assets/internetpositif""",
+        pattern=""".uzone.id/assets/internetpositif""",
         location_found="body",
         source=[
             "https://trustpositif.kominfo.go.id/"
         ],
         exp_url="https://explorer.ooni.org/measurement/20170414T032645Z_AS17974_Qho7Y39z1oG2s1ylGbQvoFuQh8aDDnY2OwhXMVkqmyBPwQjmT5?input=http://www.bglad.com",
+        confidence_no_fp=10,
+        scope="nat",
+        expected_countries=["ID"],
+        notes="Trust/Internet Positif is a DNS blacklist distributed by the Telecom regulator in Indonesia as a part of the Internet Sehat program.",
+    ),
+
+    SimpleBlockPagePattern(
+        name="nat_id_trustpositif_block_3",
+        common_name="ID TrustPositif Block",
+        pattern="""positif.uzone.id""",
+        location_found="body",
+        source=[
+            "https://trustpositif.kominfo.go.id/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20171121T103829Z_AS17974_QgZkCjksBNucHe11XDLxKXIC3MTW32OamXngJCJrLaoouWNoEM?input=http://www.ifge.org",
         confidence_no_fp=10,
         scope="nat",
         expected_countries=["ID"],
