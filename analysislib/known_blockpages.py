@@ -150,17 +150,18 @@ known_blocks = [
     SimpleBlockPagePattern(
         name="nat_id_trustpositif_forward_2",
         common_name="ID TrustPositif Block",
-        pattern="""window.location.replace("http://internetpositif.uzone.id/page/""",
+        pattern="""window.location.replace("http://internetpositif.uzone.id/""",
         location_found="body",
         source=[
-            "https://trustpositif.kominfo.go.id/"
+            "https://trustpositif.kominfo.go.id/",
+            "https://explorer.ooni.org/measurement/20171025T095349Z_AS131709_vvCnDreaVjMN1MQ2imNyl4ynBG4EhIZRdWHJIBKgOexJSnaWcb?input=http://www.ifge.org"
         ],
         exp_url ="https://explorer.ooni.org/measurement/20180528T130640Z_AS7713_A2RVHOGPmVoYQ5U9Fe3WNCMkJcH7D2kCmPboBZDEfgt6XjE8OM?input=http://www.samesexmarriage.ca",
         confidence_no_fp=10,
         scope="nat",
         expected_countries=["ID"],
         notes="""Trust/Internet Positif is a DNS blacklist distributed by the Telecom regulator in Indonesia as a part of the Internet Sehat program
-        This catches the variant that does a window.replace in the data returned to get to the block page
+        This catches the variant that does a window.replace in the data returned to get to the block page.
         """,
     ),
 
