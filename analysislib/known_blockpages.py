@@ -2293,7 +2293,7 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
-        name="isp_id_indosatooredo_block",
+        name="isp_id_indosatooredo_block_1",
         common_name="ID ISP Indosat/Ooredo Block",
         pattern="""<title>Indosatooredoo Netsafe</title>""",
         location_found="body",
@@ -2305,6 +2305,22 @@ known_blocks = [
         scope="isp",
         expected_countries=["ID"],
         notes="Indonesian ISP Indosat/Ooredo block page.",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_id_indosatooredo_block_2",
+        common_name="ID ISP Indosat/Ooredo Block",
+        pattern="""<title>Netsafe IndosatM2</title>""",
+        location_found="body",
+        source=[
+            "https://indosatooredoo.com/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20170403T000118Z_AS4795_ZGyxgVEVzoRMZpL4QlHyPZtmJOwAO26NUv1Op3Vh6fCv7XIAW3?input=http://www.ifge.org",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["ID"],
+        notes="Indonesian ISP Indosat/Ooredo block page. This is a different title to match against compared to the _1 variant."
+              "I believe this is before they merged.",
     ),
 
     SimpleBlockPagePattern(
