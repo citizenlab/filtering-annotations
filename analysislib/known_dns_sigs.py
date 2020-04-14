@@ -667,6 +667,20 @@ known_dns_sigs = [
     ),
 
     SimpleDNSReplyPattern(
+        name="dns_isp_id_sehat_argon",
+        response="103.195.19.54",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20170501T123218Z_AS17974_TQovh9GvtBR3FlRa5IfIH19tSRfiGUgUzEnGoh5sgdLI1m0OgY?input=http://www.ifge.org",
+        source=[
+            "http://www.argon.id/"
+        ],
+        scope="isp",
+        expected_countries=["ID"],
+        notes="""Indonesian ISP Argon (Datacentre) blockpage
+        """
+    ),
+
+    SimpleDNSReplyPattern(
         name="dns_isp_id_sehat_sumberdata",
         response="103.10.120.3",
         confidence_no_fp=10,

@@ -2339,6 +2339,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_id_argon_block",
+        common_name="ID ISP Argon (Data Centre) Block",
+        pattern="""argon_files/stop.jpg""",
+        location_found="body",
+        source=[
+            "http://www.argon.id/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20170501T123218Z_AS17974_TQovh9GvtBR3FlRa5IfIH19tSRfiGUgUzEnGoh5sgdLI1m0OgY?input=http://www.ifge.org",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["ID"],
+        notes="Indonesian ISP Argon (Data Centre) Block",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_id_myrepublic_forward",
         common_name="ID ISP MyRepublic Block",
         pattern="""block.myrepublic.co.id""",
