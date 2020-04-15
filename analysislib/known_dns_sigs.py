@@ -587,7 +587,7 @@ known_dns_sigs = [
 
     SimpleDNSReplyPattern(
         name="dns_isp_id_sehat_telkom_bltsel",
-        response="114.121.254.4",
+        response="mypage.blocked.bltsel",
         confidence_no_fp=10,
         exp_url="https://explorer.ooni.org/measurement/20191114T004142Z_AS17974_zSo1qO4rG5Isd8Rr2WGTHYV4hwK9jeGkR201ACNu7np3CxXqOQ?input=http://ilga.org/",
         source=[
@@ -596,7 +596,7 @@ known_dns_sigs = [
         scope="isp",
         expected_countries=["ID"],
         notes="""Indonesian ISP Telkom blockpage. This is to match against the variant where Telkomsel DNS reply
-        is to CNAME mypage.blocked.bltsel and this IP.
+        to this CNAME and was on IP 114.121.254.4
         """
     ),
 
@@ -822,7 +822,7 @@ known_dns_sigs = [
 
     SimpleDNSReplyPattern(
         name="dns_isp_id_sehat_netsafeindosat_1",
-        response="124.81.92.132",
+        response="netsafe.indosatm2.com",
         confidence_no_fp=10,
         exp_url="https://explorer.ooni.org/measurement/20170330T110102Z_AS4795_yod1sqqu9NwrIBlJDfMepLmyAp3zVxQK5QG6Qqux11QuioLrYJ?input=https://www.gay.com/",
         source=[
@@ -830,7 +830,7 @@ known_dns_sigs = [
         ],
         scope="isp",
         expected_countries=["ID"],
-        notes="""Indonesian ISP Indosat Netsafe blockpage.  Note: Can probably also add a sig off of the intermediary CNAME here
+        notes="""Indonesian ISP Indosat Netsafe blockpage.  This is based off the CNAME record but was seen on IP 124.81.92.132
     """
     ),
 
@@ -878,7 +878,7 @@ known_dns_sigs = [
 
     SimpleDNSReplyPattern(
         name="dns_isp_id_sehat_firstmedia",
-        response="202.137.1.74",
+        response="internetpositif3.firstmedia.com",
         confidence_no_fp=10,
         exp_url="https://explorer.ooni.org/measurement/20190612T150505Z_AS23700_e7qsqPDY72QkdwPcDeUb5NkHxZ9HgpHOuU8p5oNFp5uW4BJAk7?input=https://www.shoe.org/",
         source=[
@@ -886,13 +886,13 @@ known_dns_sigs = [
         ],
         scope="isp",
         expected_countries=["ID"],
-        notes="""Indonesian ISP FirstMedia blockpage. NOTE: can probably track this by CNAME (internetpositif)
+        notes="""Indonesian ISP FirstMedia blockpage. Matches against a CNAME record IP was 202.137.1.74 when observed.
         """
     ),
 
     SimpleDNSReplyPattern(
         name="dns_isp_id_sehat_melsa",
-        response="202.138.224.15",
+        response="filter.melsa.net.id",
         confidence_no_fp=10,
         exp_url="https://explorer.ooni.org/measurement/20181006T114052Z_AS9657_yU1pa9b0I0vRzcBU5OsWOV6phrI2FBxQosem0mJRQdKZupCPkE?input=http://www.bglad.com",
         source=[
@@ -900,13 +900,13 @@ known_dns_sigs = [
         ],
         scope="isp",
         expected_countries=["ID"],
-        notes="""Indonesian ISP Melsa blockpage. Note: can probably track this by CNAME (filter.melsa.id)
+        notes="""Indonesian ISP Melsa blockpage. Matches the CNAME record IP was 202.138.224.15
         """
     ),
 
     SimpleDNSReplyPattern(
         name="dns_isp_id_sehat_ptcentrin",
-        response="202.146.255.7",
+        response="block.centrin.net.id",
         confidence_no_fp=10,
         exp_url="https://explorer.ooni.org/measurement/20190314T214950Z_AS17658_kybYxwcXIxWZYnX32z36B1ZprSLxFT3WpxY0g7sfuy0Uy7MLAo?input=https://www.ilga-europe.org/",
         source=[
@@ -914,7 +914,7 @@ known_dns_sigs = [
         ],
         scope="isp",
         expected_countries=["ID"],
-        notes="""Indonesian ISP PT Centrin Online blockpage. Note: Can probably also track this by CNAME
+        notes="""Indonesian ISP PT Centrin Online blockpage. Matches the CNAME record, the IP was 202.146.255.7
         """
     ),
 
@@ -976,7 +976,7 @@ known_dns_sigs = [
 
     SimpleDNSReplyPattern(
         name="dns_isp_id_sehat_iforte",
-        response="202.51.96.7",
+        response="trustpositif.iforte.net.id",
         confidence_no_fp=10,
         exp_url="https://explorer.ooni.org/measurement/20190924T072134Z_AS17995_Seinciq0527hnzfIuN4ZQvKYqy8NKBKGHK9vt01KkY79iofutj?input=http://www.gayhealth.com/",
         source=[
@@ -984,7 +984,7 @@ known_dns_sigs = [
         ],
         scope="isp",
         expected_countries=["ID"],
-        notes="""Indonesian ISP iForte blockpage. Note: Can probably track this by CNAME (trustpositif)
+        notes="""Indonesian ISP iForte blockpage. Matches a CNAME record IP was 202.51.96.7
         """
     ),
 
@@ -1085,7 +1085,7 @@ known_dns_sigs = [
         ],
         scope="isp",
         expected_countries=["ID"],
-        notes="""Indonesian ISP Icon Comnets+ blockpage. Note: Can probably track via CNAME
+        notes="""Indonesian ISP Icon Comnets+ blockpage.
         """
     ),
 
@@ -1195,6 +1195,23 @@ known_dns_sigs = [
         A poisoned DNS reply used in Turkey since 2014
         """
     ),
+
+    SimpleDNSReplyPattern(
+        name="dns_nat_id_trustpositif",
+        response="trustpositif.kominfo.go.id",
+        confidence_no_fp=10,
+        exp_url="",
+        source=[
+            ""
+        ],
+        scope="nat",
+        expected_countries=["ID"],
+        notes="""
+        Matches a CNAME record of the official Indonesidan filter TrustPositif
+        """
+    ),
+
+#
 
     #########
     # IRAN RELATED NATIONAL RESPONSES
