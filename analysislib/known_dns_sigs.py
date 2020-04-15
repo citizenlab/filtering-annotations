@@ -36,6 +36,21 @@ known_dns_sigs = [
         """
     ),
 
+    SimpleDNSReplyPattern(
+        name="dns_br_1234",
+        response="1.2.3.4",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20190612T013439Z_AS17974_XnyS9G0FWELa7uamYqu2zGxaYOQVrFFvlb9KmzbXlChVfY76uV?input=https://www.scruff.com/",
+        source=[
+
+        ],
+        scope="br",
+        expected_countries=[],
+        notes="""
+        An A record with a 1.2.3.4 reply, this is a common false response to restrict access.
+        """
+    ),
+
     #########
     # PRODUCT SCOPED RESPONSES
     #########
