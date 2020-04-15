@@ -1162,7 +1162,7 @@ known_dns_sigs = [
 
     SimpleDNSReplyPattern(
         name="dns_isp_id_sehat_mncplay",
-        response="110.50.83.31",
+        response="internetpositif.mncplaymedia.com",
         confidence_no_fp=10,
         exp_url="https://explorer.ooni.org/measurement/20180727T095622Z_AS17670_ryQ3v3ZDI2X8YI7FKTxeG9L5PEmgc0Z5N3bDIU7uusFaaIcuql?input=http://www.bglad.com",
         source=[
@@ -1170,7 +1170,7 @@ known_dns_sigs = [
         ],
         scope="isp",
         expected_countries=["ID"],
-        notes="""Indonesian ISP MNC Play Media blockpage"""
+        notes="""Indonesian ISP MNC Play Media blockpage. Based on CNAME record although the IP address was 110.50.83.31 when seen."""
     ),
 
     #########
