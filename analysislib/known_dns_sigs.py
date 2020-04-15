@@ -601,7 +601,7 @@ known_dns_sigs = [
     ),
 
     SimpleDNSReplyPattern(
-        name="dns_isp_id_sehat_telkom_bltsel",
+        name="dns_isp_id_sehat_telkom_bltsel_cname",
         response="mypage.blocked.bltsel",
         confidence_no_fp=10,
         exp_url="https://explorer.ooni.org/measurement/20191114T004142Z_AS17974_zSo1qO4rG5Isd8Rr2WGTHYV4hwK9jeGkR201ACNu7np3CxXqOQ?input=http://ilga.org/",
@@ -613,6 +613,21 @@ known_dns_sigs = [
         notes="""Indonesian ISP Telkom blockpage. This is to match against the variant where Telkomsel DNS reply
         to this CNAME and was on IP 114.121.254.4
         """
+    ),
+
+    SimpleDNSReplyPattern(
+        name="dns_isp_id_sehat_telkom_bltsel_ip",
+        response="114.121.254.4",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20191114T004142Z_AS17974_zSo1qO4rG5Isd8Rr2WGTHYV4hwK9jeGkR201ACNu7np3CxXqOQ?input=http://ilga.org/",
+        source=[
+            "https://uzone.id/"
+        ],
+        scope="isp",
+        expected_countries=["ID"],
+        notes="""Indonesian ISP Telkom blockpage. This is to match against the variant where Telkomsel DNS reply
+    to CNAME mypage.blocked.bltsel and IP 114.121.254.4
+    """
     ),
 
     SimpleDNSReplyPattern(
