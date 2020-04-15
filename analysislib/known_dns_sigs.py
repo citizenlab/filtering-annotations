@@ -601,6 +601,21 @@ known_dns_sigs = [
     ),
 
     SimpleDNSReplyPattern(
+        name="dns_isp_id_sehat_xl_block",
+        response="blockpage.xl.co.id",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20180324T031959Z_AS24203_oRMW0HPO6Z2u3lkA8d4uROtqX2fuKU6XH8ARB0JtGanxPSHX3L?input=https://www.scruff.com/",
+        source=[
+            "https://www.xl.co.id/id"
+        ],
+        scope="isp",
+        expected_countries=["ID"],
+        notes="""
+        Indonesian ISP XL blockpage. This is to match against the CNAME IP was 112.215.197.131
+        """
+    ),
+
+    SimpleDNSReplyPattern(
         name="dns_isp_id_sehat_crypto_negatif",
         response="202.52.141.98",
         confidence_no_fp=10,
