@@ -632,6 +632,20 @@ known_dns_sigs = [
     ),
 
     SimpleDNSReplyPattern(
+        name="dns_isp_id_sehat_tri_blockpage",
+        response="180.214.232.61",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20170307T194134Z_AS45727_gEN976jgNQgOx6CuLiiYDb2flPY8CpNtRPcnrHTwjggcats4At?input=http://www.gay.com",
+        source=[
+            "https://tri.co.id/"
+        ],
+        scope="isp",
+        expected_countries=["ID"],
+        notes="""Indonesian ISP Tri sehat blockpage.
+        """
+    ),
+
+    SimpleDNSReplyPattern(
         name="dns_isp_id_sehat_cbn_block",
         response="internetsehataman.cbn.net.id",
         confidence_no_fp=10,
