@@ -1176,6 +1176,19 @@ known_dns_sigs = [
     ),
 
     SimpleDNSReplyPattern(
+        name="dns_isp_id_sehat_gmedia",
+        response="xblock.gmedia.net.id",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20190301T020519Z_AS55666_zcD5kLAL3QHZypge7Kppqp2ysd5p76afVPmvC7XlZ8zol52iEl?input=http://ilga.org/",
+        source=[
+            "https://gmedia.net.id/"
+        ],
+        scope="isp",
+        expected_countries=["ID"],
+        notes="""Indonesian ISP GMedia blockpage. Matches CNAME record with an IP of 49.128.177.13 when observed."""
+    ),
+
+    SimpleDNSReplyPattern(
         name="dns_isp_id_sehat_mncplay",
         response="internetpositif.mncplaymedia.com",
         confidence_no_fp=10,
