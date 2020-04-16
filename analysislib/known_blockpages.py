@@ -2158,7 +2158,7 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
-        name="isp_id_fastnet_sehat_blockpage",
+        name="isp_id_fastnet_sehat_blockpage_1",
         common_name="ID ISP First Media Fastnet Blockpage",
         pattern="""internetsehatdanamanfastnet.html""",
         location_found="body",
@@ -2170,6 +2170,21 @@ known_blocks = [
         scope="isp",
         expected_countries=["ID"],
         notes="Indonesian ISP First Media Fastnet block page.",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_id_fastnet_sehat_blockpage_2",
+        common_name="ID ISP First Media Fastnet Blockpage",
+        pattern="""var pname='internet-sehat';""",
+        location_found="body",
+        source=[
+            "https://www.firstmedia.com/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20191124T035958Z_AS23700_qdrRmnIMyFi0rfhj3OnrSb94TDyu7uRcw9vRTM1mjghyJGnAJW?input=http://ilga.org/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["ID"],
+        notes="Indonesian ISP First Media Fastnet block page. This is a variant based on a different pattern in js",
     ),
 
     SimpleBlockPagePattern(
