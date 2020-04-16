@@ -1201,6 +1201,21 @@ known_dns_sigs = [
         notes="""Indonesian ISP MNC Play Media blockpage. Based on CNAME record although the IP address was 110.50.83.31 when seen."""
     ),
 
+    SimpleDNSReplyPattern(
+        name="dns_inst_id_sehat_telkomuniversity",
+        response="dnssehat.telkomuniversity.ac.id",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20180315T084438Z_AS133357_LeDGv9wMP20hFNfN2nqsvJxL1vUKOFZ0grMlnMJXACYHkmPLNB?input=http://transsexual.org",
+        source=[
+            "https://telkomuniversity.ac.id/"
+        ],
+        scope="isp",
+        expected_countries=["ID"],
+        notes="""Indonesian University, owned by PT Telekom, but has a seperate filtering system"""
+    ),
+
+    #
+
     #########
     # NATIONAL-SCOPED RESPONSES
     #########
