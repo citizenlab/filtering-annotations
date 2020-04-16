@@ -2188,6 +2188,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_id_gmedia_xblock_blockpage",
+        common_name="ID ISP First Media Fastnet Blockpage",
+        pattern="""xblock.gmedia.net.id""",
+        location_found="body",
+        source=[
+            "https://gmedia.net.id/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20190301T020519Z_AS55666_zcD5kLAL3QHZypge7Kppqp2ysd5p76afVPmvC7XlZ8zol52iEl?input=http://ilga.org/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["ID"],
+        notes="Indonesian ISP GMedia blockpage. ",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_id_crypto_negatifkonten_blockpage",
         common_name="ID ISP Crypto Blockpage",
         pattern="""http://crypto.net.id/images/crypto_emblem.png""",
