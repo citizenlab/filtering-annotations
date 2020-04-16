@@ -2158,6 +2158,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_id_cbn_sehat_blockpage",
+        common_name="ID ISP CBN Fibre Blockpage",
+        pattern="""please contact our Customer Care at 1500 780 or email us at""",
+        location_found="body",
+        source=[
+            "https://cbn.id/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20190420T092536Z_AS135478_mLOlXUu4n0QwTV10X6nqZYFwh9aQga4i4fPo9fMomwk2IMV6Le?input=http://transsexual.org/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["ID"],
+        notes="Indonesian ISP CBN Fibre Blockpage. Matching on the Phone number, was worried that title would be too broad here.",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_id_fastnet_sehat_blockpage_1",
         common_name="ID ISP First Media Fastnet Blockpage",
         pattern="""internetsehatdanamanfastnet.html""",

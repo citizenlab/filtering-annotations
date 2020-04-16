@@ -626,9 +626,23 @@ known_dns_sigs = [
         scope="isp",
         expected_countries=["ID"],
         notes="""Indonesian ISP Telkom blockpage. This is to match against the variant where Telkomsel DNS reply
-    to CNAME mypage.blocked.bltsel and IP 114.121.254.4
-    """
+        to CNAME mypage.blocked.bltsel and IP 114.121.254.4
+        """
     ),
+
+    SimpleDNSReplyPattern(
+        name="dns_isp_id_sehat_cbn_block",
+        response="internetsehataman.cbn.net.id",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20190420T092536Z_AS135478_mLOlXUu4n0QwTV10X6nqZYFwh9aQga4i4fPo9fMomwk2IMV6Le?input=http://transsexual.org/",
+        source=[
+            "https://cbn.id/"
+        ],
+        scope="isp",
+        expected_countries=["ID"],
+        notes="""Indonesian ISP CBN"""
+    ),
+
 
     SimpleDNSReplyPattern(
         name="dns_isp_id_sehat_xl_block",
