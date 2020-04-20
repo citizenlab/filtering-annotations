@@ -2173,6 +2173,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_id_bolt_sehat_blockpage",
+        common_name="ID ISP Bolt! Blockpage",
+        pattern="""UA-4293319-7""",
+        location_found="body",
+        source=[
+            "https://www.bolt.id/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20170213T013637Z_AS4832_Y8ct5af944VzPhrMoeoll3Ap7MtHL97R2JBO0lEHto45vPYwFQ?input=http://www.gayscape.com",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["ID"],
+        notes="Indonesian ISP Bolt! Blockpage. Matching on the analytics tracker ID the blockpage used in 2017.",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_id_fastnet_sehat_blockpage_1",
         common_name="ID ISP First Media Fastnet Blockpage",
         pattern="""internetsehatdanamanfastnet.html""",

@@ -646,6 +646,19 @@ known_dns_sigs = [
     ),
 
     SimpleDNSReplyPattern(
+        name="dns_isp_id_sehat_bolt_block",
+        response="202.62.29.1",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20170213T013637Z_AS4832_Y8ct5af944VzPhrMoeoll3Ap7MtHL97R2JBO0lEHto45vPYwFQ?input=http://www.gayscape.com",
+        source=[
+            "https://www.bolt.id/"
+        ],
+        scope="isp",
+        expected_countries=["ID"],
+        notes="""Indonesian ISP Bolt"""
+    ),
+
+    SimpleDNSReplyPattern(
         name="dns_isp_id_sehat_cbn_block",
         response="internetsehataman.cbn.net.id",
         confidence_no_fp=10,
