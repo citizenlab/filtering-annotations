@@ -363,6 +363,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="prod_nawala",
+        common_name="Nawala",
+        pattern="UA-36449470-1",
+        location_found="body",
+        source=[
+            "https://nawala.id/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20170214T023529Z_AS17974_1hVbJGBPLdOsxQvNgIawwvABxfZuLNeVK5VaY1XWajguEt0yK3?input=http://www.lesbian.org",
+        confidence_no_fp=10,
+        scope="prod",
+        expected_countries=["ID"],
+        notes="DNS filtering blacklist promoted by government of Indonesia. This is for the blockpage and matches on analytics code used.",
+    ),
+
+    SimpleBlockPagePattern(
         name="prod_netsweeper_inject",
         common_name="Netsweeper",
         pattern="?dpid=",
