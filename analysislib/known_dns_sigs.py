@@ -659,6 +659,19 @@ known_dns_sigs = [
     ),
 
     SimpleDNSReplyPattern(
+        name="dns_isp_id_sehat_myrepublic_block",
+        response="103.47.132.195",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20170916T151028Z_AS63859_OMzXkgk31oMZMCyxyswHDc9s7PcHYUDMAm8BEsKSmcioamnK0f?input=http://www.gayscape.com",
+        source=[
+            "https://myrepublic.co.id/"
+        ],
+        scope="isp",
+        expected_countries=["ID"],
+        notes="""Indonesian ISP My Republic"""
+    ),
+
+    SimpleDNSReplyPattern(
         name="dns_isp_id_sehat_cbn_block",
         response="internetsehataman.cbn.net.id",
         confidence_no_fp=10,
