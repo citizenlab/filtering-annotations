@@ -1256,7 +1256,18 @@ known_dns_sigs = [
         notes="""Indonesian ISP GMedia blockpage. Matches cases where IP is used instead of CNAME."""
     ),
 
-
+    SimpleDNSReplyPattern(
+        name="dns_isp_id_sehat_smartfren",
+        response="internetsehat.smartfren.com",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20191225T231001Z_AS18004_hA8xsVHcbUOLZLKxI8kAQ2GV3yzQ8TpDNqUpHA1Sm3Mdb3yYVB?input=http://www.samesexmarriage.ca/",
+        source=[
+            "https://www.smartfren.com/"
+        ],
+        scope="isp",
+        expected_countries=["ID"],
+        notes="""Indonesian ISP Smartfren blockpage."""
+    ),
 
     SimpleDNSReplyPattern(
         name="dns_isp_id_sehat_mncplay",
