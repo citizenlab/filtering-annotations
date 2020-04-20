@@ -210,6 +210,23 @@ known_blocks = [
         notes="Trust/Internet Positif is a DNS blacklist distributed by the Telecom regulator in Indonesia as a part of the Internet Sehat program.",
     ),
 
+    #
+    SimpleBlockPagePattern(
+        name="nat_id_trustpositif_block_4",
+        common_name="ID TrustPositif Block",
+        pattern="""UA-16251743-3""",
+        location_found="body",
+        source=[
+            "https://trustpositif.kominfo.go.id/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20181005T025940Z_AS0_j9Q9C7qnBZAdAtoiStJMgBFCSjmGxSNkXU6UNjfx2xeIxoIVtd?input=http://www.gayscape.com",
+        confidence_no_fp=10,
+        scope="nat",
+        expected_countries=["ID"],
+        notes="""Trust/Internet Positif is a DNS blacklist distributed by the Telecom regulator in Indonesia as a part of the Internet Sehat program.
+        This is based on the analytics code used on the page as observed in 2018.""",
+    ),
+
     SimpleBlockPagePattern(
         name="nat_qa_block_forward_accessurl",
         common_name="National Qatari Blockpage",
