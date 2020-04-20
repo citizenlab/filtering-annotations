@@ -210,7 +210,6 @@ known_blocks = [
         notes="Trust/Internet Positif is a DNS blacklist distributed by the Telecom regulator in Indonesia as a part of the Internet Sehat program.",
     ),
 
-    #
     SimpleBlockPagePattern(
         name="nat_id_trustpositif_block_4",
         common_name="ID TrustPositif Block",
@@ -225,6 +224,21 @@ known_blocks = [
         expected_countries=["ID"],
         notes="""Trust/Internet Positif is a DNS blacklist distributed by the Telecom regulator in Indonesia as a part of the Internet Sehat program.
         This is based on the analytics code used on the page as observed in 2018.""",
+    ),
+
+    SimpleBlockPagePattern(
+        name="nat_id_idnic_block",
+        common_name="ID NIC Block",
+        pattern="""di.og.ofnimok@netnoknauda""",
+        location_found="body",
+        source=[
+            "https://www.idnic.id/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200130T121354Z_AS18103_6roxhkcpVP4ML3VyjL75G28deYvsJgocbDyeV8Ud6WBHAFTwy4?input=http://www.grindr.com/",
+        confidence_no_fp=10,
+        scope="nat",
+        expected_countries=["ID"],
+        notes="""Indonesian NIC block. Based on weird localnet email used in the HTML.""",
     ),
 
     SimpleBlockPagePattern(
