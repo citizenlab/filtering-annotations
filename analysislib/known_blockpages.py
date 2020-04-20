@@ -227,6 +227,22 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="nat_id_trustpositif_block_5",
+        common_name="ID TrustPositif Block",
+        pattern="""This page is blocked by <a href=http://trustpositif.kominfo.go.id""",
+        location_found="body",
+        source=[
+            "https://trustpositif.kominfo.go.id/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20190314T214950Z_AS17658_kybYxwcXIxWZYnX32z36B1ZprSLxFT3WpxY0g7sfuy0Uy7MLAo?input=http://www.samesexmarriage.ca/",
+        confidence_no_fp=10,
+        scope="nat",
+        expected_countries=["ID"],
+        notes="""Trust/Internet Positif is a DNS blacklist distributed by the Telecom regulator in Indonesia as a part of the Internet Sehat program.
+        This is based on the block message.""",
+    ),
+
+    SimpleBlockPagePattern(
         name="nat_id_idnic_block",
         common_name="ID NIC Block",
         pattern="""di.og.ofnimok@netnoknauda""",
