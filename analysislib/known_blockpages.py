@@ -1111,12 +1111,12 @@ known_blocks = [
     # ISP Level Blockpage Patterns
 
     SimpleBlockPagePattern(
-        name="isp_ae_du_surfsafely_forward",
+        name="isp_ae_du_surfsafely_forward_1",
         common_name="UAE ISP du Block",
         pattern="""index2.php?ucat=""",
         location_found="header",
         source=[
-            ""
+            "https://www.du.ae/personal"
         ],
         exp_url ="https://explorer.ooni.org/measurement/20191118T063541Z_AS15802_ocKS0RbSg8GE1oLahQKYeAozvsxM3HglG8f3xMRkrWVOd4ajtN?input=http://gayguide.net/",
         confidence_no_fp=8,
@@ -1126,18 +1126,48 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
-        name="isp_ae_du_surfsafely_block",
+        name="isp_ae_du_surfsafely_forward_2",
+        common_name="UAE ISP du Block",
+        pattern="""lighthouse.du.ae""",
+        location_found="header",
+        source=[
+            "https://www.du.ae/personal"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20171105T032733Z_AS15802_HaY0S8nTvD8xcK50zBOzcdDFCLiqhjVRFAFhPnUowVNv582Tp6?input=http://amygoodloe.com/lesbian-dot-org/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["AE"],
+        notes="UAE ISP Du Surf Safely does an intermediate forward to Location: http://lighthouse.du.ae?dpid=X&dpruleid=X&cat=X&dplanguage=-&url=X (netsweeper)",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ae_du_surfsafely_block_1",
         common_name="UAE ISP du Block",
         pattern="""lighthouse.du.ae""",
         location_found="body",
         source=[
-            ""
+            "https://www.du.ae/personal"
         ],
         exp_url ="https://explorer.ooni.org/measurement/20200127T092537Z_AS15802_GvFE8kAEn7C40Sq0vlu5OUmUxAP89DajF7LRzqs51Bl8eztjip?input=http://www.gayscape.com/",
         confidence_no_fp=10,
         scope="isp",
         expected_countries=["AE"],
-        notes="UAE ISP Du Surf Safely Blockpage",
+        notes="UAE ISP Du Surf Safely Blockpage matches on lighthouse domain used in body",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ae_du_surfsafely_block_2",
+        common_name="UAE ISP du Block",
+        pattern="""UA-102574946-1""",
+        location_found="body",
+        source=[
+            "https://www.du.ae/personal"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20171105T032733Z_AS15802_HaY0S8nTvD8xcK50zBOzcdDFCLiqhjVRFAFhPnUowVNv582Tp6?input=http://amygoodloe.com/lesbian-dot-org/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["AE"],
+        notes="UAE ISP Du Surf Safely Blockpage matches on analytics code used in blockpage.",
     ),
 
     SimpleBlockPagePattern(
