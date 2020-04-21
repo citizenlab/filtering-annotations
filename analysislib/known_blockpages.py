@@ -3131,6 +3131,36 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="inst_edu_my_uitm_captiveportal_forward",
+        common_name="ID Institutional Block - Univesiti Teknologi Mara",
+        pattern="""https://wifi.uitm.edu.my""",
+        location_found="header",
+        source=[
+            "https://uitm.edu.my/index.php/en/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20190829T162515Z_AS24020_0ezmhWkibgyIWMDFfSZmCMhLKQewB5r6nwsf53v7OqCbAMyKRi?input=http://gaytoday.com/",
+        confidence_no_fp=10,
+        scope="inst",
+        expected_countries=["MY"],
+        notes="Malaysian University captive portal",
+    ),
+
+    SimpleBlockPagePattern(
+        name="inst_edu_my_uitm_captiveportal_login",
+        common_name="ID Institutional Block - Univesiti Teknologi Mara",
+        pattern="""https://wifi.uitm.edu.my""",
+        location_found="body",
+        source=[
+            "https://uitm.edu.my/index.php/en/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20190829T162515Z_AS24020_0ezmhWkibgyIWMDFfSZmCMhLKQewB5r6nwsf53v7OqCbAMyKRi?input=http://gaytoday.com/",
+        confidence_no_fp=10,
+        scope="inst",
+        expected_countries=["MY"],
+        notes="Malaysian University captive portal",
+    ),
+
+    SimpleBlockPagePattern(
         name="inst_edu_taunton",
         common_name="Institutional Block - Taunton School",
         pattern="""Taunton School allow access to the following search engines""",
