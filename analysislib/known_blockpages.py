@@ -3161,6 +3161,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="inst_edu_sa_kacst_blockpage",
+        common_name="SA Institutional Block - King Abdul Aziz City for Science and Technology",
+        pattern="""://blocking-web-server.isu.net.sa/""",
+        location_found="body",
+        source=[
+            "https://www.kacst.edu.sa/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180711T082508Z_AS15505_oTsIWsdnymUNFDsNnrCRIBb7hKzhU2GzmYv04oZvlUwQ2TicqG?input=http://gaytoday.com",
+        confidence_no_fp=10,
+        scope="inst",
+        expected_countries=["SA"],
+        notes="Saudi Center for Technology and Research blockpage",
+    ),
+
+    SimpleBlockPagePattern(
         name="inst_edu_taunton",
         common_name="Institutional Block - Taunton School",
         pattern="""Taunton School allow access to the following search engines""",
