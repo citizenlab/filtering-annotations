@@ -1306,6 +1306,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_rostelcom_warning_block",
+        common_name="RU ISP Rostelecom Block",
+        pattern="""://mc.yandex.ru/watch/38740850""",
+        location_found="body",
+        source=[
+            ""
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200205T210511Z_AS12389_m0Vr9g5NgqSChZXnMdMOyFNWZj3AmUrKMZz26Y8KAwG3eiliaO?input=http://bluesystem.info/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Blockpage on Rostelcom. Matches on the Yandex Metrika Tracker ID",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_rostelcom_block_forward",
         common_name="RU ISP Rostelecom Block",
         pattern="""http://block.rt.ru""",
