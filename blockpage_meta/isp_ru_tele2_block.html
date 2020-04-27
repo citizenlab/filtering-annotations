@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Ресурс заблокирован</title>
+	<meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<style>
+		* {
+			padding: 0px;
+			margin: 0px;
+			border:none;
+		}
+		body, html  {
+			background-color: #FFF;
+			height: 100%;
+			-webkit-overflow-scrolling : touch !important;
+			overflow: auto !important;
+		}
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 20px;
+			font-weight: normal;
+			color:#777;
+			position: relative;
+		}
+		body * {
+			max-height: 1000000em;
+			-moz-text-size-adjust: none;
+		}
+		#cust {
+			min-height:50%;
+			height:50%;
+			overflow: auto;
+			-webkit-overflow-scrolling: touch;
+			position: relative;
+		}
+		#rule {
+			min-height: 50%;
+			height:50%;
+			font-size: 0px;
+			max-height: none;
+		}
+
+		#rtxt {
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 14px;
+			text-align: center;
+			padding: 0px 10px;
+			font-size: 20px;
+			line-height: 20px;
+		}
+		#rth {
+			display: inline-block;
+			height: 100%;
+			vertical-align: middle;
+			max-height: none;
+		}
+
+		#ctxt {
+			width: 100%;
+			padding: 3px 0px 2px;
+			line-height: 13px;
+			font-size: 13px;
+			text-align: center;
+		}
+
+		#cfw {
+			position: absolute;
+			top:0px;
+			left:0px;
+			right:0px;
+			bottom:0px;
+			min-height: 200px;
+			margin: 0px auto;
+		}
+
+		#cframe {
+			width:100%;
+			height: 100%;
+			overflow: hidden;
+			display:block;
+		}
+
+		@media (orientation:landscape) and (max-height: 500px) {
+			#cust {
+				width:50%;
+				min-height: 100%;
+				height: 100%;
+				float: left;
+			}
+			#rule {
+				width:50%;
+				min-height: 100%;
+				height: 100%;
+				float: left;
+			}
+			#rtxt {
+				padding: 0px 10px;
+			}
+		}
+
+		@media (orientation:landscape) and (max-height: 500px) and (max-width: 600px) {
+			#rtxt {
+				padding: 0px 5px;
+			}
+		}
+
+	@media (orientation: landscape) and (max-height: 300px),
+	(orientation: landscape) and (max-width: 750px),
+	(orientation: portrait) and (max-height: 700px) {
+		#rtxt {
+			font-size: 16px;
+		}
+	}
+	@media (orientation: landscape) and (max-height: 280px),
+	(orientation: landscape) and (max-width: 630px) {
+		#rtxt {
+			font-size: 14px;
+		}
+	}
+	@media (orientation: landscape) and (max-height: 250px) {
+		#rtxt {
+			font-size: 13px;
+		}
+	}
+
+
+	</style>
+</head>
+<body>
+	<div id="cust">
+		<div id="ctxt" style="display:none;">Предлагаем доступ к ресурсу с другой тематикой</div>
+		<div id="cfw">
+
+		</div>
+	</div>
+    <script type="text/javascript">
+        (function(w){
+        	var l = function() {
+            	var n = document.getElementsByTagName("script")[0],
+            	s = document.createElement("script"),
+            	ins = function () { n.parentNode.insertBefore(s, n); };
+            	s.type = "text/javascript";
+            	s.async = true;
+            	s.src = "//t2rkn.com/?tnew2";
+            	ins();
+            };
+            l();
+        })(window);
+    </script>
+	<div id="rule"><p id="rtxt">Доступ к&nbsp;информационному ресурсу ограничен на&nbsp;основании Федерального закона от&nbsp;27&nbsp;июля&nbsp;2006&nbsp;г. №&nbsp;149-ФЗ «Об&nbsp;информации, информационных технологиях и&nbsp;о&nbsp;защите&nbsp;информации».</p><span id="rth"></span></div>
+</body>
+
+<script>
+
+	try {
+		function st() {
+			if (/(iPod|iPhone|iPad)/i.test(navigator.userAgent)) {
+				var h = document.documentElement.clientHeight;
+				var w = document.documentElement.clientWidth;
+				if (h<500 && w>h) {
+					document.body.style.paddingBottom="1px";
+				} else {
+					document.body.style.paddingBottom="0px";
+				}
+
+				if (document.body.scrollHeight >= window.innerHeight) {
+					document.body.style.height = (window.innerHeight) + 'px';
+					document.body.style.maxHeight = (window.innerHeight) + 'px';
+				}
+
+				setTimeout(function(){
+					window.scrollTo(0, 0);
+				}, 0);
+
+			}
+		}
+
+		window.addEventListener( "load",function() { st(); });
+		window.addEventListener( "resize",function() { st(); });
+		window.addEventListener( "orientationchange",function() { st(); });
+		window.addEventListener( "touchstart",function() { st(); });
+
+	} catch(e) {
+	  console.log(e.name + ": " + e.message);
+	}
+
+
+</script>
+</html>

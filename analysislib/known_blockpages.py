@@ -1336,6 +1336,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_tele2_block",
+        common_name="RU ISP Tele2 Block",
+        pattern="""//t2rkn.com/?""",
+        location_found="body",
+        source=[
+            "http://tele2.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200130T202021Z_AS12958_HjHGx4wo3WtUxuoElLzjhlNMmEucNTEIftGkafEqn6Ypg9UKDl?input=http://bluesystem.info/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="RU ISP Tele2 Block page based off the custome RKN domain they use and embed in the blockpage.",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_ttk_fz139_forward",
         common_name="RU ISP TTK Block",
         pattern="""http://fz139.ttk.ru""",
