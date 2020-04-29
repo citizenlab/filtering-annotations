@@ -1901,6 +1901,22 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_megafon_block_with_ad",
+        common_name="RU ISP Megafon Block",
+        pattern="""href="rkn">Отменить</a>""",
+        location_found="body",
+        source=[
+            "https://megafonpro.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20191213T100614Z_AS25159_ZHdmlcy3Gqv7zZKgNCUHU7kdmIRP9wsQ0xnBiRrEo5SUs0O5Zj?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""Russian ISP Megafon Block Page, this is a variant that has an ad banner above but this matches on the lower
+        RKN related block HTML.""",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_obit_forward",
         common_name="RU ISP Obit Block",
         pattern="""notice.obit.ru/censored""",
