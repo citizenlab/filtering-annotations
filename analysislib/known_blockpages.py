@@ -1864,6 +1864,42 @@ known_blocks = [
               it is a clear block page given the name and urls seen.""",
     ),
 
+    # header: http://sv-en.ru/block.php
+
+    SimpleBlockPagePattern(
+        name="isp_ru_svyazenergo_forward",
+        common_name="RU ISP Svyaz Energo Block",
+        pattern="""http://sv-en.ru/block.php""",
+        location_found="header",
+        source=[
+            "http://sv-en.ru"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180318T095622Z_AS50477_cLI1EK0sH5N5MEKzozCK1pZPygYAOWsfjxXhRB1BBIRGGDMk5J?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""Russian ISP Svyaz Energo Block Page, a business focused ISP
+        """,
+    ),
+
+    # body: http://www.sv-en.ru/block
+
+    SimpleBlockPagePattern(
+        name="isp_ru_svyazenergo_block",
+        common_name="RU ISP Svyaz Energo Block",
+        pattern="""http://www.sv-en.ru/block""",
+        location_found="body",
+        source=[
+            "http://sv-en.ru"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180318T095622Z_AS50477_cLI1EK0sH5N5MEKzozCK1pZPygYAOWsfjxXhRB1BBIRGGDMk5J?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""Russian ISP Svyaz Energo Block Page, a business focused ISP
+    """,
+    ),
+
     SimpleBlockPagePattern(
         name="isp_ru_megafon_forward",
         common_name="RU ISP Megafon Block",
