@@ -1291,6 +1291,37 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_rinet_forward",
+        common_name="RU ISP RiNet Block",
+        pattern="""http://rinet.ru/blocked/index.html""",
+        location_found="header",
+        source=[
+            ""
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180317T143113Z_AS8331_FwDwX6bHEgagwbGdtlaTJABMU3WwQXJOAJxLRoyvMIVnD8BPve?input=http://bluesystem.ru/",
+        confidence_no_fp=7,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP RiNets RKN blockpage forward",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_rinet_block",
+        common_name="RU ISP RiNet Block",
+        pattern="""http://rinet.ru/blocked/blocked_bg.png""",
+        location_found="body",
+        source=[
+            ""
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180317T143113Z_AS8331_FwDwX6bHEgagwbGdtlaTJABMU3WwQXJOAJxLRoyvMIVnD8BPve?input=http://bluesystem.ru/",
+        confidence_no_fp=7,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP RiNets RKN blockpage forward",
+    ),
+
+
+    SimpleBlockPagePattern(
         name="isp_ru_rostelcom_warning_forward",
         common_name="RU ISP Rostelecom Block",
         pattern="""http://warning.rt.ru""",
