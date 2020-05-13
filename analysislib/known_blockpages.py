@@ -1306,7 +1306,7 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
-        name="isp_ru_rostelcom_warning_block",
+        name="isp_ru_rostelcom_warning_block_1",
         common_name="RU ISP Rostelecom Block",
         pattern="""://mc.yandex.ru/watch/38740850""",
         location_found="body",
@@ -1318,6 +1318,21 @@ known_blocks = [
         scope="isp",
         expected_countries=["RU"],
         notes="Blockpage on Rostelcom. Matches on the Yandex Metrika Tracker ID",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_rostelcom_warning_block_2",
+        common_name="RU ISP Rostelecom Block",
+        pattern="""://mc.yandex.ru/watch/25730126""",
+        location_found="body",
+        source=[
+            ""
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180318T035416Z_AS8439_0e87NdF0Qx0Wh4gEH25KPSg32sz71XjM6vbRebSkdNMdJzXrZt?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Blockpage on Rostelcom. Matches on the Yandex Metrika Tracker ID, slightly older (2018) tracker than block_1",
     ),
 
     SimpleBlockPagePattern(
