@@ -1864,7 +1864,22 @@ known_blocks = [
               it is a clear block page given the name and urls seen.""",
     ),
 
-    # header: http://sv-en.ru/block.php
+    SimpleBlockPagePattern(
+        name="isp_ru_intersvas_block",
+        common_name="RU ISP Intersvas Block",
+        pattern="""id=com.intersvyaz.lk&referrer=utm_source%3Dlp_you_shall_not_pass_parking""",
+        location_found="header",
+        source=[
+            "https://www.is74.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20190726T044441Z_AS8369_pt6iOTfKLtNs6vy19VFsbMTvwtRno87AZ601Xdyj4TJkiwumfU?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""Russian ISP Intersvas (is74) Block Page, this is the forward to the blockpage via the DNS
+          you-shall-not-pass.is74.ru  This matches on their referrer links which reference both the blockpage
+          and the ISP.""",
+    ),
 
     SimpleBlockPagePattern(
         name="isp_ru_svyazenergo_forward",
@@ -1881,8 +1896,6 @@ known_blocks = [
         notes="""Russian ISP Svyaz Energo Block Page, a business focused ISP
         """,
     ),
-
-    # body: http://www.sv-en.ru/block
 
     SimpleBlockPagePattern(
         name="isp_ru_svyazenergo_block",
