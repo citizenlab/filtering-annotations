@@ -1907,7 +1907,7 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
-        name="isp_ru_yota_block",
+        name="isp_ru_yota_block_1",
         common_name="RU ISP Yota Block",
         pattern="""<h1 class="title title_h1">Доступ ограничен</h1>""",
         location_found="body",
@@ -1920,6 +1920,22 @@ known_blocks = [
         expected_countries=["RU"],
         notes="""Russian ISP Yota Block Page, this is the title since it uses these specific h1 class it may be unique
               enough to avoid fps""",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_yota_block_2",
+        common_name="RU ISP Yota Block",
+        pattern="""UA-16019436-1""",
+        location_found="body",
+        source=[
+            "https://www.yota.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20190221T004849Z_AS47395_EyAG1vxiNO1VkgbiIifh1zdrQ8Olgs4ntIfEeHpkuJozkjwFQZ?input=http://bluesystem.ru/",
+        confidence_no_fp=7,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""Russian ISP Yota Block Page, This is for the blockpage variant where a Google Analytics tracker is used
+        on the blockpage.""",
     ),
 
     SimpleBlockPagePattern(
