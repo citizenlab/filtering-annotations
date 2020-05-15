@@ -1336,6 +1336,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_comfortel_forward",
+        common_name="RU ISP Comfortel Block",
+        pattern="""law.filter.comfortel.pro""",
+        location_found="header",
+        source=[
+            "https://strelatelecom.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20190316T015348Z_AS44640_7b4Bz0TeF0gdXnQshAbDuk2jt6pgY4TrX0HPfom6wIZsxG9sWE?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP Comfortel RKN blockpage",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_rostelcom_warning_forward",
         common_name="RU ISP Rostelecom Block",
         pattern="""http://warning.rt.ru""",
