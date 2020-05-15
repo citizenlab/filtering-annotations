@@ -1969,6 +1969,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_cityline_block",
+        common_name="RU ISP City Line Block",
+        pattern="""rkn.clkon.net/images/""",
+        location_found="body",
+        source=[
+            "http://clkon.net/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180317T134334Z_AS56476_KFg0mIozfedCjgfrcGis7ZiFKnZn2gMg2BFxMpZMdxuIiVA0Vk?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""Russian ISP City Line blockpage.""",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_intersvas_forward",
         common_name="RU ISP Intersvas Block",
         pattern="""you-shall-not-pass.is74.ru""",
