@@ -1939,6 +1939,36 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_telincom_forward",
+        common_name="RU ISP Telincom Block",
+        pattern="""cacti.telincom.ru/blocked.html""",
+        location_found="header",
+        source=[
+            "http://telincom.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20190215T191020Z_AS51077_PgHDPvuTuN4HiRIfg8b6bYw2J3diS2doqaQpqs8NLlPaBsC9XQ?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""Russian ISP Telincom blockpage forward.""",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_telincom_block",
+        common_name="RU ISP Telincom Block",
+        pattern="""yaCounter48660917""",
+        location_found="body",
+        source=[
+            "http://telincom.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20190215T191020Z_AS51077_PgHDPvuTuN4HiRIfg8b6bYw2J3diS2doqaQpqs8NLlPaBsC9XQ?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""Russian ISP Telincom blockpage.""",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_intersvas_forward",
         common_name="RU ISP Intersvas Block",
         pattern="""you-shall-not-pass.is74.ru""",
