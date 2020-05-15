@@ -1320,6 +1320,20 @@ known_blocks = [
         notes="Russian ISP RiNets RKN blockpage forward",
     ),
 
+    SimpleBlockPagePattern(
+        name="isp_ru_strela_block",
+        common_name="RU ISP Strela Block",
+        pattern="""UA-52529175-5""",
+        location_found="body",
+        source=[
+            "https://strelatelecom.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180317T131026Z_AS56969_fW0lpqCHNlnPDeGqeaL7MEBDwiZOwKSzJHnYPs3FoVf84wCKsD?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP Strela RKN blockpage",
+    ),
 
     SimpleBlockPagePattern(
         name="isp_ru_rostelcom_warning_forward",
