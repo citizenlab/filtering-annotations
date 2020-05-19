@@ -1522,13 +1522,28 @@ known_blocks = [
         pattern="""http://fz139.ttk.ru""",
         location_found="header",
         source=[
-            ""
+            "https://moskva.ttk.ru/"
         ],
         exp_url ="https://explorer.ooni.org/measurement/20200215T063712Z_AS8427_cIJNHs6ysaZH1kt9gI7uAVPGmIDcZOn3UTwX2w7wkMj8SFK3VN?input=http://bluesystem.ru/",
         confidence_no_fp=10,
         scope="isp",
         expected_countries=["RU"],
         notes="Forward to TTK ISP RKN Block page forward",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_ttk_block",
+        common_name="RU ISP TTK Block",
+        pattern="""TTK :: Доступ к ресурсу ограничен""",
+        location_found="body",
+        source=[
+            "https://moskva.ttk.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180318T055620Z_AS8427_eLCazBA5rz8M241SW9vuD3Be7ikVb32rpLEk5ys3MuZqodzvwb?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Forward to TTK ISP RKN Block page matches on title.",
     ),
 
     SimpleBlockPagePattern(
