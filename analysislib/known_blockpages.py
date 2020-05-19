@@ -1299,7 +1299,7 @@ known_blocks = [
             ""
         ],
         exp_url ="https://explorer.ooni.org/measurement/20200206T193832Z_AS48720_SlLIbMHbU6Z7Nb9HY3gISWDS0s9UKgtvS4Ec9dADxjqaPV6hrH?input=http://www.deti-404.com/",
-        confidence_no_fp=7,
+        confidence_no_fp=10,
         scope="isp",
         expected_countries=["RU"],
         notes="MGTS Russias RKN blockpage",
@@ -1314,7 +1314,7 @@ known_blocks = [
             ""
         ],
         exp_url="https://explorer.ooni.org/measurement/20180314T172713Z_AS25513_JKzji9R0aZ8eAUuEplDoPGOZgZS3VxCFlnbFcyfQjTDXefoL7g?input=http://bluesystem.ru/",
-        confidence_no_fp=7,
+        confidence_no_fp=10,
         scope="isp",
         expected_countries=["RU"],
         notes="MGTS Russias RKN blockpage.  This is for the block.mgts domain and matches the GA tracker.",
@@ -1330,7 +1330,7 @@ known_blocks = [
             ""
         ],
         exp_url="https://explorer.ooni.org/measurement/20180317T143113Z_AS8331_FwDwX6bHEgagwbGdtlaTJABMU3WwQXJOAJxLRoyvMIVnD8BPve?input=http://bluesystem.ru/",
-        confidence_no_fp=7,
+        confidence_no_fp=10,
         scope="isp",
         expected_countries=["RU"],
         notes="Russian ISP RiNets RKN blockpage forward",
@@ -1345,7 +1345,7 @@ known_blocks = [
             ""
         ],
         exp_url="https://explorer.ooni.org/measurement/20180317T143113Z_AS8331_FwDwX6bHEgagwbGdtlaTJABMU3WwQXJOAJxLRoyvMIVnD8BPve?input=http://bluesystem.ru/",
-        confidence_no_fp=7,
+        confidence_no_fp=10,
         scope="isp",
         expected_countries=["RU"],
         notes="Russian ISP RiNets RKN blockpage forward",
@@ -1360,7 +1360,7 @@ known_blocks = [
             "http://www.teleseti.com/pskov/"
         ],
         exp_url="https://explorer.ooni.org/measurement/20180317T192943Z_AS15673_6rgzZxX5Dk9JVrI1x3DzM10Scuq7qtqaYD8gIatp4ByTDXjYdc?input=http://bluesystem.ru/",
-        confidence_no_fp=7,
+        confidence_no_fp=10,
         scope="isp",
         expected_countries=["RU"],
         notes="Russian ISP Teleseti RKN blockpage forward",
@@ -1375,10 +1375,40 @@ known_blocks = [
             "http://www.teleseti.com/pskov/"
         ],
         exp_url="https://explorer.ooni.org/measurement/20180317T192943Z_AS15673_6rgzZxX5Dk9JVrI1x3DzM10Scuq7qtqaYD8gIatp4ByTDXjYdc?input=http://bluesystem.ru/",
-        confidence_no_fp=7,
+        confidence_no_fp=10,
         scope="isp",
         expected_countries=["RU"],
         notes="Russian ISP Teleseti RKN blockpage blockpage, matches on Metrika tracer embedded on blockpage.",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_dialog_forward",
+        common_name="RU ISP TIS-Dialog Block",
+        pattern="""zapret-info.tis-dialog.ru""",
+        location_found="header",
+        source=[
+            "http://www.tis-dialog.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180320T222703Z_AS31214_pCNLYmthnVmG3G3QPYDFkDkxwUmXiA0kgeNB0T285eQHwIkibU?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP TIS-Dialog RKN blockpage forward",
+    ),
+    
+    SimpleBlockPagePattern(
+        name="isp_ru_dialog_block",
+        common_name="RU ISP TIS-Dialog Block",
+        pattern="""Ресурс по данному адресу заблокирован :: Тис-диалог""",
+        location_found="body",
+        source=[
+            "http://www.tis-dialog.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180320T222703Z_AS31214_pCNLYmthnVmG3G3QPYDFkDkxwUmXiA0kgeNB0T285eQHwIkibU?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP TIS-Dialog RKN blockpage blockpage, matches on title.",
     ),
 
     SimpleBlockPagePattern(
