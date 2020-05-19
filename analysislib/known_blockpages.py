@@ -1290,7 +1290,6 @@ known_blocks = [
         notes="MGTS Russias RKN blockpage forward.  This is a different domain (block instead blocked) than _1",
     ),
 
-
     SimpleBlockPagePattern(
         name="isp_ru_mgts_rkn_blockpage_1",
         common_name="RU ISP MGTS Block",
@@ -1350,6 +1349,36 @@ known_blocks = [
         scope="isp",
         expected_countries=["RU"],
         notes="Russian ISP RiNets RKN blockpage forward",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_teleseti_forward",
+        common_name="RU ISP Teleseti Block",
+        pattern="""www.teleseti.com/zapret/zapret-new.php""",
+        location_found="header",
+        source=[
+            "http://www.teleseti.com/pskov/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180317T192943Z_AS15673_6rgzZxX5Dk9JVrI1x3DzM10Scuq7qtqaYD8gIatp4ByTDXjYdc?input=http://bluesystem.ru/",
+        confidence_no_fp=7,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP Teleseti RKN blockpage forward",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_teleseti_block",
+        common_name="RU ISP Teleseti Block",
+        pattern="""yaCounter43509064""",
+        location_found="body",
+        source=[
+            "http://www.teleseti.com/pskov/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180317T192943Z_AS15673_6rgzZxX5Dk9JVrI1x3DzM10Scuq7qtqaYD8gIatp4ByTDXjYdc?input=http://bluesystem.ru/",
+        confidence_no_fp=7,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP Teleseti RKN blockpage blockpage, matches on Metrika tracer embedded on blockpage.",
     ),
 
     SimpleBlockPagePattern(
