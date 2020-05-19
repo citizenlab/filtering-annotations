@@ -1261,9 +1261,9 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
-        name="isp_ru_mgts_rkn_forward",
+        name="isp_ru_mgts_rkn_forward_1",
         common_name="RU ISP MGTS Block",
-        pattern="""http://blocked.mgts.ru""",
+        pattern="""blocked.mgts.ru""",
         location_found="header",
         source=[
             ""
@@ -1276,7 +1276,23 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
-        name="isp_ru_mgts_rkn_blockpage",
+        name="isp_ru_mgts_rkn_forward_2",
+        common_name="RU ISP MGTS Block",
+        pattern="""block.mgts.ru""",
+        location_found="header",
+        source=[
+            ""
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180314T172713Z_AS25513_JKzji9R0aZ8eAUuEplDoPGOZgZS3VxCFlnbFcyfQjTDXefoL7g?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="MGTS Russias RKN blockpage forward.  This is a different domain (block instead blocked) than _1",
+    ),
+
+
+    SimpleBlockPagePattern(
+        name="isp_ru_mgts_rkn_blockpage_1",
         common_name="RU ISP MGTS Block",
         pattern="""<p><a id="toggle" href="">Узнать причину <img src="/img/down_mobile.png"></a></p>""",
         location_found="body",
@@ -1289,6 +1305,22 @@ known_blocks = [
         expected_countries=["RU"],
         notes="MGTS Russias RKN blockpage",
     ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_mgts_rkn_blockpage_2",
+        common_name="RU ISP MGTS Block",
+        pattern="""UA-12816426-25""",
+        location_found="body",
+        source=[
+            ""
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180314T172713Z_AS25513_JKzji9R0aZ8eAUuEplDoPGOZgZS3VxCFlnbFcyfQjTDXefoL7g?input=http://bluesystem.ru/",
+        confidence_no_fp=7,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="MGTS Russias RKN blockpage.  This is for the block.mgts domain and matches the GA tracker.",
+    ),
+
 
     SimpleBlockPagePattern(
         name="isp_ru_rinet_forward",
