@@ -1984,6 +1984,36 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_rialink_forward",
+        common_name="RU ISP Ria Link Block",
+        pattern="""91.215.188.193""",
+        location_found="header",
+        source=[
+            "https://ria-link.ru/uslugi"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180318T062701Z_AS49701_cV0IJIOulrZqBi9yQsD99legkwh7MCgMcrrYBE4un3cukO6HxN?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""Russian ISP Ria Link blockpage forward via 30x through squid""",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_rialink_block",
+        common_name="RU ISP Ria Link Block",
+        pattern="""РИА-линк интернет Брянск / ria-link.ru""",
+        location_found="body",
+        source=[
+            "https://ria-link.ru/uslugi"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180318T062701Z_AS49701_cV0IJIOulrZqBi9yQsD99legkwh7MCgMcrrYBE4un3cukO6HxN?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""Russian ISP Ria Link blockpage forward via 30x through squid""",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_intersvas_forward",
         common_name="RU ISP Intersvas Block",
         pattern="""you-shall-not-pass.is74.ru""",
