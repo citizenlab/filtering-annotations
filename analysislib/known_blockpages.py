@@ -864,7 +864,7 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
-        name="prod_vasexperts_blockpage",
+        name="prod_vasexperts_blockpage_1",
         common_name="VAS Experts SKAT DPI",
         pattern="www.rm.com/filteringpolicy/",
         location_found="body",
@@ -879,6 +879,25 @@ known_blocks = [
         notes="""
             VAS Experts is a vendor of filtering gear such as SKAT DPI engine for blocking, and SORM devices for
             the Russian market.  
+        """,
+    ),
+
+    SimpleBlockPagePattern(
+        name="prod_vasexperts_blockpage_2",
+        common_name="VAS Experts SKAT DPI",
+        pattern="mc.yandex.ru/watch/21144079",
+        location_found="body",
+        source=[
+            "https://vasexperts.ru",
+            "https://vasexperts.ru/products/skat/",
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180317T120401Z_AS58042_yJMJTpz2i5Qbl8JH3UfBICOMoLFILAZpNrZUxGWdDqvjKFluPF?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="prod",
+        expected_countries=["RU"],
+        notes="""
+            VAS Experts is a vendor of filtering gear such as SKAT DPI engine for blocking, and SORM devices for
+            the Russian market.  This matches the Metrika ID embedded on the blockpage.
         """,
     ),
 
