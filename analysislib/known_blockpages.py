@@ -1709,7 +1709,7 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
-        name="isp_ru_akado_block",
+        name="isp_ru_akado_block_1",
         common_name="RU ISP Akado Block",
         pattern="""https://www.akado.ru/services/itv/?utm_source=blocked-RKN""",
         location_found="body",
@@ -1721,6 +1721,21 @@ known_blocks = [
         scope="isp",
         expected_countries=["RU"],
         notes="Russian ISP Akado Block Page, this is a link on the blockpage unique to the ISP and relating to RKN blocking",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_akado_block_2",
+        common_name="RU ISP Akado Block",
+        pattern="""UA-2468561-43""",
+        location_found="body",
+        source=[
+            "https://akado.ru"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180318T190102Z_AS15582_AN3pN6fRfLwsONN4y0GEgnGLXlIGPv9QDysJwLhzVv3PZw4Ujz?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP Akado Block Page, this is the Google Analytics tracker id embedded in blockpage.",
     ),
 
     SimpleBlockPagePattern(
