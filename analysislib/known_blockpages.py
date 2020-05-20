@@ -2014,6 +2014,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_virginconnect_forward",
+        common_name="RU ISP Virgin Connect Block",
+        pattern="""mega.nn.ru/l7.html""",
+        location_found="header",
+        source=[
+            "https://www.virginconnect.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180810T065459Z_AS39289_SM4QfsdBvxi6UYZjn4rwMHvIzgSwDPBxwmfOZUTeIa4YWyg5Ft?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""Russian ISP Virgin Connect Block Page, this is the forward to the blockpage""",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_yota_forward",
         common_name="RU ISP Yota Block",
         pattern="""forbidden.yota.ru""",
