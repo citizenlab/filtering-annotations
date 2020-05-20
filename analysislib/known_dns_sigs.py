@@ -500,12 +500,27 @@ known_dns_sigs = [
     #########
 
     SimpleDNSReplyPattern(
+        name="dns_isp_ru_rkn_mastertel",
+        response="83.69.208.124",
+        confidence_no_fp=10,
+        exp_url="",
+        source=[
+            "http://mastertel.ru/"
+        ],
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""
+            Russian ISP Mastertel (business focused, telecom provider, datacenters, etc) RKN blockpage
+        """
+    ),
+
+    SimpleDNSReplyPattern(
         name="dns_isp_ru_rkn_netbynet",
         response="212.1.226.59",
         confidence_no_fp=10,
         exp_url="",
         source=[
-            "http://www.netbynet.ru//"
+            "http://www.netbynet.ru/"
         ],
         scope="isp",
         expected_countries=["RU"],
