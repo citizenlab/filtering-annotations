@@ -1750,7 +1750,7 @@ known_blocks = [
         confidence_no_fp=10,
         scope="isp",
         expected_countries=["RU"],
-        notes="Russian ISP Akado Block Page, this is the forward to the blockpage via the DNS block.akado.ru",
+        notes="Russian ISP Alliance Telecom Block Page, this is the forward to the blockpage via blocked.inetvl.ru",
     ),
 
     SimpleBlockPagePattern(
@@ -1767,6 +1767,36 @@ known_blocks = [
         expected_countries=["RU"],
         notes="""Russian ISP Alliance Telecom Block Page, this is a base64 of the blockpage because of mixed encodings so
               will likely only work against ooni data if you don't try to parse the different encodings""",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_podryad_forward",
+        common_name="RU ISP Podryad Block",
+        pattern="""forbidden.podryad.tv/""",
+        location_found="header",
+        source=[
+            "http://podryad.tv"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180317T133059Z_AS196949_VIOHLwGOwFJGNHcWbbYtxOFTrTftiYhDXtyngllWDEmhgNgED1?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP Podryad Block Page, this is the forward to the blockpage via forbidden.podryad.tv",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_podryad_block",
+        common_name="RU ISP Podryad Block",
+        pattern="""<a href="http://podryad.tv" class="header__logo header__logo__locked"></a>""",
+        location_found="body",
+        source=[
+            "http://podryad.tv"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180317T133059Z_AS196949_VIOHLwGOwFJGNHcWbbYtxOFTrTftiYhDXtyngllWDEmhgNgED1?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP Podryad Block Page, this is matching some html referencing the ISP and blockpage",
     ),
 
     SimpleBlockPagePattern(
