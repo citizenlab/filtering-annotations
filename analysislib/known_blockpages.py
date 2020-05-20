@@ -1983,7 +1983,7 @@ known_blocks = [
 
     SimpleBlockPagePattern(
         name="isp_ru_2kom_forward",
-        common_name="RU/UA/Crimean ISP 2kom Block",
+        common_name="RU ISP 2kom Block",
         pattern="""forbidden.2kom.ru""",
         location_found="header",
         source=[
@@ -1995,6 +1995,22 @@ known_blocks = [
         expected_countries=["RU"],
         notes="""Russian ISP 2kom Block Page, this is the forward to the blockpage via the
           DNS forbidden.2kom.ru. This forwarded me to the almatel blockpage when I checked""",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_2kom_block",
+        common_name="RU ISP 2kom Block",
+        pattern="""GTM-NBL6CQ""",
+        location_found="header",
+        source=[
+            "https://2kom.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180430T004143Z_AS8334_w0W0QB8R1vcxsb8GkwBu0vuI5LV4ktuldUTUvI2DLeEulIOxN3?input=http://bluesystem.ru/",
+        confidence_no_fp=8,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""Russian ISP 2kom Block Page, matches based on Google Tag Manager ID so there is a slight chance
+        this is used on other 2Kom sites.""",
     ),
 
     SimpleBlockPagePattern(
