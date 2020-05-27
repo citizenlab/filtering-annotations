@@ -1220,6 +1220,36 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_planeta_forward",
+        common_name="RU ISP Planeta Block",
+        pattern="""blacklist.planeta.tc""",
+        location_found="header",
+        source=[
+            "https://planeta.tc/ekb"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180318T080743Z_AS12668_tteAPafZVumB1iKGUlmJj24vMNIuhsyxoTFqFbtkmxOyUjBoUW?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Planetas RKN blockpage Forward",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_planeta_block",
+        common_name="RU ISP Planeta Block",
+        pattern="""https://planeta.tc/articles/inet/tariff#gigabit" class="block-brand-img">""",
+        location_found="body",
+        source=[
+            "https://planeta.tc/ekb"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180318T080743Z_AS12668_tteAPafZVumB1iKGUlmJj24vMNIuhsyxoTFqFbtkmxOyUjBoUW?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Planetas RKN blockpage matches on a tag that links to the ISPs page.",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_ertelecom_rkn_forward",
         common_name="RU ISP Ertelecom Block",
         pattern="""http://lawfilter.ertelecom.ru""",
@@ -2469,6 +2499,21 @@ known_blocks = [
         scope="isp",
         expected_countries=["RU"],
         notes="""Russian ISP Wiland Block Page forward.""",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_megion_forward",
+        common_name="RU ISP Megion Block",
+        pattern="""megion.biz/block.html""",
+        location_found="header",
+        source=[
+            "http://www.megion.biz/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180318T204204Z_AS12714_moZOawAkYEeJxmuAAbfpf9G8DqJOvLSXIg9EFrNRGWztrVM7nn?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""Russian ISP Megion Block Page forward.""",
     ),
 
     SimpleBlockPagePattern(
