@@ -1851,6 +1851,36 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_infolink_forward",
+        common_name="RU ISP Info-Link Block",
+        pattern="""85.234.0.61""",
+        location_found="header",
+        source=[
+            "https://new.info-link.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180318T165918Z_AS34892_LhhbkpUslR9YCTt4Nbig5XeUd39rXBk0COnBk5h0js3Wpr1R4D?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP Info-Link Block Page, this is the forward to the blockpage via IP",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_infolink_block",
+        common_name="RU ISP Info-Link Block",
+        pattern="""missing.info-link.ru/""",
+        location_found="body",
+        source=[
+            "https://new.info-link.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180318T165918Z_AS34892_LhhbkpUslR9YCTt4Nbig5XeUd39rXBk0COnBk5h0js3Wpr1R4D?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP Info-Link Block Page matches the link to their site on the blockpage.",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_podryad_forward",
         common_name="RU ISP Podryad Block",
         pattern="""forbidden.podryad.tv/""",
