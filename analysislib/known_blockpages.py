@@ -1628,6 +1628,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_formulasvyaz_forward",
+        common_name="RU Formula Svyaz LLC Block",
+        pattern="""109.197.24.2""",
+        location_found="header",
+        source=[
+            ""
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20190320T052333Z_AS50672_uQSuXHki5S8pmwxwMNUaebGb3G1NAl54hrzfxn0eplF3Qi3T5U?input=http://bluesystem.ru/",
+        confidence_no_fp=9,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Not sure what the scope is here, blockpage lives on AS50672, Formula Svyaz",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_westcall_forward_1",
         common_name="RU ISP Westcall Block",
         pattern="""http://195.94.233.66?UrlRedir=""",
