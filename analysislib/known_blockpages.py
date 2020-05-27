@@ -2349,6 +2349,23 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_megafon_block_tag",
+        common_name="RU ISP Megafon Block",
+        pattern="""GTM-WBQ8X7M1""",
+        location_found="body",
+        source=[
+            "https://megafonpro.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200118T012925Z_AS31213_HXkdYCWN5qqPLgvSvFam2G3EwubT2qtm6Wrp6e6s7GS8X46mDq?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""Russian ISP Megafon Block Page, this matches the GTM tag they use on the blockpage.""",
+    ),
+
+    #
+
+    SimpleBlockPagePattern(
         name="isp_ru_megafon_block_with_ad",
         common_name="RU ISP Megafon Block",
         pattern="""href="rkn">Отменить</a>""",
