@@ -2363,8 +2363,6 @@ known_blocks = [
         notes="""Russian ISP Megafon Block Page, this matches the GTM tag they use on the blockpage.""",
     ),
 
-    #
-
     SimpleBlockPagePattern(
         name="isp_ru_megafon_block_with_ad",
         common_name="RU ISP Megafon Block",
@@ -2424,6 +2422,23 @@ known_blocks = [
         scope="isp",
         expected_countries=["RU"],
         notes="""Russian ISP Ufanet Block Page via a forward in the headers to https://www.ufanet.ru/blocking.html/""",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_ufanet_forward_ipvariant",
+        common_name="RU ISP Ufanet Block",
+        pattern="""95.213.254.253""",
+        location_found="header",
+        source=[
+            "https://www.ufanet.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20190525T080819Z_AS24955_qQMrVJZWRoIbrZFkqSUgKpO7SVsWXKSfH9ZtiIGPGoIiuaths0?input=http://bluesystem.ru/",
+        confidence_no_fp=6,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""Russian ISP Ufanet Block Page via a forward in the headers to http://95.213.254.253/.  Attribution
+        is not clear as the explorer URL places this to Ufanet but the blockpage is hosted on Russian IT provider
+        Selectel.""",
     ),
 
     SimpleBlockPagePattern(
