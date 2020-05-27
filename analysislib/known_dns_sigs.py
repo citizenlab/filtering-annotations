@@ -500,6 +500,23 @@ known_dns_sigs = [
     #########
 
     SimpleDNSReplyPattern(
+        name="dns_isp_rostelecom_blocksystem",
+        response="217.148.54.171",
+        confidence_no_fp=7,
+        exp_url="",
+        source=[
+            "https://rt.ru/"
+        ],
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""
+        Russian ISP Rostelecom but the filtering pattern is very different than what
+        customers typically see.  This might be a small downstream players RKN
+        implementation.
+    """
+    ),
+
+    SimpleDNSReplyPattern(
         name="dns_isp_ru_rkn_mastertel",
         response="83.69.208.124",
         confidence_no_fp=10,

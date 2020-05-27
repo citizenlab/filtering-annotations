@@ -1881,6 +1881,25 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_rostelecom_blocksystem",
+        common_name="RU ISP Rostelecom Block System",
+        pattern="""<title>block-system</title>""",
+        location_found="body",
+        source=[
+            "https://rt.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180318T052642Z_AS31499_2BoIdLV94NnrtvwbVNk89RkG6Wg86FBLjO2lzCH6o8FmebjrQv?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""
+        Russian ISP Rostelecom but the filtering pattern is very different than what
+        customers typically see.  This might be a small downstream players RKN
+        implementation.
+        """,
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_podryad_forward",
         common_name="RU ISP Podryad Block",
         pattern="""forbidden.podryad.tv/""",
