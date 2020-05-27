@@ -1628,6 +1628,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_tscrimea_forward",
+        common_name="RU/UA ISP TS Crimea Block",
+        pattern="""77.121.14.5""",
+        location_found="header",
+        source=[
+            "https://tscrimea.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180716T134926Z_AS205515_y8sbE1h6ribC4qXeK9b3X9CWdj1tPywgOpxrMxojiCy50Oav5i?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU", "UA"],
+        notes="Block for RU/UA ISP TS Crimea reverse DNS for IP is undefined.tscrimea.ru",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_formulasvyaz_forward",
         common_name="RU Formula Svyaz LLC Block",
         pattern="""109.197.24.2""",
