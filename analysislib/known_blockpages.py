@@ -1900,6 +1900,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_kmtn_forward",
+        common_name="RU ISP KMTN Block",
+        pattern="""block.kmtn.ru""",
+        location_found="header",
+        source=[
+            "https://www.kostroma.net/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20190520T181638Z_AS44507_AXiwWpNivv9uIzC1ESqdSNy3lkqoNDBpgK2ZrFoCUhoj79MymS?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP KMTN Block Page, this is the forward to the blockpage",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_podryad_forward",
         common_name="RU ISP Podryad Block",
         pattern="""forbidden.podryad.tv/""",
