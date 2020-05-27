@@ -2457,6 +2457,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_wiland_forward",
+        common_name="RU ISP Wiland Block",
+        pattern="""blocked.wiland.ru""",
+        location_found="header",
+        source=[
+            "http://wiland.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20181221T095704Z_AS21367_H6haY9cXO9O0I2t86lqWzxgBmqnJOkIyt0NUfD8Rz7XAceiMJw?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""Russian ISP Wiland Block Page forward.""",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_tr_ttnet_secureinternet_forward",
         common_name="TR ISP TTNet OptIn Block",
         pattern="""http://bilgi.turktelekom.com.tr/guvenli_internet_uyari""",
@@ -2470,6 +2485,7 @@ known_blocks = [
         expected_countries=["TR"],
         notes="Turkish ISP TTNet (Turk Telecom) block page this is an opt-in filter",
     ),
+
 
     SimpleBlockPagePattern(
         name="isp_tr_ttnet_secureinternet_blockpage",
