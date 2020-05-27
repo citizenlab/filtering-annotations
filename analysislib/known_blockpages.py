@@ -1565,6 +1565,38 @@ known_blocks = [
         notes="Forward to TTK ISP RKN Block page matches on title.",
     ),
 
+    # header: kaspnet.ru/sites/default/files/0.html
+
+    SimpleBlockPagePattern(
+        name="isp_ru_kaspnet_forward",
+        common_name="RU ISP Kaspnet Block",
+        pattern="""kaspnet.ru/sites/default/files/0.html""",
+        location_found="header",
+        source=[
+            "http://kaspnet.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20190803T010043Z_AS42922_pjHbAidMpZuZp2PN2HzXhXCQZyZlhf0A4hkNqOzB7XbXGzkmHF?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Forward to Kaspnet RKN Block page",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_kaspnet_block",
+        common_name="RU ISP Kaspnet Block",
+        pattern="""i.imgur.com/KMKuXmA.png""",
+        location_found="body",
+        source=[
+            "http://kaspnet.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20190803T010043Z_AS42922_pjHbAidMpZuZp2PN2HzXhXCQZyZlhf0A4hkNqOzB7XbXGzkmHF?input=http://bluesystem.ru/",
+        confidence_no_fp=7,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Kaspnet RKN Block page matches the TV advert embedded in the blockpage.",
+    ),
+
     SimpleBlockPagePattern(
         name="isp_ru_westcall_forward_1",
         common_name="RU ISP Westcall Block",
