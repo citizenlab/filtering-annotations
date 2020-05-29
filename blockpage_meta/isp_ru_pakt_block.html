@@ -1,0 +1,35 @@
+
+<html>
+<head>
+	<title>Заблокировано РосКомНадзором</title>
+	<script>
+		var rknuri = '';
+
+		function seturidecode() {
+
+			var d = document.getElementById('uridecode');
+			var u = unescape(rknuri);
+			d.innerHTML = u.replace ('UrlRedir=','');
+			var t = document.getElementById('timediv');
+			var dt = new Date();
+			t.innerHTML = dt.toLocaleString();
+		}
+	</script>
+</head>
+<body onload='seturidecode();'>
+	<h1>
+	Уважаемый пользователь!
+	</h1>
+	<p>
+	Ресурс, к которому вы пытались обратиться,<br>
+	<div id=uridecode style="font-weight: bold"></div><br> заблокирован
+	<a href="http://blocklist.rkn.gov.ru/">РосКомНадзором</a>. По требованию Российского законодательства
+	доступ к ресурсам, находящимся в федеральном списке блокировки, должен быть ограничен.
+
+	<p>Приносим свои искренние извинения за неудобства.
+
+	<p>
+		C уважением, П.А.К.Т.<br>
+		<div id='timediv' style="font-family:monospace"></div>
+</body>
+</html>

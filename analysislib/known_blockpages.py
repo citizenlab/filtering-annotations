@@ -1925,6 +1925,39 @@ known_blocks = [
     ),
 
 
+    # forward: rkn.pakt.ru
+    SimpleBlockPagePattern(
+        name="isp_ru_pakt_forward",
+        common_name="RU ISP Pakt Block",
+        pattern="""rkn.pakt.ru""",
+        location_found="header",
+        source=[
+            "https://pakt.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180317T130438Z_AS39087_UU6okQpeONhX0qrLfLdlKQeculY95MVSW1zY89UcbM4snfJPNN?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian Pakt Block Page, this is the forward to the blockpage",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_pakt_block",
+        common_name="RU ISP Pakt Block",
+        pattern="""C уважением, П.А.К.Т.""",
+        location_found="body",
+        source=[
+            "https://pakt.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180317T130438Z_AS39087_UU6okQpeONhX0qrLfLdlKQeculY95MVSW1zY89UcbM4snfJPNN?input=http://bluesystem.ru/",
+        confidence_no_fp=8,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian Pakt Block Page, this matches the salutation at the end of their announcements.",
+    ),
+
+    # body:
+
     SimpleBlockPagePattern(
         name="isp_ru_alliancetelecom_forward",
         common_name="RU ISP Alliance Telecom Block",
