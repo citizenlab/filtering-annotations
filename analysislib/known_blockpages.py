@@ -1252,13 +1252,13 @@ known_blocks = [
     SimpleBlockPagePattern(
         name="isp_ru_planeta_block",
         common_name="RU ISP Planeta Block",
-        pattern="""https://planeta.tc/articles/inet/tariff#gigabit" class="block-brand-img">""",
+        pattern="""<h1 class="HeaderTitle">Доступ к данному ресурсу закрыт</h1>""",
         location_found="body",
         source=[
             "https://planeta.tc/ekb"
         ],
         exp_url="https://explorer.ooni.org/measurement/20180318T080743Z_AS12668_tteAPafZVumB1iKGUlmJj24vMNIuhsyxoTFqFbtkmxOyUjBoUW?input=http://bluesystem.ru/",
-        confidence_no_fp=10,
+        confidence_no_fp=6,
         scope="isp",
         expected_countries=["RU"],
         notes="Planetas RKN blockpage matches on a tag that links to the ISPs page.",
