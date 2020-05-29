@@ -1568,7 +1568,7 @@ known_blocks = [
     SimpleBlockPagePattern(
         name="isp_ru_tele2_block",
         common_name="RU ISP Tele2 Block",
-        pattern="""//t2rkn.com/?""",
+        pattern="""//t2rkn.com/""",
         location_found="body",
         source=[
             "http://tele2.ru/"
