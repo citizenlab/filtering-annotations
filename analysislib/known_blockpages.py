@@ -2490,7 +2490,7 @@ known_blocks = [
     SimpleBlockPagePattern(
         name="isp_ru_megafon_block_tag",
         common_name="RU ISP Megafon Block",
-        pattern="""GTM-WBQ8X7M1""",
+        pattern="""GTM-WBQ8X7M""",
         location_found="body",
         source=[
             "https://megafonpro.ru/"
