@@ -1235,6 +1235,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_novotelecom_forward",
+        common_name="RU ISP Novotelecom Block",
+        pattern="""zapret.2090000.ru""",
+        location_found="header",
+        source=[
+            "https://2090000.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180318T070543Z_AS31200_V253RHv9hxMZJA1k3MqyQxreUHCZcXPk5ERo5oe8Dof0klN1iV?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Novotelecom RKN blockpage Forward",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_postltd_forward",
         common_name="RU ISP Post LTD (formerly KMV) Block",
         pattern="""blockpage.kmv.ru""",
