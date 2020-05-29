@@ -517,6 +517,21 @@ known_dns_sigs = [
     ),
 
     SimpleDNSReplyPattern(
+        name="dns_isp_ru_rkn_zencom",
+        response="46.175.31.250",
+        confidence_no_fp=10,
+        exp_url="",
+        source=[
+            "https://zencom.ru/"
+        ],
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""
+        Russian ISP Zencom RKN blockpage
+        """
+    ),
+
+    SimpleDNSReplyPattern(
         name="dns_isp_ru_rkn_mastertel",
         response="83.69.208.124",
         confidence_no_fp=10,
