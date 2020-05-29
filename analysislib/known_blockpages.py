@@ -1910,6 +1910,22 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_akado_block_3",
+        common_name="RU ISP Akado Block",
+        pattern=""".akado-ural.ru/web/rkn/site_blocked.css""",
+        location_found="body",
+        source=[
+            "https://akado.ru"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180318T035524Z_AS30868_YNRgacl7Q5HcThofYIOQRl0Z0T00uxv1TnvOXqhzsM7165fN8W?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP Akado Block Page, this is for their Ural Oblast branding",
+    ),
+
+
+    SimpleBlockPagePattern(
         name="isp_ru_alliancetelecom_forward",
         common_name="RU ISP Alliance Telecom Block",
         pattern="""blocked.inetvl.ru""",
