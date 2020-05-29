@@ -1924,8 +1924,6 @@ known_blocks = [
         notes="Russian ISP Akado Block Page, this is for their Ural Oblast branding",
     ),
 
-
-    # forward: rkn.pakt.ru
     SimpleBlockPagePattern(
         name="isp_ru_pakt_forward",
         common_name="RU ISP Pakt Block",
@@ -1956,7 +1954,35 @@ known_blocks = [
         notes="Russian Pakt Block Page, this matches the salutation at the end of their announcements.",
     ),
 
-    # body:
+    SimpleBlockPagePattern(
+        name="isp_ru_tcentr_forward",
+        common_name="RU ISP Telecom Center Block",
+        pattern="""185.36.60.2/blocked.html""",
+        location_found="header",
+        source=[
+            "https://www.tcenter.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20190603T211434Z_AS0_kxjMajdYmi5TXQlX4eA3fC0yf9puWMbkCK1QP8TcUSz4CoS0So?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian Telecom Center Block Page, this is the forward to the blockpage",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_tcentr_block",
+        common_name="RU ISP Telecom Center Block",
+        pattern="""185.36.60.2/icons/logo.png""",
+        location_found="body",
+        source=[
+            "https://www.tcenter.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20190603T211434Z_AS0_kxjMajdYmi5TXQlX4eA3fC0yf9puWMbkCK1QP8TcUSz4CoS0So?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian Telecom Center Block Page",
+    ),
 
     SimpleBlockPagePattern(
         name="isp_ru_alliancetelecom_forward",
