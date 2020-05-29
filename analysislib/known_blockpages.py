@@ -1962,7 +1962,7 @@ known_blocks = [
     SimpleBlockPagePattern(
         name="isp_ru_podryad_forward",
         common_name="RU ISP Podryad Block",
-        pattern="""forbidden.podryad.tv/""",
+        pattern="""forbidden.podryad.tv""",
         location_found="header",
         source=[
             "http://podryad.tv"
