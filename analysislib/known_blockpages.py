@@ -1235,6 +1235,36 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_postltd_forward",
+        common_name="RU ISP Post LTD (formerly KMV) Block",
+        pattern="""blockpage.kmv.ru""",
+        location_found="header",
+        source=[
+            "https://www.kmv.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180317T130121Z_AS12494_4BeSmhJhSVlr2II7km6x1bWG3s4UV02F1PI69cbDm85b97kMaS?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Post LTD (formerly KMV) RKN blockpage Forward",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_postltd_block",
+        common_name="RU ISP Post LTD (formerly KMV) Block",
+        pattern="""<title>POST Ltd &bull; Доступ ограничен</title>""",
+        location_found="body",
+        source=[
+            "https://www.kmv.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180317T130121Z_AS12494_4BeSmhJhSVlr2II7km6x1bWG3s4UV02F1PI69cbDm85b97kMaS?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Post LTD (formerly KMV) RKN blockpage Forward",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_planeta_forward",
         common_name="RU ISP Planeta Block",
         pattern="""blacklist.planeta.tc""",
