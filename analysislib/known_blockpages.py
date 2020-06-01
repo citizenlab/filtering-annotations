@@ -1985,6 +1985,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_mipt_block",
+        common_name="RU ISP MIPT Telecom Block",
+        pattern="""МФТИ-Телеком&nbsp;&nbsp;</td>""",
+        location_found="body",
+        source=[
+            "http://mipt-telecom.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180317T124213Z_AS5467_jYLepdiccPKELyLYmRNgvZ8KaaeGBz4JArbyfepClYbyg1EHJK?input=http://bluesystem.ru/",
+        confidence_no_fp=8,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP MIPT Telecom Block Page.",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_ucanet_block",
         common_name="RU ISP UCA Networks Block",
         pattern="""rkn.ucanet.ru""",
