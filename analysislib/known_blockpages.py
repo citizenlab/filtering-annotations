@@ -1985,6 +1985,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_ucanet_block",
+        common_name="RU ISP UCA Networks Block",
+        pattern="""rkn.ucanet.ru""",
+        location_found="body",
+        source=[
+            "http://www.ucanet.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180318T222011Z_AS43404_jQgcHPhGKPE8KsqFe0Psx5228ciYSdUgH6KCjYMUq5CJk6f6ty?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP UCA Networks Block Page this should match both the iframe forward and the destination block page.",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_alliancetelecom_forward",
         common_name="RU ISP Alliance Telecom Block",
         pattern="""blocked.inetvl.ru""",
