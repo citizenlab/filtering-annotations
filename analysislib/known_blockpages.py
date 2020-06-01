@@ -1655,8 +1655,6 @@ known_blocks = [
         notes="Forward to TTK ISP RKN Block page matches on title.",
     ),
 
-    # header: kaspnet.ru/sites/default/files/0.html
-
     SimpleBlockPagePattern(
         name="isp_ru_kaspnet_forward",
         common_name="RU ISP Kaspnet Block",
@@ -2012,6 +2010,21 @@ known_blocks = [
         scope="isp",
         expected_countries=["RU"],
         notes="Russian ISP UCA Networks Block Page this should match both the iframe forward and the destination block page.",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_maximatelecom_forward",
+        common_name="RU ISP Maxima Telecom Block",
+        pattern="""81.200.123.101""",
+        location_found="header",
+        source=[
+            "https://maximatelecom.ru/en"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180317T175207Z_AS0_QOSBKEtHsKf5hG22JdhEjgZT83erD2VFRZpYuuhLyzWlnBCPQi?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP Maxima Telecom Block Page, this is the forward to the blockpage.",
     ),
 
     SimpleBlockPagePattern(
