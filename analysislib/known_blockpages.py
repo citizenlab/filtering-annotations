@@ -2013,6 +2013,36 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_lantanet_forward",
+        common_name="RU ISP Lanta Net Block",
+        pattern="""193.203.61.234""",
+        location_found="header",
+        source=[
+            "https://www.lanta-net.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180317T131247Z_AS41268_VA5OAJGFFPBeOIRJUBeiSu1WdeRjOtw2Z0O5t0FyOKmvQZsuse?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP Lanta Net Block Page, this is the forward to the blockpage.",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_lantanet_block",
+        common_name="RU ISP Lanta Net Block",
+        pattern="""www.lanta-net.ru/zapret/""",
+        location_found="header",
+        source=[
+            "https://www.lanta-net.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180317T131247Z_AS41268_VA5OAJGFFPBeOIRJUBeiSu1WdeRjOtw2Z0O5t0FyOKmvQZsuse?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP Lanta Net Block Page, this is the forward to the blockpage.",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_maximatelecom_forward",
         common_name="RU ISP Maxima Telecom Block",
         pattern="""81.200.123.101""",
