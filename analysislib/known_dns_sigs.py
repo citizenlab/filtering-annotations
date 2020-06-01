@@ -517,6 +517,21 @@ known_dns_sigs = [
     ),
 
     SimpleDNSReplyPattern(
+        name="dns_isp_ru_rkn_skynet",
+        response="185.37.129.10",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20190628T034744Z_AS35807_4XwiNixlQ8odJ6ek21IUmKwtvCecSOWoII5ZjwqzCCgx6Sx9a3?input=http://bluesystem.ru/",
+        source=[
+            "https://www.sknt.ru/"
+        ],
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""
+            Russian ISP Skynet RKN blockpage
+        """
+    ),
+
+    SimpleDNSReplyPattern(
         name="dns_isp_ru_rkn_zencom",
         response="46.175.31.250",
         confidence_no_fp=10,
