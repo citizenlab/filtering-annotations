@@ -2031,7 +2031,7 @@ known_blocks = [
         name="isp_ru_lantanet_block",
         common_name="RU ISP Lanta Net Block",
         pattern="""www.lanta-net.ru/zapret/""",
-        location_found="header",
+        location_found="body",
         source=[
             "https://www.lanta-net.ru/"
         ],
@@ -2041,6 +2041,22 @@ known_blocks = [
         expected_countries=["RU"],
         notes="Russian ISP Lanta Net Block Page, this is the forward to the blockpage.",
     ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_skynetkazan_forward",
+        common_name="RU ISP Skynet Kazan Block",
+        pattern="""www.skynet-kazan.com/_blocked.htm""",
+        location_found="header",
+        source=[
+            "https://www.skynet-kazan.com/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180318T073159Z_AS31566_N85quRr4romDzcXN4MZPiHCueUqZ0WBQGZdGq7tcJWEh32D7bz?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP Skynet Kazan Block Page, this is the forward to the blockpage.",
+    ),
+
 
     SimpleBlockPagePattern(
         name="isp_ru_maximatelecom_forward",
