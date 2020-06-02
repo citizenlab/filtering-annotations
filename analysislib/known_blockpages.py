@@ -2186,6 +2186,23 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_rostelecom_ipcenter",
+        common_name="RU ISP Rostelecom Block System",
+        pattern="""block.ip.center.rt.ru""",
+        location_found="header",
+        source=[
+            "https://rt.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180317T162427Z_AS25515_5VmIHP6K59TMNgwYPVjJMsKM4a87URc7sbuvlZe7yb5a7Y83Rf?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""
+        Russian ISP Rostelecom variant where an HTTP 451 response is given via block.ip.center.rt.ru in the headers.
+        """,
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_kmtn_forward",
         common_name="RU ISP KMTN Block",
         pattern="""block.kmtn.ru""",
