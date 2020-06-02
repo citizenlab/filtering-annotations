@@ -2057,6 +2057,38 @@ known_blocks = [
         notes="Russian ISP Skynet Kazan Block Page, this is the forward to the blockpage.",
     ),
 
+    SimpleBlockPagePattern(
+        name="isp_ru_linkregion_forward",
+        common_name="RU ISP Link Block",
+        pattern="""error.link-region.ru:8099""",
+        location_found="header",
+        source=[
+            "https://link-region.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180318T075609Z_AS0_HUKpvO8jhpAAdqfvJAlNqtoJOpDUf0MNDCQGuD1yJU2KsSUzxO?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP Link Block Page, this is the forward to the blockpage.",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_linkregion_block",
+        common_name="RU ISP Link Block",
+        pattern="""<title>Federal block</title>""",
+        location_found="header",
+        source=[
+            "https://link-region.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180318T075609Z_AS0_HUKpvO8jhpAAdqfvJAlNqtoJOpDUf0MNDCQGuD1yJU2KsSUzxO?input=http://bluesystem.ru/",
+        confidence_no_fp=6,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP Link Block Page, this might be a broad pattern to match against.",
+    ),
+
+
+
 
     SimpleBlockPagePattern(
         name="isp_ru_maximatelecom_forward",
