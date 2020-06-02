@@ -1250,6 +1250,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_profintel_forward",
+        common_name="RU ISP Profintel Block",
+        pattern="""stat.profintel.ru/block/blacklist/""",
+        location_found="header",
+        source=[
+            "https://www.profintel.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200215T045010Z_AS28890_zMSKnUXeDyc2AIT0zl1JkHBLyx89vDgeFoXvi3I6iRuBA0XV1Y?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Profintel blacklist Forward",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_postltd_forward",
         common_name="RU ISP Post LTD (formerly KMV) Block",
         pattern="""blockpage.kmv.ru""",
