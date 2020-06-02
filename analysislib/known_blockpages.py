@@ -4249,6 +4249,21 @@ known_blocks = [
         notes="Blockpage seen on RUNnet which has an english translation and a poem in the HTML comments.",
     ),
 
+    SimpleBlockPagePattern(
+        name="inst_corp_prometey_datacenter_blockpage",
+        common_name="Institutional Block - Prometety Russian ISP Data Center",
+        pattern="""zapret-info.prometey.me""",
+        location_found="header",
+        source=[
+            "https://prometey.me/"
+        ],
+        exp_url="",
+        confidence_no_fp=10,
+        scope="inst",
+        expected_countries=["RU"],
+        notes="Blockpage seen on Prometey which is a data center and hosting provider in Russia.",
+    ),
+
     # Suspicous - Suspected of Being a Block but With a High Likelihood of False Positives (typically no-render html and similar)
 
     SimpleBlockPagePattern(
