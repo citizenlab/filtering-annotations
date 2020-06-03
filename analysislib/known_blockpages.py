@@ -2091,7 +2091,7 @@ known_blocks = [
         name="isp_ru_linkregion_block",
         common_name="RU ISP Link Block",
         pattern="""<title>Federal block</title>""",
-        location_found="header",
+        location_found="body",
         source=[
             "https://link-region.ru/"
         ],
@@ -2509,7 +2509,7 @@ known_blocks = [
         name="isp_ru_2kom_block",
         common_name="RU ISP 2kom Block",
         pattern="""GTM-NBL6CQ""",
-        location_found="header",
+        location_found="body",
         source=[
             "https://2kom.ru/"
         ],
@@ -2679,7 +2679,7 @@ known_blocks = [
         name="isp_ru_intersvas_block",
         common_name="RU ISP Intersvas Block",
         pattern="""id=com.intersvyaz.lk&referrer=utm_source%3Dlp_you_shall_not_pass_parking""",
-        location_found="header",
+        location_found="body",
         source=[
             "https://www.is74.ru/"
         ],
@@ -4268,7 +4268,7 @@ known_blocks = [
         name="inst_corp_prometey_datacenter_blockpage",
         common_name="Institutional Block - Prometety Russian ISP Data Center",
         pattern="""zapret-info.prometey.me""",
-        location_found="header",
+        location_found="body",
         source=[
             "https://prometey.me/"
         ],
