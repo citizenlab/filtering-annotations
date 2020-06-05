@@ -11,7 +11,7 @@ known_blocks = [
     # National Level Blockpage Patterns
 
     SimpleBlockPagePattern(
-        name="nat_ir_iframe_forward",
+        name="nat_ir_iframe_forward_ipv4",
         common_name="National Iran Block",
         pattern="""iframe src="http://10.10.""",
         location_found="body",
@@ -23,6 +23,21 @@ known_blocks = [
         scope="nat",
         expected_countries=[ "IR" ],
         notes="Well known iframe to http://10.10.34.34 (or .33) Iranian national blockpage",
+    ),
+
+    SimpleBlockPagePattern(
+        name="nat_ir_iframe_forward_ipv6",
+        common_name="National Iran Block",
+        pattern="""</title></head><body><iframe src="http://[d0:0:0:0:0:0:0:11:80]" style="width: 100%; height: 100%" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0"></iframe></body></html>""",
+        location_found="body",
+        source=[
+            "https://censorbib.nymity.ch/pdf/Aryan2013a.pdf"
+        ],
+        exp_url ="https://explorer.ooni.org/measurement/20180627T180515Z_AS44244_Z8V0i4Cr6PoJHByQQ89uN3meAmQbvdUrBli1NqYU8786BLquMk?input=http://alone-persian-man.blogspot.com",
+        confidence_no_fp=10,
+        scope="nat",
+        expected_countries=[ "IR" ],
+        notes="IPv6 variant of the known 10.10.34.34/35 blockpage iframe forward.",
     ),
 
     SimpleBlockPagePattern(
