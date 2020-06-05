@@ -635,6 +635,34 @@ known_dns_sigs = [
     ),
 
     SimpleDNSReplyPattern(
+        name="dns_isp_id_sehat_tri_cname",
+        response="restricted.tri.co.id",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20200329T090119Z_AS45727_GqQe4DZduLsSaYZB6qnqeMpsNgJn7dTvEaoEFZ0eGGmjyBoQG4?input=https://www.scruff.com/",
+        source=[
+            "https://tri.co.id/"
+        ],
+        scope="isp",
+        expected_countries=["ID"],
+        notes="""Indonesian ISP Tri blockpage, matches on the CNAME 
+        """
+    ),
+
+    SimpleDNSReplyPattern(
+        name="dns_isp_id_sehat_tri_ip",
+        response="116.206.10.31",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20200329T090119Z_AS45727_GqQe4DZduLsSaYZB6qnqeMpsNgJn7dTvEaoEFZ0eGGmjyBoQG4?input=https://www.scruff.com/",
+        source=[
+            "https://tri.co.id/"
+        ],
+        scope="isp",
+        expected_countries=["ID"],
+        notes="""Indonesian ISP Tri blockpage, matches on the IP
+    """
+    ),
+
+    SimpleDNSReplyPattern(
         name="dns_isp_id_sehat_telkom_uzone",
         response="36.86.63.185",
         confidence_no_fp=10,
