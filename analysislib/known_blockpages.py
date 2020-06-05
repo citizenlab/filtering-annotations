@@ -196,6 +196,22 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="nat_id_trustpositif_forward_3",
+        common_name="ID TrustPositif Block",
+        pattern="""mercusuar.uzone.id""",
+        location_found="header",
+        source=[
+            "https://trustpositif.kominfo.go.id/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200312T024737Z_AS45292_QGO96hC1JiPt1T30OH3q4EXyCDfE8D3c4cjGqalbffrgJCrbe9?input=http://ilga.org/",
+        confidence_no_fp=10,
+        scope="nat",
+        expected_countries=["ID"],
+        notes="""Trust/Internet Positif is a DNS blacklist distributed by the Telecom regulator in Indonesia as a part of the Internet Sehat program.
+        Mercusuar is a branding put of this under the Telkom brand.""",
+    ),
+
+    SimpleBlockPagePattern(
         name="nat_id_trustpositif_block_1",
         common_name="ID TrustPositif Block",
         pattern="""http://block.uzone.id""",
@@ -270,6 +286,22 @@ known_blocks = [
         expected_countries=["ID"],
         notes="""Trust/Internet Positif is a DNS blacklist distributed by the Telecom regulator in Indonesia as a part of the Internet Sehat program.
         This is based on the block message.""",
+    ),
+
+    SimpleBlockPagePattern(
+        name="nat_id_trustpositif_block_6",
+        common_name="ID TrustPositif Block",
+        pattern="""<title>Mercusuar</title>""",
+        location_found="body",
+        source=[
+            "https://trustpositif.kominfo.go.id/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200312T024737Z_AS45292_QGO96hC1JiPt1T30OH3q4EXyCDfE8D3c4cjGqalbffrgJCrbe9?input=http://ilga.org/",
+        confidence_no_fp=10,
+        scope="nat",
+        expected_countries=["ID"],
+        notes="""Trust/Internet Positif is a DNS blacklist distributed by the Telecom regulator in Indonesia as a part of the Internet Sehat program.
+        Mercusuar is a branding put of this under the Telkom brand.""",
     ),
 
     SimpleBlockPagePattern(
