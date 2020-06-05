@@ -26,14 +26,29 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
-        name="nat_ir_block",
+        name="nat_ir_block_internetir",
         common_name="National Iran Block",
-        pattern="""internet.ir/1-2.htm""",
+        pattern="""internet.ir/1-2""",
         location_found="body",
         source=[
             "https://censorbib.nymity.ch/pdf/Aryan2013a.pdf"
         ],
         exp_url="https://explorer.ooni.org/measurement/20180820T042050Z_AS61173_FPMTdrQeLtEbtLwBjDarQzBlhKVOLhwMbYXGvn9RRcazAFRzRM?input=http://www.wmmh.blogspot.com",
+        confidence_no_fp=10,
+        scope="nat",
+        expected_countries=["IR"],
+        notes="Destination block page of iran (from 10.10.34.34 and 10.10.34.33 within country)",
+    ),
+
+    SimpleBlockPagePattern(
+        name="nat_ir_block_peyvandha",
+        common_name="National Iran Block",
+        pattern="""peyvandha.ir/1-2""",
+        location_found="body",
+        source=[
+            "https://censorbib.nymity.ch/pdf/Aryan2013a.pdf"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20190409T200524Z_AS58224_rPCEFPueXMqioaKnlJnCxocixIQntBMYRps14Iabf3FYimDuRd?input=http://www.wmmh.blogspot.com/",
         confidence_no_fp=10,
         scope="nat",
         expected_countries=["IR"],
