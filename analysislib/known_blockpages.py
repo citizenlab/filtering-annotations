@@ -2385,6 +2385,36 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_miranda_forward",
+        common_name="RU ISP Miranda Media Block",
+        pattern="""miranda-media.ru/stop_rkn""",
+        location_found="header",
+        source=[
+            "https://www.miranda-media.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200503T080344Z_AS201776_LcmthstHJJjoU7fd9RIdqC2NvOPIbT48S43epb5mWou5gDdYux?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian/Ukranian ISP Miranda Media (based in Crimea) Block Page, this is the forward to the blockpage via 302 redir",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_miranda_block",
+        common_name="RU ISP Miranda Media Block",
+        pattern="""109.200.155.73/info.js""",
+        location_found="body",
+        source=[
+            "https://www.miranda-media.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200503T080344Z_AS201776_LcmthstHJJjoU7fd9RIdqC2NvOPIbT48S43epb5mWou5gDdYux?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian/Ukranian ISP Miranda Media (based in Crimea) Block Page, this matches the custom tracker js they include",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_mts_forward",
         common_name="RU ISP MTS Block",
         pattern="""blocked.mts.ru""",
