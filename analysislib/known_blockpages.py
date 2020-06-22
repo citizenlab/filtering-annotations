@@ -1882,6 +1882,36 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_rascom_forward",
+        common_name="RU ISP Rascom Block",
+        pattern="""blocked.as20764.net/blocked.php""",
+        location_found="header",
+        source=[
+            "https://rascom.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200426T030624Z_AS15378_m3QsGmFgaY0yex11nq2wFgOTNLHiCK0lmShNdYZR6LXBKE1iq5?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP Rascom Page, this is the forward to the blockpage",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_rascom_block",
+        common_name="RU ISP Rascom Block",
+        pattern="""<hr><center><a href="http://www.rascom.ru">""",
+        location_found="body",
+        source=[
+            "https://rascom.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200426T030624Z_AS15378_m3QsGmFgaY0yex11nq2wFgOTNLHiCK0lmShNdYZR6LXBKE1iq5?input=http://bluesystem.ru/",
+        confidence_no_fp=7,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP Rascom Page, this is matches on the ISP branding at the end of the blockpage.",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_beeline_blackhole_forward",
         common_name="RU ISP Beeline Block",
         pattern="""blackhole.beeline.ru""",
