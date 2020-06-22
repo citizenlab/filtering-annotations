@@ -2280,6 +2280,36 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_ktelecom_forward",
+        common_name="RU ISP K-Telecom Block",
+        pattern="""block.k-telecom.org""",
+        location_found="header",
+        source=[
+            "https://k-telecom.org/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200218T053707Z_AS48642_teIfdu9u5LoU76KCYMwyEQOk2qbfpJPmeSsiYL2KRMgkYxwE9e?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP K-Telecom Block Page, this is the forward to the blockpage",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_ktelecom_block",
+        common_name="RU ISP K-Telecom Block",
+        pattern="""<p>Техническая поддержка: <a href="mailto:support@k-telecom.org""",
+        location_found="body",
+        source=[
+            "https://k-telecom.org/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200218T053707Z_AS48642_teIfdu9u5LoU76KCYMwyEQOk2qbfpJPmeSsiYL2KRMgkYxwE9e?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP K-Telecom Block Page, this matches on the support email they append to a standard RKN blockpage",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_kmtn_forward",
         common_name="RU ISP KMTN Block",
         pattern="""block.kmtn.ru""",
