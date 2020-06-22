@@ -2755,6 +2755,22 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_nevalink_forward",
+        common_name="RU ISP Nevalink Block",
+        pattern="""89.223.47.135""",
+        location_found="header",
+        source=[
+            "https://nevalink.net/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200201T082946Z_AS42668_gmx6fqwN0k925BbuFXoqKR01sUjq7fsFHbXJT8LpqmAJrWSRDi?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""Russian ISP Nevalink forward to a blockpage should 302 to GET http://89.223.47.135/index.html
+        """,
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_svyazenergo_forward",
         common_name="RU ISP Svyaz Energo Block",
         pattern="""http://sv-en.ru/block.php""",
