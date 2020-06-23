@@ -21,6 +21,12 @@ There are two types of signatures:
 
 Where possible samples of both screenshots and HTML are contained in the `meta` directories.
 
+# Data
+
+The data is stored in the `data` directory and currently in version 1.  It is available
+in both JSON and CSV format.  If you are hoping to contribute annotations it is best
+to edit the `.py` files in a pull request or add an issue with an associated example.
+
 # Schema
 
 ## HTTP(s) Signatures

@@ -5,6 +5,8 @@ SimpleBlockPagePattern - defines what a single entry in a known block looks like
 BlockPatternMatcher - a group of BlockPagePatterns that can generate matching dictionaries to use against headers/body text
 """
 
+import re
+
 class SimpleBlockPagePattern:
     def __init__(self, name, pattern, location_found, common_name="", source="", exp_url="",confidence_no_fp=10, scope="nat", expected_countries=None, notes=""):
 
@@ -32,6 +34,8 @@ class SimpleBlockPagePattern:
         self.expected_countries =[x.upper() for x in expected_countries]    # two letter country code where we expect to find it
         self.notes = notes                                                  # extra text if needed
 
+    def __repr__(self):
+        return "%s:%s:%s" % (self.name, self.common_name, self.pattern)
 
 class BlockPatternMatcher:
 
@@ -46,6 +50,8 @@ class BlockPatternMatcher:
         else:
             self.all_blocks_known = given_blocks
 
+        self.all_blocks_known = sorted(self.all_blocks_known, key=lambda i: i.name)
+
     def pattern_to_common_name(self, given_detection_name):
         for this_block in self.all_blocks_known:
             if this_block.name == given_detection_name:
@@ -55,18 +61,33 @@ class BlockPatternMatcher:
     def get_info_for_detection(self, given_detection_name):
         for this_block in self.all_blocks_known:
             if this_block.name == given_detection_name:
+
+                cleaned_notes = str(this_block.notes).replace("\n","")
+                _RE_COMBINE_WHITESPACE = re.compile(r"\s+")
+                cleaned_notes = _RE_COMBINE_WHITESPACE.sub(" ", cleaned_notes).strip()
+
                 return {
                     "name": this_block.name,
                     "common_name": this_block.common_name,
                     "pattern": this_block.pattern,
                     "location_found": this_block.location_found,
+                    "exp_url": this_block.exp_url,
                     "confidence_no_fp": this_block.confidence_no_fp,
-                    "scope": this_block.scope,
                     "source": this_block.source,
+                    "scope": this_block.scope,
                     "expected_countries": this_block.expected_countries,
-                    "notes": this_block.notes
+                    "notes": cleaned_notes
                 }
         return {}
+
+    def as_dict_list(self):
+        final_list = list()
+
+        for this_sig in self.all_blocks_known:
+            this_sig_as_dict = self.get_info_for_detection(this_sig.name)
+            final_list.append(this_sig_as_dict)
+
+        return final_list
 
     def generate_comparison_dicts(self, confidence_thresh=1, limit_to_countries=None, limit_to_scope=None):
 
@@ -105,6 +126,3 @@ class BlockPatternMatcher:
                     body_compare_dict[this_pattern.name] = this_pattern.pattern
 
         return headers_compare_dict, body_compare_dict
-
-
-
