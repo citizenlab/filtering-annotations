@@ -44,7 +44,7 @@ def dict_to_csv(given_fn, given_dict, given_fields):
 
 # json
 blocks_to_json(os.path.join(output_dir, current_version, "http.json"))
-blocks_to_json(os.path.join(output_dir, current_version, "http.json"))
+dns_to_json(os.path.join(output_dir, current_version, "dns.json"))
 
 # csv
 blocks_to_csv(os.path.join(output_dir, current_version, "http.csv"))
