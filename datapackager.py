@@ -19,7 +19,7 @@ def dns_to_json(given_fn):
 
 def dict_to_json(given_fn, given_dict):
     with open(given_fn, 'w') as fout:
-        json.dump(given_dict, fout, indent=2)
+        json.dump(given_dict, fout, indent=2, sort_keys=True)
 
 # csv output
 def blocks_to_csv(given_fn):
