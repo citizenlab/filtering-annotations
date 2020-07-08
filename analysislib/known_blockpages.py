@@ -1326,6 +1326,36 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_relline_forward",
+        common_name="RU ISP Relline Block",
+        pattern="""195.146.65.20/block.html""",
+        location_found="header",
+        source=[
+            "http://relline.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180426T161628Z_AS0_CWEZrmlwar4W96mZVYgWNq3ICGQMGAAb9g3IJeLt1yGoYWcG34?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Relline RKN blockpage Forward",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_relline_block",
+        common_name="RU ISP Relline Block",
+        pattern="""<a href="http://relline.ru/" style="border:0;" title="Главная страница сайта «Реллайн»">""",
+        location_found="body",
+        source=[
+            "http://relline.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180426T161628Z_AS0_CWEZrmlwar4W96mZVYgWNq3ICGQMGAAb9g3IJeLt1yGoYWcG34?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Relline RKN blockpage Forward",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_profintel_forward",
         common_name="RU ISP Profintel Block",
         pattern="""stat.profintel.ru/block/blacklist/""",
