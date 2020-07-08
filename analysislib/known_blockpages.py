@@ -683,7 +683,7 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
-        name="prod_cisco_opendns_block",
+        name="prod_cisco_opendns_block_1",
         common_name="Cisco OpenDNS/Umbrella",
         pattern="This site is blocked due to content filtering.",
         location_found="body",
@@ -697,6 +697,20 @@ known_blocks = [
         notes="Cisco OpenDNS Content Filter Blockpage (also Cisco Umbrella)",
     ),
 
+    SimpleBlockPagePattern(
+        name="prod_opendns_block_2",
+        common_name="Cisco OpenDNS/Umbrella",
+        pattern="""This domain is blocked due to content filtering.""",
+        location_found="body",
+        source=[
+            "https://support.opendns.com/hc/en-us/community/posts/220047187-OpenDNS-suddenly-blocks-sites-after-a-few-days-of-use"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180401T092328Z_AS25019_Fwt7OWzgSX5bgt4fU2uwLnIfAlQrSkXHIrgk0NaMktVUkMsJCC?input=http://www.gayegypt.com",
+        confidence_no_fp=8,
+        scope="prod",
+        expected_countries=[""],
+        notes="Matches default block page text for an OpenDNS blockpage. Lower fp value due to wording based pattern.",
+    ),
 
     SimpleBlockPagePattern(
         name="prod_juniper_webfilter",
