@@ -2235,6 +2235,22 @@
     ]
   },
   {
+    "common_name": "RU ISP MGTS Block",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20180826T070129Z_AS25513_Oc2jCi998XSfV1AccJgCanulDVWpm8PBG7tEZeiOF2nuh8FFIj?input=http://www.deti-404.com/",
+    "expected_countries": [
+      "RU"
+    ],
+    "location_found": "header",
+    "name": "isp_ru_mgts_rkn_forward_3",
+    "notes": "MGTS Russias RKN blockpage forward. This is a by IP since early versions (circa 2018) do not use the domain.",
+    "pattern": "62.112.121.68",
+    "scope": "isp",
+    "source": [
+      ""
+    ]
+  },
+  {
     "common_name": "RU ISP MIPT Telecom Block",
     "confidence_no_fp": 8,
     "exp_url": "https://explorer.ooni.org/measurement/20180317T124213Z_AS5467_jYLepdiccPKELyLYmRNgvZ8KaaeGBz4JArbyfepClYbyg1EHJK?input=http://bluesystem.ru/",

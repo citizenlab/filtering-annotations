@@ -1521,6 +1521,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_mgts_rkn_forward_3",
+        common_name="RU ISP MGTS Block",
+        pattern="""62.112.121.68""",
+        location_found="header",
+        source=[
+            ""
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180826T070129Z_AS25513_Oc2jCi998XSfV1AccJgCanulDVWpm8PBG7tEZeiOF2nuh8FFIj?input=http://www.deti-404.com/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="MGTS Russias RKN blockpage forward.  This is a by IP since early versions (circa 2018) do not use the domain.",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_mgts_rkn_blockpage_1",
         common_name="RU ISP MGTS Block",
         pattern="""<p><a id="toggle" href="">Узнать причину <img src="/img/down_mobile.png"></a></p>""",
