@@ -2919,6 +2919,22 @@
     ]
   },
   {
+    "common_name": "RU ISP Tele2 Block",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20190809T191432Z_AS15378_fmsQw7Pl5AMY5uxejuU0d095iyVXnfki55sFBPtu799zPhfi0R?input=http://bluesystem.ru/",
+    "expected_countries": [
+      "RU"
+    ],
+    "location_found": "header",
+    "name": "isp_ru_tele2_forward",
+    "notes": "RU ISP Tele2 Block page forward.",
+    "pattern": "//217.169.82.130/",
+    "scope": "isp",
+    "source": [
+      "http://tele2.ru/"
+    ]
+  },
+  {
     "common_name": "RU ISP Teleseti Block",
     "confidence_no_fp": 10,
     "exp_url": "https://explorer.ooni.org/measurement/20180317T192943Z_AS15673_6rgzZxX5Dk9JVrI1x3DzM10Scuq7qtqaYD8gIatp4ByTDXjYdc?input=http://bluesystem.ru/",

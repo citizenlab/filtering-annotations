@@ -1732,6 +1732,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_tele2_forward",
+        common_name="RU ISP Tele2 Block",
+        pattern="""//217.169.82.130/""",
+        location_found="header",
+        source=[
+            "http://tele2.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20190809T191432Z_AS15378_fmsQw7Pl5AMY5uxejuU0d095iyVXnfki55sFBPtu799zPhfi0R?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="RU ISP Tele2 Block page forward.",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_tele2_block",
         common_name="RU ISP Tele2 Block",
         pattern="""//t2rkn.com/""",
