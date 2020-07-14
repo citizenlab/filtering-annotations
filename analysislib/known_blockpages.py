@@ -1461,7 +1461,7 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
-        name="isp_ru_megamax_rkn_forward",
+        name="isp_ru_megamax_rkn_forward_1",
         common_name="RU ISP Megamax Block",
         pattern="""http://89.185.75.227/451/1f50893f80d6830d62765ffad7721742.html""",
         location_found="header",
@@ -1473,6 +1473,21 @@ known_blocks = [
         scope="isp",
         expected_countries=["RU"],
         notes="Forward to Megamax Russias RKN blockpage",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_megamax_rkn_forward_2",
+        common_name="RU ISP Megamax Block",
+        pattern="""81.163.39.153:8080""",
+        location_found="header",
+        source=[
+            ""
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200326T111113Z_AS57227_WihnDCNLJ6CX0NmZejS46ni9PWDk4eUGHCrXzDM7Rh0Wr181pi?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Forward to Megamax Russias RKN blockpage, variant on other IP",
     ),
 
     SimpleBlockPagePattern(

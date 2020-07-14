@@ -2146,9 +2146,25 @@
       "RU"
     ],
     "location_found": "header",
-    "name": "isp_ru_megamax_rkn_forward",
+    "name": "isp_ru_megamax_rkn_forward_1",
     "notes": "Forward to Megamax Russias RKN blockpage",
     "pattern": "http://89.185.75.227/451/1f50893f80d6830d62765ffad7721742.html",
+    "scope": "isp",
+    "source": [
+      ""
+    ]
+  },
+  {
+    "common_name": "RU ISP Megamax Block",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20200326T111113Z_AS57227_WihnDCNLJ6CX0NmZejS46ni9PWDk4eUGHCrXzDM7Rh0Wr181pi?input=http://bluesystem.ru/",
+    "expected_countries": [
+      "RU"
+    ],
+    "location_found": "header",
+    "name": "isp_ru_megamax_rkn_forward_2",
+    "notes": "Forward to Megamax Russias RKN blockpage, variant on other IP",
+    "pattern": "81.163.39.153:8080",
     "scope": "isp",
     "source": [
       ""
