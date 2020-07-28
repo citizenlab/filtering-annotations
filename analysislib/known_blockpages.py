@@ -838,10 +838,47 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="prod_comodo_securedns_forward",
+        common_name="Comodo SecureDNS Service",
+        pattern="warn.recursive.dnsbycomodo.com",
+        location_found="header",
+        source=[
+            "https://securedns.dnsbycomodo.com/",
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20190924T211601Z_AS6856_p2XyAY2gncrEiK23Ac5zqFDfYHF83J94NEp4fyxbKWNrGTdXBk?input=http://www.deti-404.com/",
+        confidence_no_fp=10,
+        scope="prod",
+        expected_countries=[""],
+        notes="""
+        Comodo SecureDNS is a security focused DNS filtering system.  This matches the forward where you are forwarded
+        to a url in this format: http://warn.recursive.dnsbycomodo.com/?host={{url}}
+        """,
+    ),
+
+    SimpleBlockPagePattern(
+        name="prod_comodo_securedns_warning",
+        common_name="Comodo SecureDNS Service",
+        pattern="://www.comodo.com/home/internet-security/submit.php?",
+        location_found="body",
+        source=[
+            "https://securedns.dnsbycomodo.com/",
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20190924T211601Z_AS6856_p2XyAY2gncrEiK23Ac5zqFDfYHF83J94NEp4fyxbKWNrGTdXBk?input=http://www.deti-404.com/",
+        confidence_no_fp=10,
+        scope="prod",
+        expected_countries=[""],
+        notes="""
+        Comodo SecureDNS is a security focused DNS filtering system.  This matches the submission for recategorization 
+        script call.
+        """,
+    ),
+
+
+    SimpleBlockPagePattern(
         name="prod_bluecoat_notify_forward",
         common_name="Symantec Bluecoat User Notification",
         pattern="notify.bluecoat.com",
-        location_found="forward",
+        location_found="header",
         source=[
             "http://notify.bluecoat.com/",
             "https://knowledge.broadcom.com/external/article/169743/notifybluecoatcom-unexpectedly-shows-up.html",

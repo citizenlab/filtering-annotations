@@ -3968,7 +3968,7 @@
     "expected_countries": [
       ""
     ],
-    "location_found": "forward",
+    "location_found": "header",
     "name": "prod_bluecoat_notify_forward",
     "notes": "Symantec Bluecoat product line notifications are done via a foward to the notify.bluecoat.com domain with the following parameters as an HTTP 302 to URL: http://notify.bluecoat.com/notify-Notify?{{requested_url}}{{url_as_base64}}",
     "pattern": "notify.bluecoat.com",
@@ -4107,6 +4107,38 @@
     "scope": "prod",
     "source": [
       "https://community.meraki.com/t5/Security-SD-WAN/Content-Filtering-Categories-with-exclusions/td-p/6543"
+    ]
+  },
+  {
+    "common_name": "Comodo SecureDNS Service",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20190924T211601Z_AS6856_p2XyAY2gncrEiK23Ac5zqFDfYHF83J94NEp4fyxbKWNrGTdXBk?input=http://www.deti-404.com/",
+    "expected_countries": [
+      ""
+    ],
+    "location_found": "header",
+    "name": "prod_comodo_securedns_forward",
+    "notes": "Comodo SecureDNS is a security focused DNS filtering system. This matches the forward where you are forwarded to a url in this format: http://warn.recursive.dnsbycomodo.com/?host={{url}}",
+    "pattern": "warn.recursive.dnsbycomodo.com",
+    "scope": "prod",
+    "source": [
+      "https://securedns.dnsbycomodo.com/"
+    ]
+  },
+  {
+    "common_name": "Comodo SecureDNS Service",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20190924T211601Z_AS6856_p2XyAY2gncrEiK23Ac5zqFDfYHF83J94NEp4fyxbKWNrGTdXBk?input=http://www.deti-404.com/",
+    "expected_countries": [
+      ""
+    ],
+    "location_found": "body",
+    "name": "prod_comodo_securedns_warning",
+    "notes": "Comodo SecureDNS is a security focused DNS filtering system. This matches the submission for recategorization script call.",
+    "pattern": "://www.comodo.com/home/internet-security/submit.php?",
+    "scope": "prod",
+    "source": [
+      "https://securedns.dnsbycomodo.com/"
     ]
   },
   {
