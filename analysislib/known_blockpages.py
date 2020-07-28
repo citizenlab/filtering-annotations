@@ -2654,6 +2654,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_primelink_forward",
+        common_name="RU ISP Primelink Block",
+        pattern="""95.131.176.27""",
+        location_found="header",
+        source=[
+            "http://www.primelink.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180322T162058Z_AS49058_vYrpjxnSyh3GXz3R7EW8zGy4sVAxZ92jcSYvbcgny3uYTixO8B?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP Primelink Block Page, this is the forward to the blockpage",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_almatel_forward",
         common_name="RU ISP Almatel Block",
         pattern="""deny.cifra1.ru""",

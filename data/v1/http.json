@@ -2571,6 +2571,22 @@
     ]
   },
   {
+    "common_name": "RU ISP Primelink Block",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20180322T162058Z_AS49058_vYrpjxnSyh3GXz3R7EW8zGy4sVAxZ92jcSYvbcgny3uYTixO8B?input=http://bluesystem.ru/",
+    "expected_countries": [
+      "RU"
+    ],
+    "location_found": "header",
+    "name": "isp_ru_primelink_forward",
+    "notes": "Russian ISP Primelink Block Page, this is the forward to the blockpage",
+    "pattern": "95.131.176.27",
+    "scope": "isp",
+    "source": [
+      "http://www.primelink.ru/"
+    ]
+  },
+  {
     "common_name": "RU ISP Profintel Block",
     "confidence_no_fp": 10,
     "exp_url": "https://explorer.ooni.org/measurement/20200215T045010Z_AS28890_zMSKnUXeDyc2AIT0zl1JkHBLyx89vDgeFoXvi3I6iRuBA0XV1Y?input=http://bluesystem.ru/",
