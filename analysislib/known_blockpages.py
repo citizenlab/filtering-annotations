@@ -2624,6 +2624,36 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_avantel_forward",
+        common_name="RU ISP Avantel Block",
+        pattern="""block.msk.avantel.ru""",
+        location_found="header",
+        source=[
+            "https://avantel.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20190418T064317Z_AS44811_YuHou8TpZoBdfIwW8ZjLp7AJUZjWkLe1j3mJnedRpx3DU5Ge3q?input=http://www.deti-404.com/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP Avantel Block Page, this is the forward to the blockpage",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_avantel_block",
+        common_name="RU ISP Avantel Block",
+        pattern="""helpdesk@avantel.ru""",
+        location_found="body",
+        source=[
+            "https://avantel.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20190418T064317Z_AS44811_YuHou8TpZoBdfIwW8ZjLp7AJUZjWkLe1j3mJnedRpx3DU5Ge3q?input=http://www.deti-404.com/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP Avantel Block Page, this matches on the helpdesk email embedded in the block page.",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_yaltanet_forward",
         common_name="RU ISP Yaltanet Block",
         pattern="""block.yaltanet.ru""",

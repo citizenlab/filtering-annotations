@@ -1599,6 +1599,38 @@
     ]
   },
   {
+    "common_name": "RU ISP Avantel Block",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20190418T064317Z_AS44811_YuHou8TpZoBdfIwW8ZjLp7AJUZjWkLe1j3mJnedRpx3DU5Ge3q?input=http://www.deti-404.com/",
+    "expected_countries": [
+      "RU"
+    ],
+    "location_found": "body",
+    "name": "isp_ru_avantel_block",
+    "notes": "Russian ISP Avantel Block Page, this matches on the helpdesk email embedded in the block page.",
+    "pattern": "helpdesk@avantel.ru",
+    "scope": "isp",
+    "source": [
+      "https://avantel.ru/"
+    ]
+  },
+  {
+    "common_name": "RU ISP Avantel Block",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20190418T064317Z_AS44811_YuHou8TpZoBdfIwW8ZjLp7AJUZjWkLe1j3mJnedRpx3DU5Ge3q?input=http://www.deti-404.com/",
+    "expected_countries": [
+      "RU"
+    ],
+    "location_found": "header",
+    "name": "isp_ru_avantel_forward",
+    "notes": "Russian ISP Avantel Block Page, this is the forward to the blockpage",
+    "pattern": "block.msk.avantel.ru",
+    "scope": "isp",
+    "source": [
+      "https://avantel.ru/"
+    ]
+  },
+  {
     "common_name": "RU ISP Beeline Block",
     "confidence_no_fp": 10,
     "exp_url": "https://explorer.ooni.org/measurement/20200214T003928Z_AS16345_MspHYIbQka8Krh8T1rYKMv2a2mwRaYQZSVlKwgYpew7x3I1f4x?input=http://www.deti-404.com/",
