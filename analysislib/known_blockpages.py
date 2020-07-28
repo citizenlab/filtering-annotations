@@ -838,6 +838,46 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="prod_bluecoat_notify_forward",
+        common_name="Symantec Bluecoat User Notification",
+        pattern="notify.bluecoat.com",
+        location_found="forward",
+        source=[
+            "http://notify.bluecoat.com/",
+            "https://knowledge.broadcom.com/external/article/169743/notifybluecoatcom-unexpectedly-shows-up.html",
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20181014T082454Z_AS15505_UlzScz9IQ0QBGrAg6CscMDzF2FeTJhqWXiOvcQYZGj2uFI9BD0?input=http://www.glil.org",
+        confidence_no_fp=10,
+        scope="prod",
+        expected_countries=[""],
+        notes="""
+        Symantec Bluecoat product line notifications are done via a foward to the notify.bluecoat.com domain with the 
+        following parameters as an HTTP 302 to URL:
+        http://notify.bluecoat.com/notify-Notify?{{requested_url}}{{url_as_base64}}
+        """,
+    ),
+
+    SimpleBlockPagePattern(
+        name="prod_bluecoat_notify_notification",
+        common_name="Symantec Bluecoat User Notification",
+        pattern="://notify.bluecoat.com",
+        location_found="body",
+        source=[
+            "http://notify.bluecoat.com/",
+            "https://knowledge.broadcom.com/external/article/169743/notifybluecoatcom-unexpectedly-shows-up.html",
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20181014T082454Z_AS15505_UlzScz9IQ0QBGrAg6CscMDzF2FeTJhqWXiOvcQYZGj2uFI9BD0?input=http://www.glil.org",
+        confidence_no_fp=8,
+        scope="prod",
+        expected_countries=[""],
+        notes="""
+        Symantec Bluecoat product line notifications are done via a foward to the notify.bluecoat.com domain with the 
+        following parameters as an HTTP 302 to URL:
+        http://notify.bluecoat.com/notify-Notify?{{requested_url}}{{url_as_base64}}
+    """,
+    ),
+
+    SimpleBlockPagePattern(
         name="prod_squid_error_page",
         common_name="Squid Proxy",
         pattern="Stylesheet for Squid Error pages",
