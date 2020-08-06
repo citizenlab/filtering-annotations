@@ -1373,6 +1373,36 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_convex_intersat_foward",
+        common_name="RU ISP Convex Block",
+        pattern="""block.intersat.ru""",
+        location_found="header",
+        source=[
+            "https://www.convex.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200109T111809Z_AS38972_nXN971LWjRPgQi8AkN52iZQwOo8SOV3VkLqvkV6NYSnDGVjWkd?input=http://www.deti-404.com/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Convex Russias RKN blockpage with Intersat branding",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_convex_intersat_block",
+        common_name="RU ISP Convex Block",
+        pattern="""Уважаемые пользователи ООО &quot;Сухой Лог Интерсат&quot;!""",
+        location_found="body",
+        source=[
+            "https://www.convex.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200109T111809Z_AS38972_nXN971LWjRPgQi8AkN52iZQwOo8SOV3VkLqvkV6NYSnDGVjWkd?input=http://www.deti-404.com/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Convex Russias RKN blockpage with Intersat branding",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_convex_rkn_foward",
         common_name="RU ISP Convex Block",
         pattern="""http://ban.convex.ru/index.html""",

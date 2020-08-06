@@ -1693,6 +1693,38 @@
   {
     "common_name": "RU ISP Convex Block",
     "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20200109T111809Z_AS38972_nXN971LWjRPgQi8AkN52iZQwOo8SOV3VkLqvkV6NYSnDGVjWkd?input=http://www.deti-404.com/",
+    "expected_countries": [
+      "RU"
+    ],
+    "location_found": "body",
+    "name": "isp_ru_convex_intersat_block",
+    "notes": "Convex Russias RKN blockpage with Intersat branding",
+    "pattern": "\u0423\u0432\u0430\u0436\u0430\u0435\u043c\u044b\u0435 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0438 \u041e\u041e\u041e &quot;\u0421\u0443\u0445\u043e\u0439 \u041b\u043e\u0433 \u0418\u043d\u0442\u0435\u0440\u0441\u0430\u0442&quot;!",
+    "scope": "isp",
+    "source": [
+      "https://www.convex.ru/"
+    ]
+  },
+  {
+    "common_name": "RU ISP Convex Block",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20200109T111809Z_AS38972_nXN971LWjRPgQi8AkN52iZQwOo8SOV3VkLqvkV6NYSnDGVjWkd?input=http://www.deti-404.com/",
+    "expected_countries": [
+      "RU"
+    ],
+    "location_found": "header",
+    "name": "isp_ru_convex_intersat_foward",
+    "notes": "Convex Russias RKN blockpage with Intersat branding",
+    "pattern": "block.intersat.ru",
+    "scope": "isp",
+    "source": [
+      "https://www.convex.ru/"
+    ]
+  },
+  {
+    "common_name": "RU ISP Convex Block",
+    "confidence_no_fp": 10,
     "exp_url": "https://explorer.ooni.org/measurement/20200214T055045Z_AS5563_stIHGHbLS4sYXFhdxetRWMC8MwZ5fkkNFexjCPlCpMT1D6nOmv?input=http://bluesystem.ru/",
     "expected_countries": [
       "RU"
