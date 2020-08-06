@@ -1658,6 +1658,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_mgts_rkn_forward_4",
+        common_name="RU ISP MGTS Block",
+        pattern="""block.kf.mgts.ru""",
+        location_found="header",
+        source=[
+            ""
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20171125T060158Z_AS25513_qFQyEl7yxNubN8DjveszHUl8t8mfzEFKV5M1pAqpwOPoBNxxhN?input=http://www.glil.org",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="MGTS Russias blockpage forward.  This is the block page for the content filter (this might be opt-in)",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_mgts_rkn_blockpage_1",
         common_name="RU ISP MGTS Block",
         pattern="""<p><a id="toggle" href="">Узнать причину <img src="/img/down_mobile.png"></a></p>""",

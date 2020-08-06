@@ -2331,6 +2331,22 @@
     ]
   },
   {
+    "common_name": "RU ISP MGTS Block",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20171125T060158Z_AS25513_qFQyEl7yxNubN8DjveszHUl8t8mfzEFKV5M1pAqpwOPoBNxxhN?input=http://www.glil.org",
+    "expected_countries": [
+      "RU"
+    ],
+    "location_found": "header",
+    "name": "isp_ru_mgts_rkn_forward_4",
+    "notes": "MGTS Russias blockpage forward. This is the block page for the content filter (this might be opt-in)",
+    "pattern": "block.kf.mgts.ru",
+    "scope": "isp",
+    "source": [
+      ""
+    ]
+  },
+  {
     "common_name": "RU ISP MIPT Telecom Block",
     "confidence_no_fp": 8,
     "exp_url": "https://explorer.ooni.org/measurement/20180317T124213Z_AS5467_jYLepdiccPKELyLYmRNgvZ8KaaeGBz4JArbyfepClYbyg1EHJK?input=http://bluesystem.ru/",
