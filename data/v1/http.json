@@ -2427,6 +2427,38 @@
     ]
   },
   {
+    "common_name": "RU ISP Naukanet Block",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20200318T090603Z_AS8641_sZfld8WLVRMRZ6Oa6uj23WNddUJ5zFCFLL5JCNBqorFDn1P050?input=http://www.lesbi.ru/",
+    "expected_countries": [
+      "RU"
+    ],
+    "location_found": "body",
+    "name": "isp_ru_naukanet_block",
+    "notes": "Russian ISP Nauka Nnet blockpage, matches on the return to nauka net link.",
+    "pattern": "\u043f\u0435\u0440\u0435\u0439\u0442\u0438 \u043d\u0430 \u0441\u0430\u0439\u0442 www.naukanet.ru",
+    "scope": "isp",
+    "source": [
+      "https://www.naukanet.ru/"
+    ]
+  },
+  {
+    "common_name": "RU ISP Naukanet Block",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20200318T090603Z_AS8641_sZfld8WLVRMRZ6Oa6uj23WNddUJ5zFCFLL5JCNBqorFDn1P050?input=http://www.lesbi.ru/",
+    "expected_countries": [
+      "RU"
+    ],
+    "location_found": "header",
+    "name": "isp_ru_naukanet_forward",
+    "notes": "Russian ISP Nauka Net blockpage forward",
+    "pattern": "block.naukanet.ru",
+    "scope": "isp",
+    "source": [
+      "https://www.naukanet.ru/"
+    ]
+  },
+  {
     "common_name": "RU ISP NetByNet Block",
     "confidence_no_fp": 10,
     "exp_url": "https://explorer.ooni.org/measurement/20180317T125006Z_AS12714_EKKezyi1I1R4ccMvYU90GdJ9xf5mwg7qocORQgcQZ1ckX6vVCA?input=http://bluesystem.ru/",

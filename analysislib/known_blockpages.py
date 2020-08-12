@@ -1734,6 +1734,36 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_naukanet_forward",
+        common_name="RU ISP Naukanet Block",
+        pattern="""block.naukanet.ru""",
+        location_found="header",
+        source=[
+            "https://www.naukanet.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200318T090603Z_AS8641_sZfld8WLVRMRZ6Oa6uj23WNddUJ5zFCFLL5JCNBqorFDn1P050?input=http://www.lesbi.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP Nauka Net blockpage forward",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_naukanet_block",
+        common_name="RU ISP Naukanet Block",
+        pattern="""перейти на сайт www.naukanet.ru""",
+        location_found="body",
+        source=[
+            "https://www.naukanet.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200318T090603Z_AS8641_sZfld8WLVRMRZ6Oa6uj23WNddUJ5zFCFLL5JCNBqorFDn1P050?input=http://www.lesbi.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP Nauka Nnet blockpage, matches on the return to nauka net link.",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_teleseti_forward",
         common_name="RU ISP Teleseti Block",
         pattern="""www.teleseti.com/zapret/zapret-new.php""",
