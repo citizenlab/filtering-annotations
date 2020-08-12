@@ -3079,6 +3079,38 @@
     ]
   },
   {
+    "common_name": "RU ISP Sova Telecom Block",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20200116T201205Z_AS35239_m3RIheOFkheUOKXr8r58t2OsdVEZnB54J1ib0Qt4IIqI9Pezxl?input=http://www.deti-404.com/",
+    "expected_countries": [
+      "RU"
+    ],
+    "location_found": "body",
+    "name": "isp_ru_sovatelecom_block",
+    "notes": "Sovatelecoms RKN blockpage",
+    "pattern": "mailto:support@balttelecom.net",
+    "scope": "isp",
+    "source": [
+      "https://sovatelecom.ru/"
+    ]
+  },
+  {
+    "common_name": "RU ISP Sova Telecom Block",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20200116T201205Z_AS35239_m3RIheOFkheUOKXr8r58t2OsdVEZnB54J1ib0Qt4IIqI9Pezxl?input=http://www.deti-404.com/",
+    "expected_countries": [
+      "RU"
+    ],
+    "location_found": "header",
+    "name": "isp_ru_sovatelecom_forward",
+    "notes": "Sovatelecoms RKN blockpage",
+    "pattern": "://sovatelecom.ru/ZAPRET.html",
+    "scope": "isp",
+    "source": [
+      "https://sovatelecom.ru/"
+    ]
+  },
+  {
     "common_name": "RU ISP Strela Block",
     "confidence_no_fp": 10,
     "exp_url": "https://explorer.ooni.org/measurement/20180317T131026Z_AS56969_fW0lpqCHNlnPDeGqeaL7MEBDwiZOwKSzJHnYPs3FoVf84wCKsD?input=http://bluesystem.ru/",

@@ -1433,6 +1433,36 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_sovatelecom_forward",
+        common_name="RU ISP Sova Telecom Block",
+        pattern="""://sovatelecom.ru/ZAPRET.html""",
+        location_found="header",
+        source=[
+            "https://sovatelecom.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200116T201205Z_AS35239_m3RIheOFkheUOKXr8r58t2OsdVEZnB54J1ib0Qt4IIqI9Pezxl?input=http://www.deti-404.com/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Sovatelecoms RKN blockpage",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_sovatelecom_block",
+        common_name="RU ISP Sova Telecom Block",
+        pattern="""mailto:support@balttelecom.net""",
+        location_found="body",
+        source=[
+            "https://sovatelecom.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200116T201205Z_AS35239_m3RIheOFkheUOKXr8r58t2OsdVEZnB54J1ib0Qt4IIqI9Pezxl?input=http://www.deti-404.com/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Sovatelecoms RKN blockpage",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_sochionline_forward",
         common_name="RU ISP Sochi Online Block",
         pattern="""denied.sochi-online.com""",
