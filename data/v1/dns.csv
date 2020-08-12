@@ -63,6 +63,7 @@ dns_isp_rostelecom_blocksystem,217.148.54.171,7,,['https://rt.ru/'],isp,['RU'],R
 dns_isp_ru_rkn_enforta,87.241.223.133,10,,['https://www.enforta.ru/'],isp,['RU'],Russian ISP Enforta blockpage
 dns_isp_ru_rkn_ertelecom,5.3.3.17,10,https://explorer.ooni.org/measurement/20180313T233202Z_AS51645_dIEFx0okmP7iqOXN3x1p97EObb6Z1oLDQYOHFLVvfn7c0FKRW6?input=http://bluesystem.ru/,['https://ertelecom.ru/'],isp,['RU'],Russian ISP Ertelecom RKN blockpage
 dns_isp_ru_rkn_mastertel,83.69.208.124,10,,['http://mastertel.ru/'],isp,['RU'],"Russian ISP Mastertel (business focused, telecom provider, datacenters, etc) RKN blockpage"
+dns_isp_ru_rkn_naukanet,46.175.31.250,10,https://explorer.ooni.org/measurement/20200318T090603Z_AS8641_sZfld8WLVRMRZ6Oa6uj23WNddUJ5zFCFLL5JCNBqorFDn1P050?input=http://www.lesbi.ru/,['https://www.naukanet.ru/'],isp,['RU'],Russian ISP Nauka-Svyaz RKN blockpage
 dns_isp_ru_rkn_netbynet,212.1.226.59,10,,['http://www.netbynet.ru/'],isp,['RU'],Russian ISP NetByNet RKN blockpage
 dns_isp_ru_rkn_skynet,185.37.129.10,10,https://explorer.ooni.org/measurement/20190628T034744Z_AS35807_4XwiNixlQ8odJ6ek21IUmKwtvCecSOWoII5ZjwqzCCgx6Sx9a3?input=http://bluesystem.ru/,['https://www.sknt.ru/'],isp,['RU'],Russian ISP Skynet RKN blockpage
 dns_isp_ru_rkn_smoltelecom,37.44.40.254,10,,['http://smoltelecom.ru/'],isp,['RU'],Russian ISP Smoltelecom blockpage

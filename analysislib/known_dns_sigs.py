@@ -547,6 +547,21 @@ known_dns_sigs = [
     ),
 
     SimpleDNSReplyPattern(
+        name="dns_isp_ru_rkn_naukanet",
+        response="46.175.31.250",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20200318T090603Z_AS8641_sZfld8WLVRMRZ6Oa6uj23WNddUJ5zFCFLL5JCNBqorFDn1P050?input=http://www.lesbi.ru/",
+        source=[
+            "https://www.naukanet.ru/"
+        ],
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""
+        Russian ISP Nauka-Svyaz RKN blockpage
+        """
+    ),
+
+    SimpleDNSReplyPattern(
         name="dns_isp_ru_rkn_mastertel",
         response="83.69.208.124",
         confidence_no_fp=10,

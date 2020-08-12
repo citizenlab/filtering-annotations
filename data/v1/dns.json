@@ -885,6 +885,20 @@
   },
   {
     "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20200318T090603Z_AS8641_sZfld8WLVRMRZ6Oa6uj23WNddUJ5zFCFLL5JCNBqorFDn1P050?input=http://www.lesbi.ru/",
+    "expected_countries": [
+      "RU"
+    ],
+    "name": "dns_isp_ru_rkn_naukanet",
+    "notes": "Russian ISP Nauka-Svyaz RKN blockpage",
+    "response": "46.175.31.250",
+    "scope": "isp",
+    "source": [
+      "https://www.naukanet.ru/"
+    ]
+  },
+  {
+    "confidence_no_fp": 10,
     "exp_url": "",
     "expected_countries": [
       "RU"
