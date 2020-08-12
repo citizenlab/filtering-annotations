@@ -4700,6 +4700,29 @@ known_blocks = [
         """,
     ),
 
+    # PROVIDER SIDE BLOCKS
+
+    SimpleBlockPagePattern(
+        name="prov_vkontakte_rkn_geoblock",
+        common_name="VKontakte RKN GeoBlock",
+        pattern="""://vk.com/blank.php?rkn=""",
+        location_found="header",
+        source=[
+            "https://vk.com"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200809T060553Z_AS6697_WHViLvwEDfLrt3yRqACQW09MnDhCy6jynycEEfObNuAApaBTpv?input=https://vk.com/pramenofanarchy",
+        confidence_no_fp=10,
+        scope="prov",
+        expected_countries=["RU"],
+        notes="""
+        Russian social network Vkontakte implements geoblocks on certain pages by forwarding via url:
+        https://vk.com/blank.php?rkn=<ID>
+        
+        If you are outside the target country you are forwarded to the page otherwise a blockpage is 
+        presented (see: exp_url)
+        """,
+    ),
+
     # INSTITUTIONAL BLOCKS
 
     SimpleBlockPagePattern(
