@@ -1373,6 +1373,36 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_by_a1_forward",
+        common_name="BY ISP A1 Block",
+        pattern="""://www.a1.by/mininfo/""",
+        location_found="header",
+        source=[
+            "https://www.a1.by/ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200809T064736Z_AS42772_Sn8W1QKfDMxmJzphNHpEWpYmWbyNQS09eB8wgpQQCYIASBbkPh?input=http://intimby.net/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["BY"],
+        notes="Belarusian ISP A1 (formerly Velcom) Block forward.",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_by_a1_block",
+        common_name="BY ISP A1 Block",
+        pattern="""://www.velcom.by/mininfo/css/main.css""",
+        location_found="body",
+        source=[
+            "https://www.a1.by/ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200809T064736Z_AS42772_Sn8W1QKfDMxmJzphNHpEWpYmWbyNQS09eB8wgpQQCYIASBbkPh?input=http://intimby.net/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["BY"],
+        notes="Belarusian ISP A1 (formerly Velcom) Block forward.",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_by_mts_forward",
         common_name="BY ISP MTS Block",
         pattern="""internet.mts.by/blocked/""",

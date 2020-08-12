@@ -366,6 +366,38 @@
     ]
   },
   {
+    "common_name": "BY ISP A1 Block",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20200809T064736Z_AS42772_Sn8W1QKfDMxmJzphNHpEWpYmWbyNQS09eB8wgpQQCYIASBbkPh?input=http://intimby.net/",
+    "expected_countries": [
+      "BY"
+    ],
+    "location_found": "body",
+    "name": "isp_by_a1_block",
+    "notes": "Belarusian ISP A1 (formerly Velcom) Block forward.",
+    "pattern": "://www.velcom.by/mininfo/css/main.css",
+    "scope": "isp",
+    "source": [
+      "https://www.a1.by/ru/"
+    ]
+  },
+  {
+    "common_name": "BY ISP A1 Block",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20200809T064736Z_AS42772_Sn8W1QKfDMxmJzphNHpEWpYmWbyNQS09eB8wgpQQCYIASBbkPh?input=http://intimby.net/",
+    "expected_countries": [
+      "BY"
+    ],
+    "location_found": "header",
+    "name": "isp_by_a1_forward",
+    "notes": "Belarusian ISP A1 (formerly Velcom) Block forward.",
+    "pattern": "://www.a1.by/mininfo/",
+    "scope": "isp",
+    "source": [
+      "https://www.a1.by/ru/"
+    ]
+  },
+  {
     "common_name": "BY ISP MTS Block",
     "confidence_no_fp": 10,
     "exp_url": "https://explorer.ooni.org/measurement/20200808T195507Z_AS25106_hY9xbufjqUKiqPI5LZJ4IqiwfGMNcaOdrtKnwCaXADPRhSOL8J?input=http://intimby.net/",
