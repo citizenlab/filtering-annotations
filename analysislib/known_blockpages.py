@@ -1433,7 +1433,37 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
-        name="isp_ru_convex_intersat_foward",
+        name="isp_ru_sochionline_forward",
+        common_name="RU ISP Sochi Online Block",
+        pattern="""denied.sochi-online.com""",
+        location_found="header",
+        source=[
+            "https://www.sochi-online.com/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200307T140013Z_AS48498_UUkMRFXpMpgvZ4BCtfBBKZUsh4HSJdS5lwwzktA1xXmHlx9eMI?input=http://bluesystem.info/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Sochi Onlines' RKN blockpage",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_sochionline_block",
+        common_name="RU ISP Sochi Online Block",
+        pattern="""://www.sochi-online.com/node/2""",
+        location_found="body",
+        source=[
+            "https://www.sochi-online.com/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200307T140013Z_AS48498_UUkMRFXpMpgvZ4BCtfBBKZUsh4HSJdS5lwwzktA1xXmHlx9eMI?input=http://bluesystem.info/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Sochi Onlines' RKN blockpage",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_convex_intersat_forward",
         common_name="RU ISP Convex Block",
         pattern="""block.intersat.ru""",
         location_found="header",

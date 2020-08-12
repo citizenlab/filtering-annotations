@@ -1714,7 +1714,7 @@
       "RU"
     ],
     "location_found": "header",
-    "name": "isp_ru_convex_intersat_foward",
+    "name": "isp_ru_convex_intersat_forward",
     "notes": "Convex Russias RKN blockpage with Intersat branding",
     "pattern": "block.intersat.ru",
     "scope": "isp",
@@ -3044,6 +3044,38 @@
     "scope": "isp",
     "source": [
       "https://www.skynet-kazan.com/"
+    ]
+  },
+  {
+    "common_name": "RU ISP Sochi Online Block",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20200307T140013Z_AS48498_UUkMRFXpMpgvZ4BCtfBBKZUsh4HSJdS5lwwzktA1xXmHlx9eMI?input=http://bluesystem.info/",
+    "expected_countries": [
+      "RU"
+    ],
+    "location_found": "body",
+    "name": "isp_ru_sochionline_block",
+    "notes": "Sochi Onlines' RKN blockpage",
+    "pattern": "://www.sochi-online.com/node/2",
+    "scope": "isp",
+    "source": [
+      "https://www.sochi-online.com/"
+    ]
+  },
+  {
+    "common_name": "RU ISP Sochi Online Block",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20200307T140013Z_AS48498_UUkMRFXpMpgvZ4BCtfBBKZUsh4HSJdS5lwwzktA1xXmHlx9eMI?input=http://bluesystem.info/",
+    "expected_countries": [
+      "RU"
+    ],
+    "location_found": "header",
+    "name": "isp_ru_sochionline_forward",
+    "notes": "Sochi Onlines' RKN blockpage",
+    "pattern": "denied.sochi-online.com",
+    "scope": "isp",
+    "source": [
+      "https://www.sochi-online.com/"
     ]
   },
   {
