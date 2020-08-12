@@ -5060,7 +5060,7 @@
     "location_found": "header",
     "name": "prov_vkontakte_rkn_geoblock",
     "notes": "Russian social network Vkontakte implements geoblocks on certain pages by forwarding via url: https://vk.com/blank.php?rkn=<ID> If you are outside the target country you are forwarded to the page otherwise a blockpage is presented (see: exp_url)",
-    "pattern": "://vk.com/blank.php?rkn=",
+    "pattern": "/blank.php?rkn=",
     "scope": "prov",
     "source": [
       "https://vk.com"

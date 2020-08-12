@@ -4705,7 +4705,7 @@ known_blocks = [
     SimpleBlockPagePattern(
         name="prov_vkontakte_rkn_geoblock",
         common_name="VKontakte RKN GeoBlock",
-        pattern="""://vk.com/blank.php?rkn=""",
+        pattern="""/blank.php?rkn=""",
         location_found="header",
         source=[
             "https://vk.com"
@@ -4719,7 +4719,7 @@ known_blocks = [
         https://vk.com/blank.php?rkn=<ID>
         
         If you are outside the target country you are forwarded to the page otherwise a blockpage is 
-        presented (see: exp_url)
+        presented (see: exp_url) 
         """,
     ),
 
