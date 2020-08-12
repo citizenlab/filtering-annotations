@@ -398,6 +398,38 @@
     ]
   },
   {
+    "common_name": "BY ISP Beltelecom Block",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20200808T143914Z_AS6697_vIveEEZm32Xz4qc8nChMRmJQvQXS2vKLEFQ553NmpborhsfzDY?input=http://intimby.net/",
+    "expected_countries": [
+      "BY"
+    ],
+    "location_found": "body",
+    "name": "isp_by_beltelecom_block",
+    "notes": "Belarusian ISP Beltelecom Block",
+    "pattern": "\u041e \u0441\u0440\u0435\u0434\u0441\u0442\u0432\u0430\u0445 \u043c\u0430\u0441\u0441\u043e\u0432\u043e\u0439 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u0438\"</div>",
+    "scope": "isp",
+    "source": [
+      "https://beltelecom.by/"
+    ]
+  },
+  {
+    "common_name": "BY ISP Beltelecom Block",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20200808T143914Z_AS6697_vIveEEZm32Xz4qc8nChMRmJQvQXS2vKLEFQ553NmpborhsfzDY?input=http://intimby.net/",
+    "expected_countries": [
+      "BY"
+    ],
+    "location_found": "header",
+    "name": "isp_by_beltelecom_forward",
+    "notes": "Belarusian ISP Beltelecom Block",
+    "pattern": "82.209.230.23",
+    "scope": "isp",
+    "source": [
+      "https://beltelecom.by/"
+    ]
+  },
+  {
     "common_name": "BY ISP MTS Block",
     "confidence_no_fp": 10,
     "exp_url": "https://explorer.ooni.org/measurement/20200808T195507Z_AS25106_hY9xbufjqUKiqPI5LZJ4IqiwfGMNcaOdrtKnwCaXADPRhSOL8J?input=http://intimby.net/",

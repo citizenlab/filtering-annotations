@@ -1403,6 +1403,36 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_by_beltelecom_forward",
+        common_name="BY ISP Beltelecom Block",
+        pattern="""82.209.230.23""",
+        location_found="header",
+        source=[
+            "https://beltelecom.by/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200808T143914Z_AS6697_vIveEEZm32Xz4qc8nChMRmJQvQXS2vKLEFQ553NmpborhsfzDY?input=http://intimby.net/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["BY"],
+        notes="Belarusian ISP Beltelecom Block",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_by_beltelecom_block",
+        common_name="BY ISP Beltelecom Block",
+        pattern="""О средствах массовой информации"</div>""",
+        location_found="body",
+        source=[
+            "https://beltelecom.by/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200808T143914Z_AS6697_vIveEEZm32Xz4qc8nChMRmJQvQXS2vKLEFQ553NmpborhsfzDY?input=http://intimby.net/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["BY"],
+        notes="Belarusian ISP Beltelecom Block",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_by_mts_forward",
         common_name="BY ISP MTS Block",
         pattern="""internet.mts.by/blocked/""",
