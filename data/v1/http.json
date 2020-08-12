@@ -1835,6 +1835,38 @@
     ]
   },
   {
+    "common_name": "RU ISP E-Light Telecom Block",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20180318T022949Z_AS39927_ixezvoybYaEp6uSlk6Ikof2tJYytEeaVyzffuGRioxHuxTJIqw?input=http://bluesystem.ru/",
+    "expected_countries": [
+      "RU"
+    ],
+    "location_found": "body",
+    "name": "isp_ru_elight_block",
+    "notes": "E-Light Telecom blockpage.",
+    "pattern": "https://mc.yandex.ru/watch/43501029",
+    "scope": "isp",
+    "source": [
+      "https://goodline.info/o-kompanii/rekvizity.html"
+    ]
+  },
+  {
+    "common_name": "RU ISP E-Light Telecom Block",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20180318T022949Z_AS39927_ixezvoybYaEp6uSlk6Ikof2tJYytEeaVyzffuGRioxHuxTJIqw?input=http://bluesystem.ru/",
+    "expected_countries": [
+      "RU"
+    ],
+    "location_found": "header",
+    "name": "isp_ru_elight_forward",
+    "notes": "E-Light Telecom blockpage forwarding.",
+    "pattern": "site-blocked.ru",
+    "scope": "isp",
+    "source": [
+      "https://goodline.info/o-kompanii/rekvizity.html"
+    ]
+  },
+  {
     "common_name": "RU ISP Ertelecom Block",
     "confidence_no_fp": 10,
     "exp_url": "https://explorer.ooni.org/measurement/20200215T053939Z_AS24588_8y57x6ldbe7mTws5UTFMc8DxpIGAtn65B2hhfSPoNOGC6AhjEH?input=http://bluesystem.ru/",

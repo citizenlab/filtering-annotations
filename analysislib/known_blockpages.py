@@ -1403,6 +1403,36 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_elight_forward",
+        common_name="RU ISP E-Light Telecom Block",
+        pattern="""site-blocked.ru""",
+        location_found="header",
+        source=[
+            "https://goodline.info/o-kompanii/rekvizity.html"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180318T022949Z_AS39927_ixezvoybYaEp6uSlk6Ikof2tJYytEeaVyzffuGRioxHuxTJIqw?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="E-Light Telecom blockpage forwarding.",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_elight_block",
+        common_name="RU ISP E-Light Telecom Block",
+        pattern="""https://mc.yandex.ru/watch/43501029""",
+        location_found="body",
+        source=[
+            "https://goodline.info/o-kompanii/rekvizity.html"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180318T022949Z_AS39927_ixezvoybYaEp6uSlk6Ikof2tJYytEeaVyzffuGRioxHuxTJIqw?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="E-Light Telecom blockpage.",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_convex_intersat_foward",
         common_name="RU ISP Convex Block",
         pattern="""block.intersat.ru""",
