@@ -2555,6 +2555,38 @@
     ]
   },
   {
+    "common_name": "RU ISP Orion Net Block",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20180318T024825Z_AS31257_nfyc81ftqzpC3spdlHGM8z5mUCR3fhbcBZP9dTSkdidlB2eLMS?input=http://bluesystem.ru/",
+    "expected_countries": [
+      "RU"
+    ],
+    "location_found": "body",
+    "name": "isp_ru_orionnet_block",
+    "notes": "Orionnet RKN blockpage forwarding.",
+    "pattern": "\u041e\u0440\u0438\u043e\u043d \u0442\u0435\u043b\u0435\u043a\u043e\u043c :: \u0414\u041e\u0421\u0422\u0423\u041f \u0417\u0410\u041f\u0420\u0415\u0429\u0415\u041d",
+    "scope": "isp",
+    "source": [
+      "https://orionnet.ru/krk"
+    ]
+  },
+  {
+    "common_name": "RU ISP Orion Net Block",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20180318T024825Z_AS31257_nfyc81ftqzpC3spdlHGM8z5mUCR3fhbcBZP9dTSkdidlB2eLMS?input=http://bluesystem.ru/",
+    "expected_countries": [
+      "RU"
+    ],
+    "location_found": "header",
+    "name": "isp_ru_orionnet_forward",
+    "notes": "Orionnet RKN blockpage forwarding.",
+    "pattern": "block.orionnet.ru",
+    "scope": "isp",
+    "source": [
+      "https://orionnet.ru/krk"
+    ]
+  },
+  {
     "common_name": "RU ISP Pakt Block",
     "confidence_no_fp": 8,
     "exp_url": "https://explorer.ooni.org/measurement/20180317T130438Z_AS39087_UU6okQpeONhX0qrLfLdlKQeculY95MVSW1zY89UcbM4snfJPNN?input=http://bluesystem.ru/",

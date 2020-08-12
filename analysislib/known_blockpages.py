@@ -1373,6 +1373,36 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_orionnet_forward",
+        common_name="RU ISP Orion Net Block",
+        pattern="""block.orionnet.ru""",
+        location_found="header",
+        source=[
+            "https://orionnet.ru/krk"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180318T024825Z_AS31257_nfyc81ftqzpC3spdlHGM8z5mUCR3fhbcBZP9dTSkdidlB2eLMS?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Orionnet RKN blockpage forwarding.",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_orionnet_block",
+        common_name="RU ISP Orion Net Block",
+        pattern="""Орион телеком :: ДОСТУП ЗАПРЕЩЕН""",
+        location_found="body",
+        source=[
+            "https://orionnet.ru/krk"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180318T024825Z_AS31257_nfyc81ftqzpC3spdlHGM8z5mUCR3fhbcBZP9dTSkdidlB2eLMS?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Orionnet RKN blockpage forwarding.",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_convex_intersat_foward",
         common_name="RU ISP Convex Block",
         pattern="""block.intersat.ru""",
@@ -3625,7 +3655,6 @@ known_blocks = [
          <iframe src="http://www.talktalk.co.uk/notices/parental-controls.html?originalURL=http://www.bglad.com/&list=porn_i>"
         """,
     ),
-
 
     SimpleBlockPagePattern(
         name="isp_gb_bt_optin_forward",
