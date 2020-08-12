@@ -495,6 +495,22 @@ known_dns_sigs = [
         """
     ),
 
+    SimpleDNSReplyPattern(
+        name="dns_isp_by_mts",
+        response="134.17.0.7",
+        confidence_no_fp=10,
+        exp_url="",
+        source=[
+            "https://www.mts.by/",
+            "https://explorer.ooni.org/measurement/20200808T195507Z_AS25106_hY9xbufjqUKiqPI5LZJ4IqiwfGMNcaOdrtKnwCaXADPRhSOL8J?input=http://intimby.net/"
+        ],
+        scope="isp",
+        expected_countries=["BY"],
+        notes="""
+        Belarusian ISP block on mobile ISP MTS uses a DNS forward
+        """
+    ),
+
     #########
     # RUSSIAN RKN RELATED RESPONSES
     #########

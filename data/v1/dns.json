@@ -45,6 +45,21 @@
   },
   {
     "confidence_no_fp": 10,
+    "exp_url": "",
+    "expected_countries": [
+      "BY"
+    ],
+    "name": "dns_isp_by_mts",
+    "notes": "Belarusian ISP block on mobile ISP MTS uses a DNS forward",
+    "response": "134.17.0.7",
+    "scope": "isp",
+    "source": [
+      "https://www.mts.by/",
+      "https://explorer.ooni.org/measurement/20200808T195507Z_AS25106_hY9xbufjqUKiqPI5LZJ4IqiwfGMNcaOdrtKnwCaXADPRhSOL8J?input=http://intimby.net/"
+    ]
+  },
+  {
+    "confidence_no_fp": 10,
     "exp_url": "https://explorer.ooni.org/measurement/20200213T075343Z_AS131111_n3Zv50ZiRaGIm7uCn3IwOIN879EzYbr3OV08aHpZdOIzsk83iT?input=https://www.ilga-europe.org/",
     "expected_countries": [
       "ID"

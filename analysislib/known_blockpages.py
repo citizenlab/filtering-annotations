@@ -1373,6 +1373,36 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_by_mts_forward",
+        common_name="BY ISP MTS Block",
+        pattern="""internet.mts.by/blocked/""",
+        location_found="header",
+        source=[
+            "https://www.mts.by/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200808T195507Z_AS25106_hY9xbufjqUKiqPI5LZJ4IqiwfGMNcaOdrtKnwCaXADPRhSOL8J?input=http://intimby.net/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["BY"],
+        notes="Belarusian ISP MTS Block forward.",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_by_mts_block",
+        common_name="BY ISP MTS Block",
+        pattern="""https://help.mts.by/hc/ru/requests/new""",
+        location_found="body",
+        source=[
+            "https://www.mts.by/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200808T195507Z_AS25106_hY9xbufjqUKiqPI5LZJ4IqiwfGMNcaOdrtKnwCaXADPRhSOL8J?input=http://intimby.net/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["BY"],
+        notes="Belarusian ISP MTS Block.",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_orionnet_forward",
         common_name="RU ISP Orion Net Block",
         pattern="""block.orionnet.ru""",
