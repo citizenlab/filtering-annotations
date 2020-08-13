@@ -3337,13 +3337,29 @@
   {
     "common_name": "RU ISP Tele2 Block",
     "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20200313T111001Z_AS48190_FwhjrOV0nkpiCZvICVEdvh1N0h6D8j6Xuk2B6OsYoUYhUU597L?input=http://www.lesbi.ru/",
+    "expected_countries": [
+      "RU"
+    ],
+    "location_found": "header",
+    "name": "isp_ru_tele2_forward_1",
+    "notes": "RU ISP Tele2 Block page forward this variant is by domain.",
+    "pattern": "t2blocked.com",
+    "scope": "isp",
+    "source": [
+      "http://tele2.ru/"
+    ]
+  },
+  {
+    "common_name": "RU ISP Tele2 Block",
+    "confidence_no_fp": 10,
     "exp_url": "https://explorer.ooni.org/measurement/20190809T191432Z_AS15378_fmsQw7Pl5AMY5uxejuU0d095iyVXnfki55sFBPtu799zPhfi0R?input=http://bluesystem.ru/",
     "expected_countries": [
       "RU"
     ],
     "location_found": "header",
-    "name": "isp_ru_tele2_forward",
-    "notes": "RU ISP Tele2 Block page forward.",
+    "name": "isp_ru_tele2_forward_2",
+    "notes": "RU ISP Tele2 Block page forward this variant is by IP.",
     "pattern": "//217.169.82.130/",
     "scope": "isp",
     "source": [

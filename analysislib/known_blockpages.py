@@ -2154,7 +2154,22 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
-        name="isp_ru_tele2_forward",
+        name="isp_ru_tele2_forward_1",
+        common_name="RU ISP Tele2 Block",
+        pattern="""t2blocked.com""",
+        location_found="header",
+        source=[
+            "http://tele2.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200313T111001Z_AS48190_FwhjrOV0nkpiCZvICVEdvh1N0h6D8j6Xuk2B6OsYoUYhUU597L?input=http://www.lesbi.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="RU ISP Tele2 Block page forward this variant is by domain.",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_tele2_forward_2",
         common_name="RU ISP Tele2 Block",
         pattern="""//217.169.82.130/""",
         location_found="header",
@@ -2165,7 +2180,7 @@ known_blocks = [
         confidence_no_fp=10,
         scope="isp",
         expected_countries=["RU"],
-        notes="RU ISP Tele2 Block page forward.",
+        notes="RU ISP Tele2 Block page forward this variant is by IP.",
     ),
 
     SimpleBlockPagePattern(
