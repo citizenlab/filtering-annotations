@@ -3207,6 +3207,22 @@
     ]
   },
   {
+    "common_name": "RU ISP Stack Telecom Block",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20200217T141903Z_AS200044_49OmAmCsg1UpYhs8fqrgiAFYhVxXKl8jv8U7RVCauI3aTuHoGf?input=http://www.1gay.ru/",
+    "expected_countries": [
+      "RU"
+    ],
+    "location_found": "header",
+    "name": "isp_ru_stacktelecom_forward",
+    "notes": "Stack Telecom RKN Forward",
+    "pattern": "zapret.stacktelecom.ru",
+    "scope": "isp",
+    "source": [
+      "http://stacktelecom.ru/"
+    ]
+  },
+  {
     "common_name": "RU ISP Strela Block",
     "confidence_no_fp": 10,
     "exp_url": "https://explorer.ooni.org/measurement/20180317T131026Z_AS56969_fW0lpqCHNlnPDeGqeaL7MEBDwiZOwKSzJHnYPs3FoVf84wCKsD?input=http://bluesystem.ru/",

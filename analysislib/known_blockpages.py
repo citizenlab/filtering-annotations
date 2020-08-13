@@ -1673,6 +1673,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_stacktelecom_forward",
+        common_name="RU ISP Stack Telecom Block",
+        pattern="""zapret.stacktelecom.ru""",
+        location_found="header",
+        source=[
+            "http://stacktelecom.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200217T141903Z_AS200044_49OmAmCsg1UpYhs8fqrgiAFYhVxXKl8jv8U7RVCauI3aTuHoGf?input=http://www.1gay.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Stack Telecom RKN Forward",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_profintel_forward",
         common_name="RU ISP Profintel Block",
         pattern="""stat.profintel.ru/block/blacklist/""",
