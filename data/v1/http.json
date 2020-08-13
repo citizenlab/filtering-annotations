@@ -2610,9 +2610,25 @@
       "RU"
     ],
     "location_found": "header",
-    "name": "isp_ru_netbynet_forward",
+    "name": "isp_ru_netbynet_forward_1",
     "notes": "Russian ISP NetByNet Block Page, this is the forward to the blockpage via the DNS blocked.netbynet.ru",
     "pattern": "blocked.netbynet.ru",
+    "scope": "isp",
+    "source": [
+      "http://www.netbynet.ru/"
+    ]
+  },
+  {
+    "common_name": "RU ISP NetByNet Block",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20200314T210106Z_AS12714_rgCGaX2LPl458FfUVVwaldIdd0JwkrxzQzkkX7QRrlVVj2edPq?input=http://www.lesbi.ru/",
+    "expected_countries": [
+      "RU"
+    ],
+    "location_found": "header",
+    "name": "isp_ru_netbynet_forward_2",
+    "notes": "Russian ISP NetByNet Block Page, this is a variant of the forward to the blockpage as I believe ti was merged into netbynet",
+    "pattern": "blocked.ti.ru",
     "scope": "isp",
     "source": [
       "http://www.netbynet.ru/"

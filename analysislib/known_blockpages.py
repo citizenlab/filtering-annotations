@@ -2941,7 +2941,7 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
-        name="isp_ru_netbynet_forward",
+        name="isp_ru_netbynet_forward_1",
         common_name="RU ISP NetByNet Block",
         pattern="""blocked.netbynet.ru""",
         location_found="header",
@@ -2953,6 +2953,21 @@ known_blocks = [
         scope="isp",
         expected_countries=["RU"],
         notes="Russian ISP NetByNet Block Page, this is the forward to the blockpage via the DNS blocked.netbynet.ru",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_ru_netbynet_forward_2",
+        common_name="RU ISP NetByNet Block",
+        pattern="""blocked.ti.ru""",
+        location_found="header",
+        source=[
+            "http://www.netbynet.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200314T210106Z_AS12714_rgCGaX2LPl458FfUVVwaldIdd0JwkrxzQzkkX7QRrlVVj2edPq?input=http://www.lesbi.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Russian ISP NetByNet Block Page, this is a variant of the forward to the blockpage as I believe ti was merged into netbynet",
     ),
 
     SimpleBlockPagePattern(
