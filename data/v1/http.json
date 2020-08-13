@@ -3271,6 +3271,22 @@
     ]
   },
   {
+    "common_name": "RU ISP SV Telecom Block",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20180317T203506Z_AS31724_LDUeIhimrux1MKI34rhSVf47Fze9Wl4aMQKbT8wGZYX6I8Aon5?input=http://bluesystem.ru/",
+    "expected_countries": [
+      "RU"
+    ],
+    "location_found": "header",
+    "name": "isp_ru_svyazist_forward",
+    "notes": "SV Telecom RKN Forward",
+    "pattern": "sv-tel.ru/ban/",
+    "scope": "isp",
+    "source": [
+      "https://sv-tel.ru/"
+    ]
+  },
+  {
     "common_name": "RU ISP Telecom Center Block",
     "confidence_no_fp": 10,
     "exp_url": "https://explorer.ooni.org/measurement/20190603T211434Z_AS0_kxjMajdYmi5TXQlX4eA3fC0yf9puWMbkCK1QP8TcUSz4CoS0So?input=http://bluesystem.ru/",

@@ -1673,6 +1673,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ru_svyazist_forward",
+        common_name="RU ISP SV Telecom Block",
+        pattern="""sv-tel.ru/ban/""",
+        location_found="header",
+        source=[
+            "https://sv-tel.ru/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20180317T203506Z_AS31724_LDUeIhimrux1MKI34rhSVf47Fze9Wl4aMQKbT8wGZYX6I8Aon5?input=http://bluesystem.ru/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["RU"],
+        notes="SV Telecom RKN Forward",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ru_stacktelecom_forward",
         common_name="RU ISP Stack Telecom Block",
         pattern="""zapret.stacktelecom.ru""",
