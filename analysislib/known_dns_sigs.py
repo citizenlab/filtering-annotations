@@ -1423,6 +1423,23 @@ known_dns_sigs = [
     #########
 
     SimpleDNSReplyPattern(
+        name="dns_nat_th_mdes_illegal",
+        response="125.26.170.3",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20201228T234534Z_webconnectivity_TH_131445_n1_deRHboYpdtGToSqk?input=http://www.bbc.com/news/world-asia-38126928/",
+        source=[
+            "https://www.matichon.co.th/politics/news_2396830/attachment/%E0%B8%97%E0%B8%A7%E0%B8%B5%E0%B8%953"
+        ],
+        scope="nat",
+        expected_countries=["TH"],
+        notes="""
+        A false DNS response with Thai Ministry of Digital Economy and Society branding, suggesting this 
+        site is illegal based on the computer crime act and gambling act.
+        """
+    ),
+
+
+    SimpleDNSReplyPattern(
         name="dns_nat_my_violates",
         response="175.139.142.25",
         confidence_no_fp=10,

@@ -1298,6 +1298,20 @@
   },
   {
     "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20201228T234534Z_webconnectivity_TH_131445_n1_deRHboYpdtGToSqk?input=http://www.bbc.com/news/world-asia-38126928/",
+    "expected_countries": [
+      "TH"
+    ],
+    "name": "dns_nat_th_mdes_illegal",
+    "notes": "A false DNS response with Thai Ministry of Digital Economy and Society branding, suggesting this site is illegal based on the computer crime act and gambling act.",
+    "response": "125.26.170.3",
+    "scope": "nat",
+    "source": [
+      "https://www.matichon.co.th/politics/news_2396830/attachment/%E0%B8%97%E0%B8%A7%E0%B8%B5%E0%B8%953"
+    ]
+  },
+  {
+    "confidence_no_fp": 10,
     "exp_url": "",
     "expected_countries": [
       "TR"
