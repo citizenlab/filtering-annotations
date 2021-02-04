@@ -1423,6 +1423,21 @@ known_dns_sigs = [
     #########
 
     SimpleDNSReplyPattern(
+        name="dns_nat_mm_transportcomms_block",
+        response="167.172.4.60",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20210201T223944Z_webconnectivity_MM_133385_n1_LlJnFqnaVXNfXygL?input=http://www.hornybank.com/",
+        source=[
+            "https://ooni.org/post/2020-myanmar-blocks-websites-amid-covid19/"
+        ],
+        scope="nat",
+        expected_countries=["MM"],
+        notes="""
+        A false DNS response with Ministry of Transport and Communications of Myanmar branding.
+        """
+    ),
+
+    SimpleDNSReplyPattern(
         name="dns_nat_th_mdes_illegal",
         response="125.26.170.3",
         confidence_no_fp=10,
@@ -1437,6 +1452,8 @@ known_dns_sigs = [
         site is illegal based on the computer crime act and gambling act.
         """
     ),
+
+    # https://explorer.ooni.org/measurement/20201201T083449Z_webconnectivity_FR_3215_n1_XEo8R2qog4e2Qegg?input=http://khilafah.net/
 
 
     SimpleDNSReplyPattern(

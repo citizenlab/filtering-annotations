@@ -11,6 +11,21 @@ known_blocks = [
     # National Level Blockpage Patterns
 
     SimpleBlockPagePattern(
+        name="nat_mm_transportcomms_block",
+        common_name="National Myanmar Block",
+        pattern="""You have tried to access a web page which has been blocked as per directive received from the Ministry of Transport and Communications of Myanmar""",
+        location_found="body",
+        source=[
+            "https://ooni.org/post/2020-myanmar-blocks-websites-amid-covid19/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20210201T223944Z_webconnectivity_MM_133385_n1_LlJnFqnaVXNfXygL?input=http://www.hornybank.com/",
+        confidence_no_fp=10,
+        scope="nat",
+        expected_countries=["MM"],
+        notes="Explicit blockpage implemented by DNS, this matches the body text.",
+    ),
+
+    SimpleBlockPagePattern(
         name="nat_ir_iframe_forward_ipv4",
         common_name="National Iran Block",
         pattern="""iframe src="http://10.10.""",

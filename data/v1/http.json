@@ -4138,6 +4138,22 @@
     ]
   },
   {
+    "common_name": "National Myanmar Block",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20210201T223944Z_webconnectivity_MM_133385_n1_LlJnFqnaVXNfXygL?input=http://www.hornybank.com/",
+    "expected_countries": [
+      "MM"
+    ],
+    "location_found": "body",
+    "name": "nat_mm_transportcomms_block",
+    "notes": "Explicit blockpage implemented by DNS, this matches the body text.",
+    "pattern": "You have tried to access a web page which has been blocked as per directive received from the Ministry of Transport and Communications of Myanmar",
+    "scope": "nat",
+    "source": [
+      "https://ooni.org/post/2020-myanmar-blocks-websites-amid-covid19/"
+    ]
+  },
+  {
     "common_name": "National Malaysian Blockpage",
     "confidence_no_fp": 10,
     "exp_url": "https://explorer.ooni.org/measurement/20190510T024428Z_AS4788_39J7OiJ5VtjhP2aZ9tYooWikE9aI5pTQvCdRVwA6KiBazotDUw?input=http://www.gaystarnews.com/",

@@ -1270,6 +1270,20 @@
   },
   {
     "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20210201T223944Z_webconnectivity_MM_133385_n1_LlJnFqnaVXNfXygL?input=http://www.hornybank.com/",
+    "expected_countries": [
+      "MM"
+    ],
+    "name": "dns_nat_mm_transportcomms_block",
+    "notes": "A false DNS response with Ministry of Transport and Communications of Myanmar branding.",
+    "response": "167.172.4.60",
+    "scope": "nat",
+    "source": [
+      "https://ooni.org/post/2020-myanmar-blocks-websites-amid-covid19/"
+    ]
+  },
+  {
+    "confidence_no_fp": 10,
     "exp_url": "",
     "expected_countries": [
       "MN"
