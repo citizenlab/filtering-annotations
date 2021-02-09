@@ -3669,6 +3669,36 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_mm_myanmarnet_block_forward",
+        common_name="MM ISP Myanmarnet Block",
+        pattern="""notice.myanmarnet.com""",
+        location_found="header",
+        source=[
+            "http://myanmarnet.com/product/en"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20210208T105603Z_webconnectivity_MM_58952_n1_NEm53Iw0ysgcGt9J?input=http://www.facebook.com",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["MM"],
+        notes="Myanmar ISP Myanmar net forward to a block page.",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_mm_myanmarnet_block_page",
+        common_name="MM ISP Myanmarnet Block",
+        pattern="""<li><a href="whatever.html" class="menupics"><img src="legaltext.png" alt="descriptivetext" /></a></li>""",
+        location_found="body",
+        source=[
+            "http://myanmarnet.com/product/en"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20210208T105603Z_webconnectivity_MM_58952_n1_NEm53Iw0ysgcGt9J?input=http://www.facebook.com",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["MM"],
+        notes="Myanmar ISP Myanmar net block page. Citing order of Ministry of Transport and Telecom",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ie_three_optinporn_forward",
         common_name="IE ISP Three OptIn Block",
         pattern="""m.three.ie/adult-content""",

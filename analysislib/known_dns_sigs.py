@@ -344,6 +344,20 @@ known_dns_sigs = [
     #########
 
     SimpleDNSReplyPattern(
+        name="dns_isp_mm_myanmarnet_block",
+        response="59.153.90.11",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20210208T105603Z_webconnectivity_MM_58952_n1_NEm53Iw0ysgcGt9J?input=http://www.facebook.com",
+        source=[
+            "http://myanmarnet.com/",
+        ],
+        scope="isp",
+        expected_countries=["MM"],
+        notes="""Myanmar ISP Myanmarnet blockpage
+"""
+    ),
+
+    SimpleDNSReplyPattern(
         name="dns_isp_pk_nayatel_surfsafely",
         response="203.82.48.83",
         confidence_no_fp=10,

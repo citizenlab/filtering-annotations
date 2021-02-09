@@ -816,6 +816,20 @@
   },
   {
     "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20210208T105603Z_webconnectivity_MM_58952_n1_NEm53Iw0ysgcGt9J?input=http://www.facebook.com",
+    "expected_countries": [
+      "MM"
+    ],
+    "name": "dns_isp_mm_myanmarnet_block",
+    "notes": "Myanmar ISP Myanmarnet blockpage",
+    "response": "59.153.90.11",
+    "scope": "isp",
+    "source": [
+      "http://myanmarnet.com/"
+    ]
+  },
+  {
+    "confidence_no_fp": 10,
     "exp_url": "https://explorer.ooni.org/measurement/20191206T015807Z_AS23674_BbXvUMwowxajbM9Q1pTeOp84pawo9ccTUsltC6B1vhyNHC2kkM?input=http://gaytoday.com/",
     "expected_countries": [
       "PK"
