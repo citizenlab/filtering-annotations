@@ -371,6 +371,19 @@ known_dns_sigs = [
     ),
 
     SimpleDNSReplyPattern(
+        name="dns_isp_ca_teksavvy_block",
+        response="206.248.146.244",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20220203T004625Z_webconnectivity_CA_5645_n1_cGktKcvMOwO7Tr20?input=http%3A%2F%2Fapp.atntvv.cc%2F",
+        source=[
+            "",
+        ],
+        scope="isp",
+        expected_countries=["CA"],
+        notes="""CA ISP Teksavvy Block Page"""
+    ),
+
+    SimpleDNSReplyPattern(
         name="dns_isp_mm_myanmarnet_block",
         response="59.153.90.11",
         confidence_no_fp=10,

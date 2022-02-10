@@ -4714,6 +4714,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_ca_teksavvy_block",
+        common_name="CA ISP Teksavvy Block Page",
+        pattern="""TekSavvy has been forced to block the site you are trying to reach""",
+        location_found="body",
+        source=[
+            "https://mobilesyrup.com/2019/11/18/federal-court-order-isps-block-piracy-service/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20220203T004625Z_webconnectivity_CA_5645_n1_cGktKcvMOwO7Tr20?input=http%3A%2F%2Fapp.atntvv.cc%2F",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["CA"],
+        notes="CA ISP Teksavvy blockpage typically forwarded by way of DNS",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_th_dtac_accessurlblock_forward",
         common_name="TH ISP DTAC Block",
         pattern="""http://124.40.225.20/?accessurl=""",

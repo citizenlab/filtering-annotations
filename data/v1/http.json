@@ -494,6 +494,22 @@
     ]
   },
   {
+    "common_name": "CA ISP Teksavvy Block Page",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20220203T004625Z_webconnectivity_CA_5645_n1_cGktKcvMOwO7Tr20?input=http%3A%2F%2Fapp.atntvv.cc%2F",
+    "expected_countries": [
+      "CA"
+    ],
+    "location_found": "body",
+    "name": "isp_ca_teksavvy_block",
+    "notes": "CA ISP Teksavvy blockpage typically forwarded by way of DNS",
+    "pattern": "TekSavvy has been forced to block the site you are trying to reach",
+    "scope": "isp",
+    "source": [
+      "https://mobilesyrup.com/2019/11/18/federal-court-order-isps-block-piracy-service/"
+    ]
+  },
+  {
     "common_name": "DE ISP Vodafone Optin Block",
     "confidence_no_fp": 8,
     "exp_url": "https://explorer.ooni.org/measurement/20200127T113040Z_AS31334_f2WzvfEf8rj0X645IsaTmrojbWpB4VpU48c7TRifHnwrEPT1J7?input=http://www.nclrights.org/",

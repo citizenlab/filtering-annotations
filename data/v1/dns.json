@@ -88,6 +88,20 @@
   },
   {
     "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20220203T004625Z_webconnectivity_CA_5645_n1_cGktKcvMOwO7Tr20?input=http%3A%2F%2Fapp.atntvv.cc%2F",
+    "expected_countries": [
+      "CA"
+    ],
+    "name": "dns_isp_ca_teksavvy_block",
+    "notes": "CA ISP Teksavvy Block Page",
+    "response": "206.248.146.244",
+    "scope": "isp",
+    "source": [
+      ""
+    ]
+  },
+  {
+    "confidence_no_fp": 10,
     "exp_url": "https://explorer.ooni.org/measurement/20200213T075343Z_AS131111_n3Zv50ZiRaGIm7uCn3IwOIN879EzYbr3OV08aHpZdOIzsk83iT?input=https://www.ilga-europe.org/",
     "expected_countries": [
       "ID"
