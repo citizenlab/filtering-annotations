@@ -3744,6 +3744,51 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_sg_starhub_block_forward",
+        common_name="SG ISP Starhub Block",
+        pattern="""starhub.com/mda-blocked""",
+        location_found="body",
+        source=[
+            "https://chrome.google.com/webstore/detail/go-away-mda-bypass-mda-bl/lledpflfnanamkogoclkgaggfdgoalok?hl=en"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20210809T082132Z_webconnectivity_SG_55430_n1_7ImHaJauRVvTo2eF?input=http://www.playboy.com/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["SG"],
+        notes="SG ISP Starhub does a forward via HTTP refresh tags to for example to http://www.starhub.com/mda-blocked/02.html",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_sg_starhub_block_mda1",
+        common_name="SG ISP Starhub Block",
+        pattern="""The site requested is unavailable as it contains prohibited material that is against the public interest. Should you have further enquiries on the matter, please submit them to the e-feedback portal at the Singapore Police""",
+        location_found="body",
+        source=[
+            "https://chrome.google.com/webstore/detail/go-away-mda-bypass-mda-bl/lledpflfnanamkogoclkgaggfdgoalok?hl=en"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20210809T082132Z_webconnectivity_SG_55430_n1_7ImHaJauRVvTo2eF?input=http://www.playboy.com/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["SG"],
+        notes="SG ISP Starhub final blockpage destination of their MDA blocks: http://www.starhub.com/mda-blocked/01.html",
+    ),
+
+    SimpleBlockPagePattern(
+        name="isp_sg_starhub_block_mda2",
+        common_name="SG ISP Starhub Block",
+        pattern="""The website you are trying to access is unavailable as it contains prohibited material.""",
+        location_found="body",
+        source=[
+            "https://chrome.google.com/webstore/detail/go-away-mda-bypass-mda-bl/lledpflfnanamkogoclkgaggfdgoalok?hl=en"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20210809T082132Z_webconnectivity_SG_55430_n1_7ImHaJauRVvTo2eF?input=http://www.playboy.com/",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["SG"],
+        notes="SG ISP Starhub final blockpage destination of their MDA blocks: http://www.starhub.com/mda-blocked/02.html",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ie_three_optinporn_forward",
         common_name="IE ISP Three OptIn Block",
         pattern="""m.three.ie/adult-content""",

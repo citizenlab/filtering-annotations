@@ -3832,6 +3832,54 @@
     ]
   },
   {
+    "common_name": "SG ISP Starhub Block",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20210809T082132Z_webconnectivity_SG_55430_n1_7ImHaJauRVvTo2eF?input=http://www.playboy.com/",
+    "expected_countries": [
+      "SG"
+    ],
+    "location_found": "body",
+    "name": "isp_sg_starhub_block_forward",
+    "notes": "SG ISP Starhub does a forward via HTTP refresh tags to for example to http://www.starhub.com/mda-blocked/02.html",
+    "pattern": "starhub.com/mda-blocked",
+    "scope": "isp",
+    "source": [
+      "https://chrome.google.com/webstore/detail/go-away-mda-bypass-mda-bl/lledpflfnanamkogoclkgaggfdgoalok?hl=en"
+    ]
+  },
+  {
+    "common_name": "SG ISP Starhub Block",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20210809T082132Z_webconnectivity_SG_55430_n1_7ImHaJauRVvTo2eF?input=http://www.playboy.com/",
+    "expected_countries": [
+      "SG"
+    ],
+    "location_found": "body",
+    "name": "isp_sg_starhub_block_mda1",
+    "notes": "SG ISP Starhub final blockpage destination of their MDA blocks: http://www.starhub.com/mda-blocked/01.html",
+    "pattern": "The site requested is unavailable as it contains prohibited material that is against the public interest. Should you have further enquiries on the matter, please submit them to the e-feedback portal at the Singapore Police",
+    "scope": "isp",
+    "source": [
+      "https://chrome.google.com/webstore/detail/go-away-mda-bypass-mda-bl/lledpflfnanamkogoclkgaggfdgoalok?hl=en"
+    ]
+  },
+  {
+    "common_name": "SG ISP Starhub Block",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20210809T082132Z_webconnectivity_SG_55430_n1_7ImHaJauRVvTo2eF?input=http://www.playboy.com/",
+    "expected_countries": [
+      "SG"
+    ],
+    "location_found": "body",
+    "name": "isp_sg_starhub_block_mda2",
+    "notes": "SG ISP Starhub final blockpage destination of their MDA blocks: http://www.starhub.com/mda-blocked/02.html",
+    "pattern": "The website you are trying to access is unavailable as it contains prohibited material.",
+    "scope": "isp",
+    "source": [
+      "https://chrome.google.com/webstore/detail/go-away-mda-bypass-mda-bl/lledpflfnanamkogoclkgaggfdgoalok?hl=en"
+    ]
+  },
+  {
     "common_name": "Somali ISP So! Safe Blocking page",
     "confidence_no_fp": 8,
     "exp_url": "https://explorer.ooni.org/measurement/20210522T093516Z_webconnectivity_SO_37425_n1_TZHogn6bn6wt73ce?input=http://www.sex.com/",
