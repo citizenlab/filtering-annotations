@@ -3832,6 +3832,22 @@
     ]
   },
   {
+    "common_name": "Somali ISP So! Safe Blocking page",
+    "confidence_no_fp": 8,
+    "exp_url": "https://explorer.ooni.org/measurement/20210522T093516Z_webconnectivity_SO_37425_n1_TZHogn6bn6wt73ce?input=http://www.sex.com/",
+    "expected_countries": [
+      "SO"
+    ],
+    "location_found": "body",
+    "name": "isp_so_so_safe",
+    "notes": "This matches the Somali ISP SO! and their Safe Browsing block page",
+    "pattern": "SO! Safe Browsing",
+    "scope": "isp",
+    "source": [
+      ""
+    ]
+  },
+  {
     "common_name": "TH ISP CSLox Info Block",
     "confidence_no_fp": 10,
     "exp_url": "",

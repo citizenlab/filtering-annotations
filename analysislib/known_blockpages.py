@@ -1313,6 +1313,21 @@ known_blocks = [
     # ISP Level Blockpage Patterns
 
     SimpleBlockPagePattern(
+        name="isp_so_so_safe",
+        common_name="Somali ISP So! Safe Blocking page",
+        pattern="""SO! Safe Browsing""",
+        location_found="body",
+        source=[
+            ""
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20210522T093516Z_webconnectivity_SO_37425_n1_TZHogn6bn6wt73ce?input=http://www.sex.com/",
+        confidence_no_fp=8,
+        scope="isp",
+        expected_countries=["SO"],
+        notes="This matches the Somali ISP SO! and their Safe Browsing block page",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_ae_du_surfsafely_forward_1",
         common_name="UAE ISP du Block",
         pattern="""index2.php?ucat=""",
