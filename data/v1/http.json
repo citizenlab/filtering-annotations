@@ -462,15 +462,15 @@
     ]
   },
   {
-    "common_name": "CA ISP Rogers Block Page for Court Order",
+    "common_name": "CA ISP Rogers Telus and TVA Group Block Page",
     "confidence_no_fp": 10,
-    "exp_url": "",
+    "exp_url": "https://explorer.ooni.org/measurement/20220203T103332Z_webconnectivity_CA_812_n1_7M7ZYtu8kInk4dU3?input=http%3A%2F%2Fapp.atntvv.cc%2F",
     "expected_countries": [
       "CA"
     ],
     "location_found": "body",
-    "name": "isp_ca_rogers_courtblock",
-    "notes": "CA ISP Shaw Block Page for Court Order",
+    "name": "isp_ca_rogers_tva_telus_block",
+    "notes": "CA ISP Rogers Telus and TVA Group joint Block Page",
     "pattern": "Access to the location you have attempted to reach has been disabled pursuant to an Order&nbsp;of the Federal Court (Canada)",
     "scope": "isp",
     "source": [
@@ -480,12 +480,12 @@
   {
     "common_name": "CA ISP Shaw Block Page for Court Order",
     "confidence_no_fp": 10,
-    "exp_url": "",
+    "exp_url": "https://explorer.ooni.org/measurement/20220203T170239Z_webconnectivity_CA_6327_n1_3Qts0KFGq9BAcnb1?input=http%3A%2F%2Fdestv.me%2F",
     "expected_countries": [
       "CA"
     ],
     "location_found": "body",
-    "name": "isp_ca_shaw_courtblock",
+    "name": "isp_ca_shaw_block",
     "notes": "CA ISP Shaw Block Page for Court Order",
     "pattern": "Access to this site has been blocked by an Order issued by the Federal Court of Canada",
     "scope": "isp",

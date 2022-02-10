@@ -344,6 +344,33 @@ known_dns_sigs = [
     #########
 
     SimpleDNSReplyPattern(
+        name="dns_isp_ca_shaw_block",
+        response="64.59.135.158",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20220203T170239Z_webconnectivity_CA_6327_n1_3Qts0KFGq9BAcnb1?input=http%3A%2F%2Fdestv.me%2F",
+        source=[
+            "",
+        ],
+        scope="isp",
+        expected_countries=["CA"],
+        notes="""Canadian ISP Shaw blockpage"""
+    ),
+
+
+    SimpleDNSReplyPattern(
+        name="dns_isp_ca_rogers_tva_telus_block",
+        response="67.43.226.22",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20220203T103332Z_webconnectivity_CA_812_n1_7M7ZYtu8kInk4dU3?input=http%3A%2F%2Fapp.atntvv.cc%2F",
+        source=[
+            "",
+        ],
+        scope="isp",
+        expected_countries=["CA"],
+        notes="""CA ISP Rogers Telus and TVA Group joint Block Page"""
+    ),
+
+    SimpleDNSReplyPattern(
         name="dns_isp_mm_myanmarnet_block",
         response="59.153.90.11",
         confidence_no_fp=10,
