@@ -5116,6 +5116,20 @@ known_blocks = [
         expected_countries=[""],
         notes="Blank or No-Render HTML - Suspected Block",
     ),
+    SimpleBlockPagePattern(
+        name="susp_blankhtml_4",
+        common_name="Blank or No-Render HTML  - Suspected Block",
+        pattern="""<html><head></head><body></body></html>""",
+        location_found="body",
+        source=[
+            ""
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20210919T044513Z_webconnectivity_CU_27725_n1_oi2VGE8vyqSfKfJ1?input=http://anonymouse.org/",
+        confidence_no_fp=5,
+        scope="isp",
+        expected_countries=[""],
+        notes="Blank or No-Render HTML - Suspected Block",
+    ),
 
 
     # Injections - Benign (injb)

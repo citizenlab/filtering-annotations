@@ -5291,6 +5291,22 @@
     ]
   },
   {
+    "common_name": "Blank or No-Render HTML  - Suspected Block",
+    "confidence_no_fp": 5,
+    "exp_url": "https://explorer.ooni.org/measurement/20210919T044513Z_webconnectivity_CU_27725_n1_oi2VGE8vyqSfKfJ1?input=http://anonymouse.org/",
+    "expected_countries": [
+      ""
+    ],
+    "location_found": "body",
+    "name": "susp_blankhtml_4",
+    "notes": "Blank or No-Render HTML - Suspected Block",
+    "pattern": "<html><head></head><body></body></html>",
+    "scope": "isp",
+    "source": [
+      ""
+    ]
+  },
+  {
     "common_name": "Vague Block Words",
     "confidence_no_fp": 8,
     "exp_url": "https://explorer.ooni.org/measurement/20200213T165957Z_AS31242_dOxoMkg9lZqvXsFm9088Fywi7WcFyRSGpq8fHB3PYfDo1FUFtD?input=http://www.amnestyusa.org/the-state-of-lgbt-rights-worldwide/",
