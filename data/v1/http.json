@@ -4640,6 +4640,20 @@
   {
     "common_name": "Fortinet Fortiguard",
     "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20200213T073834Z_AS24863_yfzKDaLHODIsPqFCit6OJvwpGEBKF7HzG1zv2DWuDHJ7DK5XBw?input=http://www.well.com/",
+    "expected_countries": [],
+    "location_found": "body",
+    "name": "prod_fortiguard_ips_block",
+    "notes": "Fortguard Intrusion prevention system feature block page",
+    "pattern": "FortiGuard Intrusion Prevention - Access Blocked",
+    "scope": "prod",
+    "source": [
+      "https://www.reddit.com/r/fortinet/comments/pfvjq6/dmz_hosts_and_fortiguard_intrusion_prevention/"
+    ]
+  },
+  {
+    "common_name": "Fortinet Fortiguard",
+    "confidence_no_fp": 10,
     "exp_url": "https://explorer.ooni.org/measurement/20200213T165957Z_AS31242_dOxoMkg9lZqvXsFm9088Fywi7WcFyRSGpq8fHB3PYfDo1FUFtD?input=http://www.amnestyusa.org/the-state-of-lgbt-rights-worldwide/",
     "expected_countries": [],
     "location_found": "body",

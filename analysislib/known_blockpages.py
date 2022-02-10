@@ -576,6 +576,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="prod_fortiguard_ips_block",
+        common_name="Fortinet Fortiguard",
+        pattern="FortiGuard Intrusion Prevention - Access Blocked",
+        location_found="body",
+        source=[
+            "https://www.reddit.com/r/fortinet/comments/pfvjq6/dmz_hosts_and_fortiguard_intrusion_prevention/"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20200213T073834Z_AS24863_yfzKDaLHODIsPqFCit6OJvwpGEBKF7HzG1zv2DWuDHJ7DK5XBw?input=http://www.well.com/",
+        confidence_no_fp=10,
+        scope="prod",
+        expected_countries=[],
+        notes="Fortguard Intrusion prevention system feature block page",
+    ),
+
+    SimpleBlockPagePattern(
         name="prod_paloaltonetworks_forward",
         common_name="Palo Alto Networks Filtering",
         pattern="/php/urlblock.php?args=",
