@@ -353,8 +353,20 @@ known_dns_sigs = [
         ],
         scope="isp",
         expected_countries=["MM"],
-        notes="""Myanmar ISP Myanmarnet blockpage
-"""
+        notes="""Myanmar ISP Myanmarnet blockpage"""
+    ),
+
+    SimpleDNSReplyPattern(
+        name="dns_isp_sg_starhub_block",
+        response="202.156.3.53",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20210809T082132Z_webconnectivity_SG_55430_n1_7ImHaJauRVvTo2eF?input=http://www.playboy.com/",
+        source=[
+            "",
+        ],
+        scope="isp",
+        expected_countries=["SG"],
+        notes="""Singaporean ISP Starhub blockpage"""
     ),
 
     SimpleDNSReplyPattern(

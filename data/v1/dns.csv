@@ -70,6 +70,7 @@ dns_isp_ru_rkn_netbynet,212.1.226.59,10,,['http://www.netbynet.ru/'],isp,['RU'],
 dns_isp_ru_rkn_skynet,185.37.129.10,10,https://explorer.ooni.org/measurement/20190628T034744Z_AS35807_4XwiNixlQ8odJ6ek21IUmKwtvCecSOWoII5ZjwqzCCgx6Sx9a3?input=http://bluesystem.ru/,['https://www.sknt.ru/'],isp,['RU'],Russian ISP Skynet RKN blockpage
 dns_isp_ru_rkn_smoltelecom,37.44.40.254,10,,['http://smoltelecom.ru/'],isp,['RU'],Russian ISP Smoltelecom blockpage
 dns_isp_ru_rkn_zencom,46.175.31.250,10,,['https://zencom.ru/'],isp,['RU'],Russian ISP Zencom RKN blockpage
+dns_isp_sg_starhub_block,202.156.3.53,10,https://explorer.ooni.org/measurement/20210809T082132Z_webconnectivity_SG_55430_n1_7ImHaJauRVvTo2eF?input=http://www.playboy.com/,[''],isp,['SG'],Singaporean ISP Starhub blockpage
 dns_isp_tr_turknet_chat,193.192.98.43,10,,['https://turk.net/'],isp,['TR'],Turkish ISP Turk Net optin family oriented DNS service (this is DIFFERENT than the Turk Telecom secureinternet)
 dns_isp_tr_turknet_chat_and_socialmedia,193.192.98.46,10,,['https://turk.net/'],isp,['TR'],Turkish ISP Turk Net optin family oriented DNS service (this is DIFFERENT than the Turk Telecom secureinternet)
 dns_isp_tr_turknet_familyprofile,193.192.98.41,10,,['https://turk.net/'],isp,['TR'],Turkish ISP Turk Net optin family oriented DNS service (this is DIFFERENT than the Turk Telecom secureinternet)
