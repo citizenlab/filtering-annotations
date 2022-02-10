@@ -4729,6 +4729,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_au_telstra_block",
+        common_name="AU ISP Telstra Block Page",
+        pattern="""Access to this website has been disabled by an order of the Federal Court of Australia because it infringes or facilitates the infringement of copyright""",
+        location_found="body",
+        source=[
+            ""
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20220203T193446Z_webconnectivity_AU_1221_n1_E32NLhLwI1WJYE3p?input=http%3A%2F%2Fthepiratebay.org%2F",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["AU"],
+        notes="AU ISP Telstra Block Page typically forwarded by way of DNS",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_th_dtac_accessurlblock_forward",
         common_name="TH ISP DTAC Block",
         pattern="""http://124.40.225.20/?accessurl=""",
