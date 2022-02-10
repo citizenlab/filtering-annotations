@@ -4394,6 +4394,20 @@
     ]
   },
   {
+    "common_name": "ASUS router block",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20210831T074011Z_webconnectivity_SG_55430_n1_SBUMMY2FXDiMEa7p?input=http://anonymouse.org/",
+    "expected_countries": [],
+    "location_found": "body",
+    "name": "prod_asus_router_block_forward",
+    "notes": "A block forward done by an ASUS RT- model router, typically home router.",
+    "pattern": ":80/blocking.asp?cat_id=",
+    "scope": "prod",
+    "source": [
+      "https://forums.informaction.com/viewtopic.php?t=22174"
+    ]
+  },
+  {
     "common_name": "Symantec Bluecoat User Notification",
     "confidence_no_fp": 10,
     "exp_url": "https://explorer.ooni.org/measurement/20181014T082454Z_AS15505_UlzScz9IQ0QBGrAg6CscMDzF2FeTJhqWXiOvcQYZGj2uFI9BD0?input=http://www.glil.org",

@@ -591,6 +591,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="prod_asus_router_block_forward",
+        common_name="ASUS router block",
+        pattern=":80/blocking.asp?cat_id=",
+        location_found="body",
+        source=[
+            "https://forums.informaction.com/viewtopic.php?t=22174"
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20210831T074011Z_webconnectivity_SG_55430_n1_SBUMMY2FXDiMEa7p?input=http://anonymouse.org/",
+        confidence_no_fp=10,
+        scope="prod",
+        expected_countries=[],
+        notes="A block forward done by an ASUS RT- model router, typically home router.",
+    ),
+
+    SimpleBlockPagePattern(
         name="prod_paloaltonetworks_forward",
         common_name="Palo Alto Networks Filtering",
         pattern="/php/urlblock.php?args=",
