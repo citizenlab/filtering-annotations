@@ -384,6 +384,32 @@ known_dns_sigs = [
     ),
 
     SimpleDNSReplyPattern(
+        name="dns_isp_au_telstra_block_1",
+        response="101.167.166.53",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20220203T193446Z_webconnectivity_AU_1221_n1_E32NLhLwI1WJYE3p?input=http%3A%2F%2Fthepiratebay.org%2F",
+        source=[
+            "",
+        ],
+        scope="isp",
+        expected_countries=["AU"],
+        notes="""AU ISP Telstra Block Page"""
+    ),
+
+    SimpleDNSReplyPattern(
+        name="dns_isp_au_telstra_block_2",
+        response="101.167.164.53",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20220203T193446Z_webconnectivity_AU_1221_n1_E32NLhLwI1WJYE3p?input=http%3A%2F%2Fthepiratebay.org%2F",
+        source=[
+            "",
+        ],
+        scope="isp",
+        expected_countries=["AU"],
+        notes="""AU ISP Telstra Block Page"""
+    ),
+
+    SimpleDNSReplyPattern(
         name="dns_isp_mm_myanmarnet_block",
         response="59.153.90.11",
         confidence_no_fp=10,
