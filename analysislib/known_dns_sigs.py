@@ -410,6 +410,19 @@ known_dns_sigs = [
     ),
 
     SimpleDNSReplyPattern(
+        name="dns_isp_au_tpg_block",
+        response="202.136.99.184",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20220202T100548Z_webconnectivity_AU_7545_n1_jIoirPJjohcYOCvM?input=http%3A%2F%2Fthepiratebay.org%2F",
+        source=[
+            "https://www.lifehacker.com.au/2018/06/how-to-bypass-isp-blocking-of-the-pirate-bay-and-other-torrent-sites-for-free/",
+        ],
+        scope="isp",
+        expected_countries=["AU"],
+        notes="""AU ISP TPG Block Page"""
+    ),
+
+    SimpleDNSReplyPattern(
         name="dns_isp_mm_myanmarnet_block",
         response="59.153.90.11",
         confidence_no_fp=10,

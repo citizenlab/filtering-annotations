@@ -73,6 +73,20 @@
   },
   {
     "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20220202T100548Z_webconnectivity_AU_7545_n1_jIoirPJjohcYOCvM?input=http%3A%2F%2Fthepiratebay.org%2F",
+    "expected_countries": [
+      "AU"
+    ],
+    "name": "dns_isp_au_tpg_block",
+    "notes": "AU ISP TPG Block Page",
+    "response": "202.136.99.184",
+    "scope": "isp",
+    "source": [
+      "https://www.lifehacker.com.au/2018/06/how-to-bypass-isp-blocking-of-the-pirate-bay-and-other-torrent-sites-for-free/"
+    ]
+  },
+  {
+    "confidence_no_fp": 10,
     "exp_url": "",
     "expected_countries": [
       "BY"
