@@ -4744,6 +4744,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="isp_au_tpg_block",
+        common_name="AU ISP TPG Block Page",
+        pattern="""You have attempted to obtain access to a particular website.  This page notifies you that access to that website has been disabled because the Federal Court of Australia has determined that the website infringes, or facilitates the infringement of, copyright.""",
+        location_found="body",
+        source=[
+            ""
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20220202T100548Z_webconnectivity_AU_7545_n1_jIoirPJjohcYOCvM?input=http%3A%2F%2Fthepiratebay.org%2F",
+        confidence_no_fp=10,
+        scope="isp",
+        expected_countries=["AU"],
+        notes="AU ISP TPG Block Page typically forwarded by way of DNS",
+    ),
+
+    SimpleBlockPagePattern(
         name="isp_th_dtac_accessurlblock_forward",
         common_name="TH ISP DTAC Block",
         pattern="""http://124.40.225.20/?accessurl=""",
