@@ -26,6 +26,21 @@ known_blocks = [
     ),
 
     SimpleBlockPagePattern(
+        name="nat_it_agcom_block",
+        common_name="Italian Copyright Related Block",
+        pattern="""<title>AGCOM Stop Page</title>""",
+        location_found="body",
+        source=[
+            ""
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20211021T193015Z_webconnectivity_IT_30722_n1_Sk3HeZOfHero7Ir9?input=http://gamestorrents.com/",
+        confidence_no_fp=10,
+        scope="nat",
+        expected_countries=["IT"],
+        notes="Blockpage related to copyright related blocking in IT",
+    ),
+
+    SimpleBlockPagePattern(
         name="nat_mm_transportcomms_block",
         common_name="National Myanmar Block",
         pattern="""You have tried to access a web page which has been blocked as per directive received from the Ministry of Transport and Communications of Myanmar""",

@@ -4298,6 +4298,22 @@
     ]
   },
   {
+    "common_name": "Italian Copyright Related Block",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20211021T193015Z_webconnectivity_IT_30722_n1_Sk3HeZOfHero7Ir9?input=http://gamestorrents.com/",
+    "expected_countries": [
+      "IT"
+    ],
+    "location_found": "body",
+    "name": "nat_it_agcom_block",
+    "notes": "Blockpage related to copyright related blocking in IT",
+    "pattern": "<title>AGCOM Stop Page</title>",
+    "scope": "nat",
+    "source": [
+      ""
+    ]
+  },
+  {
     "common_name": "National Myanmar Block",
     "confidence_no_fp": 10,
     "exp_url": "https://explorer.ooni.org/measurement/20210201T223944Z_webconnectivity_MM_133385_n1_LlJnFqnaVXNfXygL?input=http://www.hornybank.com/",
