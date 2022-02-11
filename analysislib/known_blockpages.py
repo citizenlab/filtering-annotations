@@ -11,6 +11,21 @@ known_blocks = [
     # National Level Blockpage Patterns
 
     SimpleBlockPagePattern(
+        name="nat_it_adm_block",
+        common_name="Italian Sport Gaming Block",
+        pattern="""Matomo Giochi Illegali ADM""",
+        location_found="body",
+        source=[
+            ""
+        ],
+        exp_url="https://explorer.ooni.org/measurement/20211023T083841Z_webconnectivity_IT_30722_n1_hPb937VUDh5Q2NoY?input=http://www.sportingbet.com/",
+        confidence_no_fp=10,
+        scope="nat",
+        expected_countries=["IT"],
+        notes="Blockpage related to sports and gaming related blocking in IT",
+    ),
+
+    SimpleBlockPagePattern(
         name="nat_mm_transportcomms_block",
         common_name="National Myanmar Block",
         pattern="""You have tried to access a web page which has been blocked as per directive received from the Ministry of Transport and Communications of Myanmar""",

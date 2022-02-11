@@ -4282,6 +4282,22 @@
     ]
   },
   {
+    "common_name": "Italian Sport Gaming Block",
+    "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20211023T083841Z_webconnectivity_IT_30722_n1_hPb937VUDh5Q2NoY?input=http://www.sportingbet.com/",
+    "expected_countries": [
+      "IT"
+    ],
+    "location_found": "body",
+    "name": "nat_it_adm_block",
+    "notes": "Blockpage related to sports and gaming related blocking in IT",
+    "pattern": "Matomo Giochi Illegali ADM",
+    "scope": "nat",
+    "source": [
+      ""
+    ]
+  },
+  {
     "common_name": "National Myanmar Block",
     "confidence_no_fp": 10,
     "exp_url": "https://explorer.ooni.org/measurement/20210201T223944Z_webconnectivity_MM_133385_n1_LlJnFqnaVXNfXygL?input=http://www.hornybank.com/",
