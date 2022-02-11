@@ -1626,6 +1626,21 @@ known_dns_sigs = [
     ),
 
     SimpleDNSReplyPattern(
+        name="dns_nat_it_agcom_block",
+        response="83.224.65.74",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20211021T193015Z_webconnectivity_IT_30722_n1_Sk3HeZOfHero7Ir9?input=http://gamestorrents.com/",
+        source=[
+            ""
+        ],
+        scope="nat",
+        expected_countries=["IT"],
+        notes="""
+        Italian copyright related DNS block
+        """
+    ),
+
+    SimpleDNSReplyPattern(
         name="dns_nat_id_trustpositif",
         response="trustpositif.kominfo.go.id",
         confidence_no_fp=10,

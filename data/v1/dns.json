@@ -1396,6 +1396,20 @@
   },
   {
     "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20211021T193015Z_webconnectivity_IT_30722_n1_Sk3HeZOfHero7Ir9?input=http://gamestorrents.com/",
+    "expected_countries": [
+      "IT"
+    ],
+    "name": "dns_nat_it_agcom_block",
+    "notes": "Italian copyright related DNS block",
+    "response": "83.224.65.74",
+    "scope": "nat",
+    "source": [
+      ""
+    ]
+  },
+  {
+    "confidence_no_fp": 10,
     "exp_url": "https://explorer.ooni.org/measurement/20210201T223944Z_webconnectivity_MM_133385_n1_LlJnFqnaVXNfXygL?input=http://www.hornybank.com/",
     "expected_countries": [
       "MM"
