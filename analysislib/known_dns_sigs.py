@@ -1611,6 +1611,21 @@ known_dns_sigs = [
     ),
 
     SimpleDNSReplyPattern(
+        name="dns_nat_it_adm_block",
+        response="217.175.53.72",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20211023T083841Z_webconnectivity_IT_30722_n1_hPb937VUDh5Q2NoY?input=http://www.sportingbet.com/",
+        source=[
+            ""
+        ],
+        scope="nat",
+        expected_countries=["IT"],
+        notes="""
+        Italian sport/gaming related DNS block
+        """
+    ),
+
+    SimpleDNSReplyPattern(
         name="dns_nat_id_trustpositif",
         response="trustpositif.kominfo.go.id",
         confidence_no_fp=10,

@@ -1382,6 +1382,20 @@
   },
   {
     "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20211023T083841Z_webconnectivity_IT_30722_n1_hPb937VUDh5Q2NoY?input=http://www.sportingbet.com/",
+    "expected_countries": [
+      "IT"
+    ],
+    "name": "dns_nat_it_adm_block",
+    "notes": "Italian sport/gaming related DNS block",
+    "response": "217.175.53.72",
+    "scope": "nat",
+    "source": [
+      ""
+    ]
+  },
+  {
+    "confidence_no_fp": 10,
     "exp_url": "https://explorer.ooni.org/measurement/20210201T223944Z_webconnectivity_MM_133385_n1_LlJnFqnaVXNfXygL?input=http://www.hornybank.com/",
     "expected_countries": [
       "MM"
