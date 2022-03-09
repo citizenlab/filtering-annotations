@@ -753,6 +753,238 @@ known_dns_sigs = [
     """
     ),
 
+    SimpleDNSReplyPattern(
+        name="dns_isp_ru_AS52207",
+        response="188.186.157.49",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20220305T120459Z_webconnectivity_RU_52207_n1_AlXw32CjmNRv0WxI?input=http%3A%2F%2Fwww.bbc.com%2Fnews",
+        source=[
+            ""
+        ],
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""
+        PTR record is k8s-lb-onlyhttp-cluster-ingress.static.cc.ertelecom.ru.
+        Serves blockpage for: http://lawfilter.ertelecom.ru/
+        """
+    ),
+
+    SimpleDNSReplyPattern(
+        name="dns_isp_ru_AS51547",
+        response="80.76.104.20",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20220304T163214Z_webconnectivity_RU_51547_n1_oUciU7VqaGrmL4HA?input=https%3A%2F%2Fwww.bbc.com%2Fnews%2Fworld-51235105",
+        source=[
+            ""
+        ],
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""
+        PTR records are block.tdsplus.ru & balance.tdsplus.ru.
+        We get connection refused when attempting to access it.
+        """
+    ),
+
+    SimpleDNSReplyPattern(
+        name="dns_isp_ru_AS8790",
+        response="85.142.29.248",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20220305T121053Z_webconnectivity_RU_8790_n1_OfI9eozoHc8C4Xkd?input=http%3A%2F%2Fwww.bbc.com%2Fnews",
+        source=[
+            ""
+        ],
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""
+        PTR record is block.runnet.ru.
+        We get a blockpage when attempting to access it.
+        """
+    ),
+
+    SimpleDNSReplyPattern(
+        name="dns_isp_ru_AS35807",
+        response="100.64.64.66",
+        confidence_no_fp=7,
+        exp_url="https://explorer.ooni.org/measurement/20220305T121024Z_webconnectivity_RU_35807_n1_QkCl4ZggAoowPpAI?input=http%3A%2F%2Fwww.bbc.com%2Fnews",
+        source=[
+            ""
+        ],
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""
+        Private IP space, but behaviour is consistent on AS35807 for blocked domains.
+        """
+    ),
+
+    SimpleDNSReplyPattern(
+        name="dns_isp_ru_AS15378",
+        response="95.213.158.61",
+        confidence_no_fp=7,
+        exp_url="https://explorer.ooni.org/measurement/20220305T053351Z_webconnectivity_RU_15378_n1_wsIzPXq2OLRTBIAq?input=http%3A%2F%2Fwww.bbc.com",
+        source=[
+            ""
+        ],
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""
+        AS of returned IP is mapped to russian hosting provider AS49505 (SELECTEL).
+        Pattern is consistent for several blocked sites.
+        """
+    ),
+
+    SimpleDNSReplyPattern(
+        name="dns_isp_ru_AS8427",
+        response="188.43.20.67",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20220305T035626Z_webconnectivity_RU_8427_n1_6zMQbsKYAsOva4L7?input=https%3A%2F%2Fwww.bbc.com%2Frussian%2F",
+        source=[
+            ""
+        ],
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""
+        Serves a blockpage for ttk ISP
+        """
+    ),
+
+    SimpleDNSReplyPattern(
+        name="dns_isp_ru_AS52207_2",
+        response="195.128.72.3",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20220304T055948Z_webconnectivity_RU_52207_n1_H0I8CD7nFoMYXxCx?input=https%3A%2F%2Fwww.bbc.com%2F",
+        source=[
+            ""
+        ],
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""
+        Serves a blockpage
+        """
+    ),
+
+    SimpleDNSReplyPattern(
+        name="dns_isp_ru_AS12389",
+        response="31.28.24.3",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20220304T044651Z_webconnectivity_RU_12389_n1_BmRicVwEpc4HG72k?input=https%3A%2F%2Fwww.bbc.com%2F",
+        source=[
+            ""
+        ],
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Serves a blockpage for citytelecom.ru"
+    ),
+
+    SimpleDNSReplyPattern(
+        name="dns_isp_ru_AS197460",
+        response="46.175.31.251",
+        confidence_no_fp=8,
+        exp_url="https://explorer.ooni.org/measurement/20220305T044706Z_webconnectivity_RU_197460_n1_moH7izWEhyf8UJ81?input=https%3A%2F%2Fwww.bbc.com%2Fnews",
+        source=[
+            ""
+        ],
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""
+        Likely used to be a blockpage. The PTR record is
+        host-46-175-31-251.rev.zencom.ru and the AS is AS197460, which is
+        consistent with the network where we observe it.
+        As of 2022-03-05 the session times out when attempting to fetch the
+        index via HTTP (port 80 is open though).
+        """
+    ),
+
+    SimpleDNSReplyPattern(
+        name="dns_isp_ru_AS3335",
+        response="84.237.49.190",
+        confidence_no_fp=8,
+        exp_url="https://explorer.ooni.org/measurement/20220304T062438Z_webconnectivity_RU_3335_n1_mn3OTB1761hQW6PB?input=https%3A%2F%2Fwww.bbc.com%2F",
+        source=[
+            ""
+        ],
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""
+        PTR record host190.49.237.84.nsu.ru and AS is AS3335.
+        As of 2022-03-05 a 503 error is returned when accessing page.
+        """
+    ),
+
+    SimpleDNSReplyPattern(
+        name="dns_isp_ru_AS212614",
+        response="62.33.207.197",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20220303T144538Z_webconnectivity_RU_212614_n1_GNQli0Mie4NBJrkp?input=https%3A%2F%2F200rf.com%2F",
+        source=[
+            ""
+        ],
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""
+        netname of the ip range is "TTK-SECURITY". As of 2022-03-05 you get
+        connection refused when connecting to port 80.
+        """
+    ),
+
+    SimpleDNSReplyPattern(
+        name="dns_isp_ru_AS212614_2",
+        response="62.33.207.196",
+        confidence_no_fp=8,
+        exp_url="https://explorer.ooni.org/measurement/20220303T144538Z_webconnectivity_RU_212614_n1_GNQli0Mie4NBJrkp?input=https%3A%2F%2F200rf.com%2F",
+        source=[
+            ""
+        ],
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""
+        netname of the ip range is "TTK-SECURITY". As of 2022-03-05 you get
+        connection refused when connecting to port 80.
+        """
+    ),
+
+    SimpleDNSReplyPattern(
+        name="dns_isp_ru_AS60139",
+        response="185.77.150.2",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20220303T120931Z_webconnectivity_RU_60139_n1_RqlkvqFzTf9cySzI?input=https%3A%2F%2Fwww.currenttime.tv%2Ftv%2Fschedule%2F92%2F",
+        source=[
+            ""
+        ],
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Serves a cute cat blockpage"
+    ),
+
+    SimpleDNSReplyPattern(
+        name="dns_isp_ru_AS42429",
+        response="77.238.226.53",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20220302T003421Z_webconnectivity_RU_42429_n1_4xzf7tPugdylxlAj?input=https%3A%2F%2Fwww.currenttime.tv%2Ftv%2Fschedule%2F92%2F",
+        source=[
+            ""
+        ],
+        scope="isp",
+        expected_countries=["RU"],
+        notes="Serves a blockpage"
+    ),
+
+    SimpleDNSReplyPattern(
+        name="dns_isp_ru_AS8369",
+        response="78.29.1.40",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20220301T122933Z_webconnectivity_RU_8369_n1_M8IHOk8AdoWew7sE?input=https%3A%2F%2Fwww.currenttime.tv%2F",
+        source=[
+            ""
+        ],
+        scope="isp",
+        expected_countries=["RU"],
+        notes="""
+        ASN of the IP is AS8369, which is consistent with the network of the
+        measurement. Connections timeout when attempting to establish a
+        connection on port 80.
+        """
+    ),
+
     #########
     # INDONESIAN SEHAT RELATED RESPONSES
 
