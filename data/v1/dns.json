@@ -116,6 +116,20 @@
   },
   {
     "confidence_no_fp": 10,
+    "exp_url": "https://explorer.ooni.org/measurement/20220125T183515Z_webconnectivity_CA_577_n1_7mS6xLPAnfcGIgv4?input=http://app.atntvv.cc/",
+    "expected_countries": [
+      "CA"
+    ],
+    "name": "dns_isp_ca_rogers_tva_telus_block_2",
+    "notes": "CA ISP Rogers Telus and TVA Group joint Block Page, alternate IP",
+    "response": "173.209.39.114",
+    "scope": "isp",
+    "source": [
+      ""
+    ]
+  },
+  {
+    "confidence_no_fp": 10,
     "exp_url": "https://explorer.ooni.org/measurement/20220203T170239Z_webconnectivity_CA_6327_n1_3Qts0KFGq9BAcnb1?input=http%3A%2F%2Fdestv.me%2F",
     "expected_countries": [
       "CA"

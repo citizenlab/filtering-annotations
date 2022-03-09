@@ -371,6 +371,19 @@ known_dns_sigs = [
     ),
 
     SimpleDNSReplyPattern(
+        name="dns_isp_ca_rogers_tva_telus_block_2",
+        response="173.209.39.114",
+        confidence_no_fp=10,
+        exp_url="https://explorer.ooni.org/measurement/20220125T183515Z_webconnectivity_CA_577_n1_7mS6xLPAnfcGIgv4?input=http://app.atntvv.cc/",
+        source=[
+            "",
+        ],
+        scope="isp",
+        expected_countries=["CA"],
+        notes="""CA ISP Rogers Telus and TVA Group joint Block Page, alternate IP"""
+    ),
+
+    SimpleDNSReplyPattern(
         name="dns_isp_ca_teksavvy_block",
         response="206.248.146.244",
         confidence_no_fp=10,
